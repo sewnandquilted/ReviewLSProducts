@@ -1,5 +1,7 @@
 package application;
 
+// TODO FXML is not currently used (couldn't install scenebuilder)
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.Closeable;

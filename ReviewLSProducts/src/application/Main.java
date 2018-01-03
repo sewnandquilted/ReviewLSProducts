@@ -64,6 +64,8 @@ public class Main extends Application {
 
 	private TableView<LSProduct> table = new TableView();
 	final HBox hb = new HBox();
+	String productHeader=null;
+
 
 	@Override
 	public void start(Stage primaryStage) throws IOException {
@@ -346,7 +348,6 @@ public class Main extends Application {
 
 		File file = new File(lsProductFile.getAbsolutePath().toString());
 		Scanner input = new Scanner(file);
-		String productHeader=null;
 
 		if (input.hasNextLine()) {
 		    productHeader = input.nextLine();
@@ -421,6 +422,7 @@ public class Main extends Application {
 
 			File file = new File(selectedFile.getAbsolutePath());
 			writer = new BufferedWriter(new FileWriter(file));
+			writer.write(productHeader+ "\n");
 			for (LSProduct product : lsProductUpdates) {
 
 				String text = product.getInternalID() + "," + product.getCategoryIDs() + "," + product.getDeptCode()

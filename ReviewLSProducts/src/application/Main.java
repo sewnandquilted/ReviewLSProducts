@@ -14,10 +14,15 @@ import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.Writer;
 import java.math.BigDecimal;
+import java.nio.CharBuffer;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 import javax.swing.LayoutFocusTraversalPolicy;
 
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
 import application.model.LSProduct;
@@ -54,6 +59,7 @@ import javafx.scene.text.Font;
 public class Main extends Application {
 
 	static ObservableList<LSProduct> lsProductEntries = FXCollections.observableArrayList();
+	static ObservableList<LSProduct> lsProductUpdates = FXCollections.observableArrayList();
 	static ListView<LSProduct> lsProductList = new ListView<LSProduct>();
 
 	private TableView<LSProduct> table = new TableView();
@@ -155,6 +161,7 @@ public class Main extends Application {
 				public void handle(CellEditEvent<LSProduct, String> t) {
 					((LSProduct) t.getTableView().getItems().get(t.getTablePosition().getRow()))
 							.setInternalID(t.getNewValue());
+					lsProductUpdates.add(t.getTableView().getItems().get(t.getTablePosition().getRow()));
 				}
 			});
 			CategoryIDsCol.setCellValueFactory(new PropertyValueFactory<LSProduct, String>("CategoryIDs"));
@@ -178,7 +185,8 @@ public class Main extends Application {
 				@Override
 				public void handle(CellEditEvent<LSProduct, String> t) {
 					((LSProduct) t.getTableView().getItems().get(t.getTablePosition().getRow()))
-							.setInternalID(t.getNewValue());
+							.setSku(t.getNewValue());
+					lsProductUpdates.add(t.getTableView().getItems().get(t.getTablePosition().getRow()));
 				}
 			});
 			// this field is modifiable
@@ -188,7 +196,8 @@ public class Main extends Application {
 				@Override
 				public void handle(CellEditEvent<LSProduct, String> t) {
 					((LSProduct) t.getTableView().getItems().get(t.getTablePosition().getRow()))
-							.setInternalID(t.getNewValue());
+							.setUpc(t.getNewValue());
+					lsProductUpdates.add(t.getTableView().getItems().get(t.getTablePosition().getRow()));
 				}
 			});
 
@@ -255,7 +264,7 @@ public class Main extends Application {
 						return true;
 					}
 
-					// Compare descriptions and title of every product with filter text.
+					// Compare short description, sku, and title of every product with filter text.
 					String lowerCaseFilter = newValue.toLowerCase();
 
 					if (LSProduct.getShortDescription().toLowerCase().contains(lowerCaseFilter)) {
@@ -284,7 +293,6 @@ public class Main extends Application {
 					try {
 						populateLsProducts();
 					} catch (IOException e1) {
-						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
 				}
@@ -294,24 +302,12 @@ public class Main extends Application {
 			saveFileButton.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent e) {
-					FileChooser chooser = new FileChooser();
-					chooser.setTitle("Choose location To Save data");
-					File selectedFile = null;
-					selectedFile = chooser.showSaveDialog(null);
-
-					File file = new File(selectedFile.getAbsolutePath());
-					PrintWriter outFile = null;
 					try {
-						outFile = new PrintWriter(file);
-					} catch (FileNotFoundException e1) {
+						writeExcel();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-
-					for (int i = 0; i < table.getItems().size(); i++) {
-						// TODO write content of object out instead of reference
-						outFile.println(table.getItems().get(i).toString());
-					}
-					outFile.close();
 				}
 			});
 
@@ -348,12 +344,22 @@ public class Main extends Application {
 		fc.getExtensionFilters().addAll(new ExtensionFilter("CSV Files", "*.csv"));
 		File lsProductFile = fc.showOpenDialog(null);
 
+		File file = new File(lsProductFile.getAbsolutePath().toString());
+		Scanner input = new Scanner(file);
+		String productHeader=null;
+
+		if (input.hasNextLine()) {
+		    productHeader = input.nextLine();
+		}		
+		input.close();
+		System.out.println("productHeader is :" + productHeader + ":");
+		
 		Reader in = new FileReader(lsProductFile.getAbsolutePath());
 		Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(in);
 		for (CSVRecord record : records) {
 			LSProduct product = new LSProduct();
 
-			product.setInternalID(lsFieldTrim(record, "Internal ID(Do Not Change)"));
+			product.setInternalID(record.get("Internal ID(Do Not Change)"));
 			product.setCategoryIDs(record.get("Category IDs (Comma separate)"));
 			product.setDeptCode(record.get("Dept Code"));
 			product.setStatus(record.get("Status"));
@@ -368,9 +374,9 @@ public class Main extends Application {
 			product.setOptions(record.get("Options"));
 			product.setAssignedOptionValues(record.get("Assigned option values"));
 			product.setOptionID(Integer.parseInt(record.get("Option ID(Do Not Change)")));
-			product.setSku(lsFieldTrim(record, "sku"));
-			product.setUpc(lsFieldTrim(record, "upc"));
-			product.setManufacturerProductId(lsFieldTrim(record, "Manufacturer Product Id"));
+			product.setSku(record.get("sku"));
+			product.setUpc(record.get("upc"));
+			product.setManufacturerProductId(record.get("Manufacturer Product Id"));
 			product.setAlternateLookups(record.get("Alternate Lookups"));
 			product.setManufacturerId(record.get("Manufacturer Id"));
 			product.setPrimaryVendor(record.get("Primary Vendor"));
@@ -398,16 +404,6 @@ public class Main extends Application {
 		lsProductList.setItems(lsProductEntries);
 	}
 
-	private String lsFieldTrim(CSVRecord record, String fieldName) {
-		String iid = record.get(fieldName);
-		iid = iid.substring(2, iid.length() - 1);
-		return iid;
-	}
-
-	private String lsFieldPad(String field) {
-		return "=\"" + field + "\"";
-	}
-
 	private BigDecimal BigDecimalValue(String string) {
 		if (string.isEmpty()) {
 			return BigDecimal.ZERO;
@@ -418,26 +414,31 @@ public class Main extends Application {
 	public void writeExcel() throws Exception {
 		Writer writer = null;
 		try {
-			File file = new File("C:\\Person.csv.");
+			FileChooser chooser = new FileChooser();
+			chooser.setTitle("Choose location To Save data");
+			File selectedFile = null;
+			selectedFile = chooser.showSaveDialog(null);
+
+			File file = new File(selectedFile.getAbsolutePath());
 			writer = new BufferedWriter(new FileWriter(file));
-			for (LSProduct product : lsProductEntries) {
+			for (LSProduct product : lsProductUpdates) {
 
-				String text = product.getInternalID() + "," + product.getCategoryIDs() + "," + product.getStatus()
-						+ "\n";
-
-				// (InternalIDCol, CategoryIDsCol, DeptCodeCol, StatusCol, ProductTitleCol,
-				// ShortDescriptionCol, LongDescriptionCol, UnitOfMeasurementCol,
-				// AvailabilityCol,
-				// UnlimitedInventoryCol, OptionsCol, AssignedOptionValuesCol, OptionIDCol,
-				// skuCol, upcCol,
-				// ManufacturerProductIdCol, AlternateLookupsCol, ManufacturerIdCol,
-				// PrimaryVendorCol,
-				// StoreLocationIDCol, WeightCol, DefaultCostCol, PriceCol, SalePriceCol,
-				// WholesalePriceCol,
-				// WebsitePriceCol, WebsiteSalePriceCol, ReorderPointCol, DesiredStockLevelCol,
-				// CaseUnitQtyCol,
-				// RetailUnitTypeCol, CaseUnitTypeCol, TaxCodeCol, DateAddedCol
-
+				String text = product.getInternalID() + "," + product.getCategoryIDs() + "," + product.getDeptCode()
+						+ "," + product.getStatus() + "," + product.getProductTitle() + ","
+						+ product.getShortDescription() + "," + product.getLongDescription() + ","
+						+ product.getUnitOfMeasurement() + "," + product.getAvailability() + ","
+						+ product.getUnlimitedInventory() + "," + product.getOptions() + ","
+						+ product.getAssignedOptionValues() + "," + product.getOptionID() + (product.getSku()) + ","
+						+ (product.getUpc()) + ","
+						+ (product.getManufacturerProductId() + "," + product.getAlternateLookups() + ","
+								+ product.getManufacturerId())
+						+ "," + product.getPrimaryVendor() + "," + product.getStoreLocationID() + ","
+						+ product.getWeight() + "," + product.getDefaultCost() + "," + product.getPrice() + ","
+						+ product.getSalePrice() + "," + product.getWholesalePrice() + "," + product.getWebsitePrice()
+						+ "," + product.getWebsiteSalePrice() + "," + product.getReorderPoint() + ","
+						+ product.getDesiredStockLevel() + "," + product.getCaseUnitQty() + ","
+						+ product.getRetailUnitType() + "," + product.getCaseUnitType() + "," + product.getTaxCode()
+						+ "," + product.getDateAdded() + "\n";
 				writer.write(text);
 			}
 		} catch (Exception ex) {

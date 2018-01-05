@@ -77,7 +77,7 @@ public class Z002 {
 	private BigDecimal nosaleAmount;
 	private BigDecimal voidAmount;
 
-	private String z002CreateTableString() {
+	public String z002CreateTableString() {
 		return "create table z002 ( " + "z02model varchar," + "z02machine varchar," + "z02report varchar,"
 				+ "z02file varchar," + "z02mode varchar," + "z02zcounter integer," + "z02date varchar,"
 				+ "z02time varchar," + "cashQuantity integer," + "subtotalQuantity integer," + "chargeQuantity integer,"
@@ -102,579 +102,583 @@ public class Z002 {
 				+ "nosaleAmount decimal(10,2)," + "voidAmount decimal(10,2)" + " );";
 	}
 
-	private String getZ02model() {
+	public String getZ02model() {
 		return z02model;
 	}
 
-	private void setZ02model(String z02model) {
+	public void setZ02model(String z02model) {
 		this.z02model = z02model;
 	}
 
-	private String getZ02machine() {
+	public String getZ02machine() {
 		return z02machine;
 	}
 
-	private void setZ02machine(String z02machine) {
+	public void setZ02machine(String z02machine) {
 		this.z02machine = z02machine;
 	}
 
-	private String getZ02report() {
+	public String getZ02report() {
 		return z02report;
 	}
 
-	private void setZ02report(String z02report) {
+	public void setZ02report(String z02report) {
 		this.z02report = z02report;
 	}
 
-	private String getZ02file() {
+	public String getZ02file() {
 		return z02file;
 	}
 
-	private void setZ02file(String z02file) {
+	public void setZ02file(String z02file) {
 		this.z02file = z02file;
 	}
 
-	private String getZ02mode() {
+	public String getZ02mode() {
 		return z02mode;
 	}
 
-	private void setZ02mode(String z02mode) {
+	public void setZ02mode(String z02mode) {
 		this.z02mode = z02mode;
 	}
 
-	private int getZ02zcounter() {
+	public int getZ02zcounter() {
 		return z02zcounter;
 	}
 
-	private void setZ02zcounter(int z02zcounter) {
+	public void setZ02zcounter(int z02zcounter) {
 		this.z02zcounter = z02zcounter;
 	}
 
-	private String getZ02date() {
+	public String getZ02date() {
 		return z02date;
 	}
 
-	private void setZ02date(String z02date) {
+	public void setZ02date(String z02date) {
 		this.z02date = z02date;
 	}
 
-	private String getZ02time() {
+	public String getZ02time() {
 		return z02time;
 	}
 
-	private void setZ02time(String z02time) {
+	public void setZ02time(String z02time) {
 		this.z02time = z02time;
 	}
 
-	private BigDecimal getCashQuantity() {
+	public BigDecimal getCashQuantity() {
 		return cashQuantity;
 	}
 
-	private void setCashQuantity(BigDecimal cashQuantity) {
+	public void setCashQuantity(BigDecimal cashQuantity) {
 		this.cashQuantity = cashQuantity;
 	}
 
-	private BigDecimal getSubtotalQuantity() {
+	public BigDecimal getSubtotalQuantity() {
 		return subtotalQuantity;
 	}
 
-	private void setSubtotalQuantity(BigDecimal subtotalQuantity) {
+	public void setSubtotalQuantity(BigDecimal subtotalQuantity) {
 		this.subtotalQuantity = subtotalQuantity;
 	}
 
-	private BigDecimal getChargeQuantity() {
+	public BigDecimal getChargeQuantity() {
 		return chargeQuantity;
 	}
 
-	private void setChargeQuantity(BigDecimal chargeQuantity) {
+	public void setChargeQuantity(BigDecimal chargeQuantity) {
 		this.chargeQuantity = chargeQuantity;
 	}
 
-	private BigDecimal getCheckQuantity() {
+	public BigDecimal getCheckQuantity() {
 		return checkQuantity;
 	}
 
-	private void setCheckQuantity(BigDecimal checkQuantity) {
+	public void setCheckQuantity(BigDecimal checkQuantity) {
 		this.checkQuantity = checkQuantity;
 	}
 
-	private BigDecimal getHelpQuantity() {
+	public BigDecimal getHelpQuantity() {
 		return helpQuantity;
 	}
 
-	private void setHelpQuantity(BigDecimal helpQuantity) {
+	public void setHelpQuantity(BigDecimal helpQuantity) {
 		this.helpQuantity = helpQuantity;
 	}
 
-	private BigDecimal getTaxpgmQuantity() {
+	public BigDecimal getTaxpgmQuantity() {
 		return taxpgmQuantity;
 	}
 
-	private void setTaxpgmQuantity(BigDecimal taxpgmQuantity) {
+	public void setTaxpgmQuantity(BigDecimal taxpgmQuantity) {
 		this.taxpgmQuantity = taxpgmQuantity;
 	}
 
-	private BigDecimal getPoQuantity() {
+	public BigDecimal getPoQuantity() {
 		return poQuantity;
 	}
 
-	private void setPoQuantity(BigDecimal poQuantity) {
+	public void setPoQuantity(BigDecimal poQuantity) {
 		this.poQuantity = poQuantity;
 	}
 
-	private BigDecimal getRaQuantity() {
+	public BigDecimal getRaQuantity() {
 		return raQuantity;
 	}
 
-	private void setRaQuantity(BigDecimal raQuantity) {
+	public void setRaQuantity(BigDecimal raQuantity) {
 		this.raQuantity = raQuantity;
 	}
 
-	private BigDecimal getSignoffQuantity() {
+	public BigDecimal getSignoffQuantity() {
 		return signoffQuantity;
 	}
 
-	private void setSignoffQuantity(BigDecimal signoffQuantity) {
+	public void setSignoffQuantity(BigDecimal signoffQuantity) {
 		this.signoffQuantity = signoffQuantity;
 	}
 
-	private BigDecimal getClknoQuantity() {
+	public BigDecimal getClknoQuantity() {
 		return clknoQuantity;
 	}
 
-	private void setClknoQuantity(BigDecimal clknoQuantity) {
+	public void setClknoQuantity(BigDecimal clknoQuantity) {
 		this.clknoQuantity = clknoQuantity;
 	}
 
-	private BigDecimal getShiftnoQuantity() {
+	public BigDecimal getShiftnoQuantity() {
 		return shiftnoQuantity;
 	}
 
-	private void setShiftnoQuantity(BigDecimal shiftnoQuantity) {
+	public void setShiftnoQuantity(BigDecimal shiftnoQuantity) {
 		this.shiftnoQuantity = shiftnoQuantity;
 	}
 
-	private BigDecimal getDwnQuantity() {
+	public BigDecimal getDwnQuantity() {
 		return dwnQuantity;
 	}
 
-	private void setDwnQuantity(BigDecimal dwnQuantity) {
+	public void setDwnQuantity(BigDecimal dwnQuantity) {
 		this.dwnQuantity = dwnQuantity;
 	}
 
-	private BigDecimal getPctdiscountQuantity() {
+	public BigDecimal getPctdiscountQuantity() {
 		return pctdiscountQuantity;
 	}
 
-	private void setPctdiscountQuantity(BigDecimal pctdiscountQuantity) {
+	public void setPctdiscountQuantity(BigDecimal pctdiscountQuantity) {
 		this.pctdiscountQuantity = pctdiscountQuantity;
 	}
 
-	private BigDecimal getDiscountQuantity() {
+	public BigDecimal getDiscountQuantity() {
 		return discountQuantity;
 	}
 
-	private void setDiscountQuantity(BigDecimal discountQuantity) {
+	public void setDiscountQuantity(BigDecimal discountQuantity) {
 		this.discountQuantity = discountQuantity;
 	}
 
-	private BigDecimal getPluQuantity() {
+	public BigDecimal getPluQuantity() {
 		return pluQuantity;
 	}
 
-	private void setPluQuantity(BigDecimal pluQuantity) {
+	public void setPluQuantity(BigDecimal pluQuantity) {
 		this.pluQuantity = pluQuantity;
 	}
 
-	private BigDecimal getPrcQuantity() {
+	public BigDecimal getPrcQuantity() {
 		return prcQuantity;
 	}
 
-	private void setPrcQuantity(BigDecimal prcQuantity) {
+	public void setPrcQuantity(BigDecimal prcQuantity) {
 		this.prcQuantity = prcQuantity;
 	}
 
-	private BigDecimal getReceiptQuantity() {
+	public BigDecimal getReceiptQuantity() {
 		return receiptQuantity;
 	}
 
-	private void setReceiptQuantity(BigDecimal receiptQuantity) {
+	public void setReceiptQuantity(BigDecimal receiptQuantity) {
 		this.receiptQuantity = receiptQuantity;
 	}
 
-	private BigDecimal getCorrQuantity() {
+	public BigDecimal getCorrQuantity() {
 		return corrQuantity;
 	}
 
-	private void setCorrQuantity(BigDecimal corrQuantity) {
+	public void setCorrQuantity(BigDecimal corrQuantity) {
 		this.corrQuantity = corrQuantity;
 	}
 
-	private BigDecimal getRfQuantity() {
+	public BigDecimal getRfQuantity() {
 		return rfQuantity;
 	}
 
-	private void setRfQuantity(BigDecimal rfQuantity) {
+	public void setRfQuantity(BigDecimal rfQuantity) {
 		this.rfQuantity = rfQuantity;
 	}
 
-	private BigDecimal getOpenQuantity() {
+	public BigDecimal getOpenQuantity() {
 		return openQuantity;
 	}
 
-	private void setOpenQuantity(BigDecimal openQuantity) {
+	public void setOpenQuantity(BigDecimal openQuantity) {
 		this.openQuantity = openQuantity;
 	}
 
-	private BigDecimal getRctQuantity() {
+	public BigDecimal getRctQuantity() {
 		return rctQuantity;
 	}
 
-	private void setRctQuantity(BigDecimal rctQuantity) {
+	public void setRctQuantity(BigDecimal rctQuantity) {
 		this.rctQuantity = rctQuantity;
 	}
 
-	private BigDecimal getZeroQuantity() {
+	public BigDecimal getZeroQuantity() {
 		return zeroQuantity;
 	}
 
-	private void setZeroQuantity(BigDecimal zeroQuantity) {
+	public void setZeroQuantity(BigDecimal zeroQuantity) {
 		this.zeroQuantity = zeroQuantity;
 	}
 
-	private BigDecimal getDotQuantity() {
+	public BigDecimal getDotQuantity() {
 		return dotQuantity;
 	}
 
-	private void setDotQuantity(BigDecimal dotQuantity) {
+	public void setDotQuantity(BigDecimal dotQuantity) {
 		this.dotQuantity = dotQuantity;
 	}
 
-	private BigDecimal getVatQuantity() {
+	public BigDecimal getVatQuantity() {
 		return vatQuantity;
 	}
 
-	private void setVatQuantity(BigDecimal vatQuantity) {
+	public void setVatQuantity(BigDecimal vatQuantity) {
 		this.vatQuantity = vatQuantity;
 	}
 
-	private BigDecimal getNsQuantity() {
+	public BigDecimal getNsQuantity() {
 		return nsQuantity;
 	}
 
-	private void setNsQuantity(BigDecimal nsQuantity) {
+	public void setNsQuantity(BigDecimal nsQuantity) {
 		this.nsQuantity = nsQuantity;
 	}
 
-	private BigDecimal getCouponQuantity() {
+	public BigDecimal getCouponQuantity() {
 		return couponQuantity;
 	}
 
-	private void setCouponQuantity(BigDecimal couponQuantity) {
+	public void setCouponQuantity(BigDecimal couponQuantity) {
 		this.couponQuantity = couponQuantity;
 	}
 
-	private BigDecimal getUpQuantity() {
+	public BigDecimal getUpQuantity() {
 		return upQuantity;
 	}
 
-	private void setUpQuantity(BigDecimal upQuantity) {
+	public void setUpQuantity(BigDecimal upQuantity) {
 		this.upQuantity = upQuantity;
 	}
 
-	private BigDecimal getCeQuantity() {
+	public BigDecimal getCeQuantity() {
 		return ceQuantity;
 	}
 
-	private void setCeQuantity(BigDecimal ceQuantity) {
+	public void setCeQuantity(BigDecimal ceQuantity) {
 		this.ceQuantity = ceQuantity;
 	}
 
-	private BigDecimal getxQuantity() {
+	public BigDecimal getxQuantity() {
 		return xQuantity;
 	}
 
-	private void setxQuantity(BigDecimal xQuantity) {
+	public void setxQuantity(BigDecimal xQuantity) {
 		this.xQuantity = xQuantity;
 	}
 
-	private BigDecimal getHashQuantity() {
+	public BigDecimal getHashQuantity() {
 		return hashQuantity;
 	}
 
-	private void setHashQuantity(BigDecimal hashQuantity) {
+	public void setHashQuantity(BigDecimal hashQuantity) {
 		this.hashQuantity = hashQuantity;
 	}
 
-	private BigDecimal getNosaleQuantity() {
+	public BigDecimal getNosaleQuantity() {
 		return nosaleQuantity;
 	}
 
-	private void setNosaleQuantity(BigDecimal nosaleQuantity) {
+	public void setNosaleQuantity(BigDecimal nosaleQuantity) {
 		this.nosaleQuantity = nosaleQuantity;
 	}
 
-	private BigDecimal getVoidQuantity() {
+	public BigDecimal getVoidQuantity() {
 		return voidQuantity;
 	}
 
-	private void setVoidQuantity(BigDecimal voidQuantity) {
+	public void setVoidQuantity(BigDecimal voidQuantity) {
 		this.voidQuantity = voidQuantity;
 	}
 
-	private BigDecimal getCashAmount() {
+	public BigDecimal getCashAmount() {
 		return cashAmount;
 	}
 
-	private void setCashAmount(BigDecimal cashAmount) {
+	public void setCashAmount(BigDecimal cashAmount) {
 		this.cashAmount = cashAmount;
 	}
 
-	private BigDecimal getSubtotalAmount() {
+	public BigDecimal getSubtotalAmount() {
 		return subtotalAmount;
 	}
 
-	private void setSubtotalAmount(BigDecimal subtotalAmount) {
+	public void setSubtotalAmount(BigDecimal subtotalAmount) {
 		this.subtotalAmount = subtotalAmount;
 	}
 
-	private BigDecimal getChargeAmount() {
+	public BigDecimal getChargeAmount() {
 		return chargeAmount;
 	}
 
-	private void setChargeAmount(BigDecimal chargeAmount) {
+	public void setChargeAmount(BigDecimal chargeAmount) {
 		this.chargeAmount = chargeAmount;
 	}
 
-	private BigDecimal getCheckAmount() {
+	public BigDecimal getCheckAmount() {
 		return checkAmount;
 	}
 
-	private void setCheckAmount(BigDecimal checkAmount) {
+	public void setCheckAmount(BigDecimal checkAmount) {
 		this.checkAmount = checkAmount;
 	}
 
-	private BigDecimal getHelpAmount() {
+	public BigDecimal getHelpAmount() {
 		return helpAmount;
 	}
 
-	private void setHelpAmount(BigDecimal helpAmount) {
+	public void setHelpAmount(BigDecimal helpAmount) {
 		this.helpAmount = helpAmount;
 	}
 
-	private BigDecimal getTaxpgmAmount() {
+	public BigDecimal getTaxpgmAmount() {
 		return taxpgmAmount;
 	}
 
-	private void setTaxpgmAmount(BigDecimal taxpgmAmount) {
+	public void setTaxpgmAmount(BigDecimal taxpgmAmount) {
 		this.taxpgmAmount = taxpgmAmount;
 	}
 
-	private BigDecimal getPoAmount() {
+	public BigDecimal getPoAmount() {
 		return poAmount;
 	}
 
-	private void setPoAmount(BigDecimal poAmount) {
+	public void setPoAmount(BigDecimal poAmount) {
 		this.poAmount = poAmount;
 	}
 
-	private BigDecimal getRaAmount() {
+	public BigDecimal getRaAmount() {
 		return raAmount;
 	}
 
-	private void setRaAmount(BigDecimal raAmount) {
+	public void setRaAmount(BigDecimal raAmount) {
 		this.raAmount = raAmount;
 	}
 
-	private BigDecimal getSignoffAmount() {
+	public BigDecimal getSignoffAmount() {
 		return signoffAmount;
 	}
 
-	private void setSignoffAmount(BigDecimal signoffAmount) {
+	public void setSignoffAmount(BigDecimal signoffAmount) {
 		this.signoffAmount = signoffAmount;
 	}
 
-	private BigDecimal getClknoAmount() {
+	public BigDecimal getClknoAmount() {
 		return clknoAmount;
 	}
 
-	private void setClknoAmount(BigDecimal clknoAmount) {
+	public void setClknoAmount(BigDecimal clknoAmount) {
 		this.clknoAmount = clknoAmount;
 	}
 
-	private BigDecimal getShiftnoAmount() {
+	public BigDecimal getShiftnoAmount() {
 		return shiftnoAmount;
 	}
 
-	private void setShiftnoAmount(BigDecimal shiftnoAmount) {
+	public void setShiftnoAmount(BigDecimal shiftnoAmount) {
 		this.shiftnoAmount = shiftnoAmount;
 	}
 
-	private BigDecimal getDwnAmount() {
+	public BigDecimal getDwnAmount() {
 		return dwnAmount;
 	}
 
-	private void setDwnAmount(BigDecimal dwnAmount) {
+	public void setDwnAmount(BigDecimal dwnAmount) {
 		this.dwnAmount = dwnAmount;
 	}
 
-	private BigDecimal getPctdiscountAmount() {
+	public BigDecimal getPctdiscountAmount() {
 		return pctdiscountAmount;
 	}
 
-	private void setPctdiscountAmount(BigDecimal pctdiscountAmount) {
+	public void setPctdiscountAmount(BigDecimal pctdiscountAmount) {
 		this.pctdiscountAmount = pctdiscountAmount;
 	}
 
-	private BigDecimal getDiscountAmount() {
+	public BigDecimal getDiscountAmount() {
 		return discountAmount;
 	}
 
-	private void setDiscountAmount(BigDecimal discountAmount) {
+	public void setDiscountAmount(BigDecimal discountAmount) {
 		this.discountAmount = discountAmount;
 	}
 
-	private BigDecimal getPluAmount() {
+	public BigDecimal getPluAmount() {
 		return pluAmount;
 	}
 
-	private void setPluAmount(BigDecimal pluAmount) {
+	public void setPluAmount(BigDecimal pluAmount) {
 		this.pluAmount = pluAmount;
 	}
 
-	private BigDecimal getPrcAmount() {
+	public BigDecimal getPrcAmount() {
 		return prcAmount;
 	}
 
-	private void setPrcAmount(BigDecimal prcAmount) {
+	public void setPrcAmount(BigDecimal prcAmount) {
 		this.prcAmount = prcAmount;
 	}
 
-	private BigDecimal getReceiptAmount() {
+	public BigDecimal getReceiptAmount() {
 		return receiptAmount;
 	}
 
-	private void setReceiptAmount(BigDecimal receiptAmount) {
+	public void setReceiptAmount(BigDecimal receiptAmount) {
 		this.receiptAmount = receiptAmount;
 	}
 
-	private BigDecimal getCorrAmount() {
+	public BigDecimal getCorrAmount() {
 		return corrAmount;
 	}
 
-	private void setCorrAmount(BigDecimal corrAmount) {
+	public void setCorrAmount(BigDecimal corrAmount) {
 		this.corrAmount = corrAmount;
 	}
 
-	private BigDecimal getRfAmount() {
+	public BigDecimal getRfAmount() {
 		return rfAmount;
 	}
 
-	private void setRfAmount(BigDecimal rfAmount) {
+	public void setRfAmount(BigDecimal rfAmount) {
 		this.rfAmount = rfAmount;
 	}
 
-	private BigDecimal getOpenAmount() {
+	public BigDecimal getOpenAmount() {
 		return openAmount;
 	}
 
-	private void setOpenAmount(BigDecimal openAmount) {
+	public void setOpenAmount(BigDecimal openAmount) {
 		this.openAmount = openAmount;
 	}
 
-	private BigDecimal getRctAmount() {
+	public BigDecimal getRctAmount() {
 		return rctAmount;
 	}
 
-	private void setRctAmount(BigDecimal rctAmount) {
+	public void setRctAmount(BigDecimal rctAmount) {
 		this.rctAmount = rctAmount;
 	}
 
-	private BigDecimal getZeroAmount() {
+	public BigDecimal getZeroAmount() {
 		return zeroAmount;
 	}
 
-	private void setZeroAmount(BigDecimal zeroAmount) {
+	public void setZeroAmount(BigDecimal zeroAmount) {
 		this.zeroAmount = zeroAmount;
 	}
 
-	private BigDecimal getDotAmount() {
+	public BigDecimal getDotAmount() {
 		return dotAmount;
 	}
 
-	private void setDotAmount(BigDecimal dotAmount) {
+	public void setDotAmount(BigDecimal dotAmount) {
 		this.dotAmount = dotAmount;
 	}
 
-	private BigDecimal getVatAmount() {
+	public BigDecimal getVatAmount() {
 		return vatAmount;
 	}
 
-	private void setVatAmount(BigDecimal vatAmount) {
+	public void setVatAmount(BigDecimal vatAmount) {
 		this.vatAmount = vatAmount;
 	}
 
-	private BigDecimal getNsAmount() {
+	public BigDecimal getNsAmount() {
 		return nsAmount;
 	}
 
-	private void setNsAmount(BigDecimal nsAmount) {
+	public void setNsAmount(BigDecimal nsAmount) {
 		this.nsAmount = nsAmount;
 	}
 
-	private BigDecimal getCouponAmount() {
+	public BigDecimal getCouponAmount() {
 		return couponAmount;
 	}
 
-	private void setCouponAmount(BigDecimal couponAmount) {
+	public void setCouponAmount(BigDecimal couponAmount) {
 		this.couponAmount = couponAmount;
 	}
 
-	private BigDecimal getUpAmount() {
+	public BigDecimal getUpAmount() {
 		return upAmount;
 	}
 
-	private void setUpAmount(BigDecimal upAmount) {
+	public void setUpAmount(BigDecimal upAmount) {
 		this.upAmount = upAmount;
 	}
 
-	private BigDecimal getCeAmount() {
+	public BigDecimal getCeAmount() {
 		return ceAmount;
 	}
 
-	private void setCeAmount(BigDecimal ceAmount) {
+	public void setCeAmount(BigDecimal ceAmount) {
 		this.ceAmount = ceAmount;
 	}
 
-	private BigDecimal getxAmount() {
+	public BigDecimal getxAmount() {
 		return xAmount;
 	}
 
-	private void setxAmount(BigDecimal xAmount) {
+	public void setxAmount(BigDecimal xAmount) {
 		this.xAmount = xAmount;
 	}
 
-	private BigDecimal getHashAmount() {
+	public BigDecimal getHashAmount() {
 		return hashAmount;
 	}
 
-	private void setHashAmount(BigDecimal hashAmount) {
+	public void setHashAmount(BigDecimal hashAmount) {
 		this.hashAmount = hashAmount;
 	}
 
-	private BigDecimal getNosaleAmount() {
+	public BigDecimal getNosaleAmount() {
 		return nosaleAmount;
 	}
 
-	private void setNosaleAmount(BigDecimal nosaleAmount) {
+	public void setNosaleAmount(BigDecimal nosaleAmount) {
 		this.nosaleAmount = nosaleAmount;
 	}
 
-	private BigDecimal getVoidAmount() {
+	public BigDecimal getVoidAmount() {
 		return voidAmount;
 	}
 
-	private void setVoidAmount(BigDecimal voidAmount) {
+	public void setVoidAmount(BigDecimal voidAmount) {
 		this.voidAmount = voidAmount;
+	}
+
+	public Z002() {
+		super();
 	}
 }

@@ -413,7 +413,7 @@ public class Z005 {
 	private BigDecimal dept199Amount;
 	private BigDecimal dept200Amount;
 
-	private String z005CreateTableString() {
+	public String z005CreateTableString() {
 		return "create table z005 ( " + "z05model varchar," + "z05machine varchar," + "z05report varchar,"
 				+ "z05file varchar," + "z05mode varchar," + "z05zcounter integer," + "z05date varchar,"
 				+ "z05time varchar," + "fabricQuantity decimal(10,2)," + "workshopQuantity decimal(10,2),"
@@ -553,3267 +553,3271 @@ public class Z005 {
 				+ "dept200Amount decimal(10,2)" + " );";
 	}
 
-	private String getZ05model() {
+	public String getZ05model() {
 		return z05model;
 	}
 
-	private void setZ05model(String z05model) {
+	public void setZ05model(String z05model) {
 		this.z05model = z05model;
 	}
 
-	private String getZ05machine() {
+	public String getZ05machine() {
 		return z05machine;
 	}
 
-	private void setZ05machine(String z05machine) {
+	public void setZ05machine(String z05machine) {
 		this.z05machine = z05machine;
 	}
 
-	private String getZ05report() {
+	public String getZ05report() {
 		return z05report;
 	}
 
-	private void setZ05report(String z05report) {
+	public void setZ05report(String z05report) {
 		this.z05report = z05report;
 	}
 
-	private String getZ05file() {
+	public String getZ05file() {
 		return z05file;
 	}
 
-	private void setZ05file(String z05file) {
+	public void setZ05file(String z05file) {
 		this.z05file = z05file;
 	}
 
-	private String getZ05mode() {
+	public String getZ05mode() {
 		return z05mode;
 	}
 
-	private void setZ05mode(String z05mode) {
+	public void setZ05mode(String z05mode) {
 		this.z05mode = z05mode;
 	}
 
-	private int getZ05zcounter() {
+	public int getZ05zcounter() {
 		return z05zcounter;
 	}
 
-	private void setZ05zcounter(int z05zcounter) {
+	public void setZ05zcounter(int z05zcounter) {
 		this.z05zcounter = z05zcounter;
 	}
 
-	private String getZ05date() {
+	public String getZ05date() {
 		return z05date;
 	}
 
-	private void setZ05date(String z05date) {
+	public void setZ05date(String z05date) {
 		this.z05date = z05date;
 	}
 
-	private String getZ05time() {
+	public String getZ05time() {
 		return z05time;
 	}
 
-	private void setZ05time(String z05time) {
+	public void setZ05time(String z05time) {
 		this.z05time = z05time;
 	}
 
-	private BigDecimal getFabricQuantity() {
+	public BigDecimal getFabricQuantity() {
 		return fabricQuantity;
 	}
 
-	private void setFabricQuantity(BigDecimal fabricQuantity) {
+	public void setFabricQuantity(BigDecimal fabricQuantity) {
 		this.fabricQuantity = fabricQuantity;
 	}
 
-	private BigDecimal getWorkshopQuantity() {
+	public BigDecimal getWorkshopQuantity() {
 		return workshopQuantity;
 	}
 
-	private void setWorkshopQuantity(BigDecimal workshopQuantity) {
+	public void setWorkshopQuantity(BigDecimal workshopQuantity) {
 		this.workshopQuantity = workshopQuantity;
 	}
 
-	private BigDecimal getSalefabricQuantity() {
+	public BigDecimal getSalefabricQuantity() {
 		return salefabricQuantity;
 	}
 
-	private void setSalefabricQuantity(BigDecimal salefabricQuantity) {
+	public void setSalefabricQuantity(BigDecimal salefabricQuantity) {
 		this.salefabricQuantity = salefabricQuantity;
 	}
 
-	private BigDecimal getGiftcertQuantity() {
+	public BigDecimal getGiftcertQuantity() {
 		return giftcertQuantity;
 	}
 
-	private void setGiftcertQuantity(BigDecimal giftcertQuantity) {
+	public void setGiftcertQuantity(BigDecimal giftcertQuantity) {
 		this.giftcertQuantity = giftcertQuantity;
 	}
 
-	private BigDecimal getDept005Quantity() {
+	public BigDecimal getDept005Quantity() {
 		return dept005Quantity;
 	}
 
-	private void setDept005Quantity(BigDecimal dept005Quantity) {
+	public void setDept005Quantity(BigDecimal dept005Quantity) {
 		this.dept005Quantity = dept005Quantity;
 	}
 
-	private BigDecimal getNotionQuantity() {
+	public BigDecimal getNotionQuantity() {
 		return notionQuantity;
 	}
 
-	private void setNotionQuantity(BigDecimal notionQuantity) {
+	public void setNotionQuantity(BigDecimal notionQuantity) {
 		this.notionQuantity = notionQuantity;
 	}
 
-	private BigDecimal getBomQuantity() {
+	public BigDecimal getBomQuantity() {
 		return bomQuantity;
 	}
 
-	private void setBomQuantity(BigDecimal bomQuantity) {
+	public void setBomQuantity(BigDecimal bomQuantity) {
 		this.bomQuantity = bomQuantity;
 	}
 
-	private BigDecimal getThreadsQuantity() {
+	public BigDecimal getThreadsQuantity() {
 		return threadsQuantity;
 	}
 
-	private void setThreadsQuantity(BigDecimal threadsQuantity) {
+	public void setThreadsQuantity(BigDecimal threadsQuantity) {
 		this.threadsQuantity = threadsQuantity;
 	}
 
-	private BigDecimal getDept009Quantity() {
+	public BigDecimal getDept009Quantity() {
 		return dept009Quantity;
 	}
 
-	private void setDept009Quantity(BigDecimal dept009Quantity) {
+	public void setDept009Quantity(BigDecimal dept009Quantity) {
 		this.dept009Quantity = dept009Quantity;
 	}
 
-	private BigDecimal getDept010Quantity() {
+	public BigDecimal getDept010Quantity() {
 		return dept010Quantity;
 	}
 
-	private void setDept010Quantity(BigDecimal dept010Quantity) {
+	public void setDept010Quantity(BigDecimal dept010Quantity) {
 		this.dept010Quantity = dept010Quantity;
 	}
 
-	private BigDecimal getBookQuantity() {
+	public BigDecimal getBookQuantity() {
 		return bookQuantity;
 	}
 
-	private void setBookQuantity(BigDecimal bookQuantity) {
+	public void setBookQuantity(BigDecimal bookQuantity) {
 		this.bookQuantity = bookQuantity;
 	}
 
-	private BigDecimal getPostageQuantity() {
+	public BigDecimal getPostageQuantity() {
 		return postageQuantity;
 	}
 
-	private void setPostageQuantity(BigDecimal postageQuantity) {
+	public void setPostageQuantity(BigDecimal postageQuantity) {
 		this.postageQuantity = postageQuantity;
 	}
 
-	private BigDecimal getKitsQuantity() {
+	public BigDecimal getKitsQuantity() {
 		return kitsQuantity;
 	}
 
-	private void setKitsQuantity(BigDecimal kitsQuantity) {
+	public void setKitsQuantity(BigDecimal kitsQuantity) {
 		this.kitsQuantity = kitsQuantity;
 	}
 
-	private BigDecimal getDept014Quantity() {
+	public BigDecimal getDept014Quantity() {
 		return dept014Quantity;
 	}
 
-	private void setDept014Quantity(BigDecimal dept014Quantity) {
+	public void setDept014Quantity(BigDecimal dept014Quantity) {
 		this.dept014Quantity = dept014Quantity;
 	}
 
-	private BigDecimal getDept015Quantity() {
+	public BigDecimal getDept015Quantity() {
 		return dept015Quantity;
 	}
 
-	private void setDept015Quantity(BigDecimal dept015Quantity) {
+	public void setDept015Quantity(BigDecimal dept015Quantity) {
 		this.dept015Quantity = dept015Quantity;
 	}
 
-	private BigDecimal getClassQuantity() {
+	public BigDecimal getClassQuantity() {
 		return classQuantity;
 	}
 
-	private void setClassQuantity(BigDecimal classQuantity) {
+	public void setClassQuantity(BigDecimal classQuantity) {
 		this.classQuantity = classQuantity;
 	}
 
-	private BigDecimal getLongarmQuantity() {
+	public BigDecimal getLongarmQuantity() {
 		return longarmQuantity;
 	}
 
-	private void setLongarmQuantity(BigDecimal longarmQuantity) {
+	public void setLongarmQuantity(BigDecimal longarmQuantity) {
 		this.longarmQuantity = longarmQuantity;
 	}
 
-	private BigDecimal getPatternsQuantity() {
+	public BigDecimal getPatternsQuantity() {
 		return patternsQuantity;
 	}
 
-	private void setPatternsQuantity(BigDecimal patternsQuantity) {
+	public void setPatternsQuantity(BigDecimal patternsQuantity) {
 		this.patternsQuantity = patternsQuantity;
 	}
 
-	private BigDecimal getDept019Quantity() {
+	public BigDecimal getDept019Quantity() {
 		return dept019Quantity;
 	}
 
-	private void setDept019Quantity(BigDecimal dept019Quantity) {
+	public void setDept019Quantity(BigDecimal dept019Quantity) {
 		this.dept019Quantity = dept019Quantity;
 	}
 
-	private BigDecimal getPatternQuantity() {
+	public BigDecimal getPatternQuantity() {
 		return patternQuantity;
 	}
 
-	private void setPatternQuantity(BigDecimal patternQuantity) {
+	public void setPatternQuantity(BigDecimal patternQuantity) {
 		this.patternQuantity = patternQuantity;
 	}
 
-	private BigDecimal getJanomeQuantity() {
+	public BigDecimal getJanomeQuantity() {
 		return janomeQuantity;
 	}
 
-	private void setJanomeQuantity(BigDecimal janomeQuantity) {
+	public void setJanomeQuantity(BigDecimal janomeQuantity) {
 		this.janomeQuantity = janomeQuantity;
 	}
 
-	private BigDecimal getBattingQuantity() {
+	public BigDecimal getBattingQuantity() {
 		return battingQuantity;
 	}
 
-	private void setBattingQuantity(BigDecimal battingQuantity) {
+	public void setBattingQuantity(BigDecimal battingQuantity) {
 		this.battingQuantity = battingQuantity;
 	}
 
-	private BigDecimal getMiscQuantity() {
+	public BigDecimal getMiscQuantity() {
 		return miscQuantity;
 	}
 
-	private void setMiscQuantity(BigDecimal miscQuantity) {
+	public void setMiscQuantity(BigDecimal miscQuantity) {
 		this.miscQuantity = miscQuantity;
 	}
 
-	private BigDecimal getDept024Quantity() {
+	public BigDecimal getDept024Quantity() {
 		return dept024Quantity;
 	}
 
-	private void setDept024Quantity(BigDecimal dept024Quantity) {
+	public void setDept024Quantity(BigDecimal dept024Quantity) {
 		this.dept024Quantity = dept024Quantity;
 	}
 
-	private BigDecimal getDept025Quantity() {
+	public BigDecimal getDept025Quantity() {
 		return dept025Quantity;
 	}
 
-	private void setDept025Quantity(BigDecimal dept025Quantity) {
+	public void setDept025Quantity(BigDecimal dept025Quantity) {
 		this.dept025Quantity = dept025Quantity;
 	}
 
-	private BigDecimal getDept026Quantity() {
+	public BigDecimal getDept026Quantity() {
 		return dept026Quantity;
 	}
 
-	private void setDept026Quantity(BigDecimal dept026Quantity) {
+	public void setDept026Quantity(BigDecimal dept026Quantity) {
 		this.dept026Quantity = dept026Quantity;
 	}
 
-	private BigDecimal getDept027Quantity() {
+	public BigDecimal getDept027Quantity() {
 		return dept027Quantity;
 	}
 
-	private void setDept027Quantity(BigDecimal dept027Quantity) {
+	public void setDept027Quantity(BigDecimal dept027Quantity) {
 		this.dept027Quantity = dept027Quantity;
 	}
 
-	private BigDecimal getDept028Quantity() {
+	public BigDecimal getDept028Quantity() {
 		return dept028Quantity;
 	}
 
-	private void setDept028Quantity(BigDecimal dept028Quantity) {
+	public void setDept028Quantity(BigDecimal dept028Quantity) {
 		this.dept028Quantity = dept028Quantity;
 	}
 
-	private BigDecimal getDept029Quantity() {
+	public BigDecimal getDept029Quantity() {
 		return dept029Quantity;
 	}
 
-	private void setDept029Quantity(BigDecimal dept029Quantity) {
+	public void setDept029Quantity(BigDecimal dept029Quantity) {
 		this.dept029Quantity = dept029Quantity;
 	}
 
-	private BigDecimal getDept030Quantity() {
+	public BigDecimal getDept030Quantity() {
 		return dept030Quantity;
 	}
 
-	private void setDept030Quantity(BigDecimal dept030Quantity) {
+	public void setDept030Quantity(BigDecimal dept030Quantity) {
 		this.dept030Quantity = dept030Quantity;
 	}
 
-	private BigDecimal getDept031Quantity() {
+	public BigDecimal getDept031Quantity() {
 		return dept031Quantity;
 	}
 
-	private void setDept031Quantity(BigDecimal dept031Quantity) {
+	public void setDept031Quantity(BigDecimal dept031Quantity) {
 		this.dept031Quantity = dept031Quantity;
 	}
 
-	private BigDecimal getDept032Quantity() {
+	public BigDecimal getDept032Quantity() {
 		return dept032Quantity;
 	}
 
-	private void setDept032Quantity(BigDecimal dept032Quantity) {
+	public void setDept032Quantity(BigDecimal dept032Quantity) {
 		this.dept032Quantity = dept032Quantity;
 	}
 
-	private BigDecimal getDept033Quantity() {
+	public BigDecimal getDept033Quantity() {
 		return dept033Quantity;
 	}
 
-	private void setDept033Quantity(BigDecimal dept033Quantity) {
+	public void setDept033Quantity(BigDecimal dept033Quantity) {
 		this.dept033Quantity = dept033Quantity;
 	}
 
-	private BigDecimal getDept034Quantity() {
+	public BigDecimal getDept034Quantity() {
 		return dept034Quantity;
 	}
 
-	private void setDept034Quantity(BigDecimal dept034Quantity) {
+	public void setDept034Quantity(BigDecimal dept034Quantity) {
 		this.dept034Quantity = dept034Quantity;
 	}
 
-	private BigDecimal getDept035Quantity() {
+	public BigDecimal getDept035Quantity() {
 		return dept035Quantity;
 	}
 
-	private void setDept035Quantity(BigDecimal dept035Quantity) {
+	public void setDept035Quantity(BigDecimal dept035Quantity) {
 		this.dept035Quantity = dept035Quantity;
 	}
 
-	private BigDecimal getDept036Quantity() {
+	public BigDecimal getDept036Quantity() {
 		return dept036Quantity;
 	}
 
-	private void setDept036Quantity(BigDecimal dept036Quantity) {
+	public void setDept036Quantity(BigDecimal dept036Quantity) {
 		this.dept036Quantity = dept036Quantity;
 	}
 
-	private BigDecimal getDept037Quantity() {
+	public BigDecimal getDept037Quantity() {
 		return dept037Quantity;
 	}
 
-	private void setDept037Quantity(BigDecimal dept037Quantity) {
+	public void setDept037Quantity(BigDecimal dept037Quantity) {
 		this.dept037Quantity = dept037Quantity;
 	}
 
-	private BigDecimal getDept038Quantity() {
+	public BigDecimal getDept038Quantity() {
 		return dept038Quantity;
 	}
 
-	private void setDept038Quantity(BigDecimal dept038Quantity) {
+	public void setDept038Quantity(BigDecimal dept038Quantity) {
 		this.dept038Quantity = dept038Quantity;
 	}
 
-	private BigDecimal getDept039Quantity() {
+	public BigDecimal getDept039Quantity() {
 		return dept039Quantity;
 	}
 
-	private void setDept039Quantity(BigDecimal dept039Quantity) {
+	public void setDept039Quantity(BigDecimal dept039Quantity) {
 		this.dept039Quantity = dept039Quantity;
 	}
 
-	private BigDecimal getDept040Quantity() {
+	public BigDecimal getDept040Quantity() {
 		return dept040Quantity;
 	}
 
-	private void setDept040Quantity(BigDecimal dept040Quantity) {
+	public void setDept040Quantity(BigDecimal dept040Quantity) {
 		this.dept040Quantity = dept040Quantity;
 	}
 
-	private BigDecimal getDept041Quantity() {
+	public BigDecimal getDept041Quantity() {
 		return dept041Quantity;
 	}
 
-	private void setDept041Quantity(BigDecimal dept041Quantity) {
+	public void setDept041Quantity(BigDecimal dept041Quantity) {
 		this.dept041Quantity = dept041Quantity;
 	}
 
-	private BigDecimal getDept042Quantity() {
+	public BigDecimal getDept042Quantity() {
 		return dept042Quantity;
 	}
 
-	private void setDept042Quantity(BigDecimal dept042Quantity) {
+	public void setDept042Quantity(BigDecimal dept042Quantity) {
 		this.dept042Quantity = dept042Quantity;
 	}
 
-	private BigDecimal getDept043Quantity() {
+	public BigDecimal getDept043Quantity() {
 		return dept043Quantity;
 	}
 
-	private void setDept043Quantity(BigDecimal dept043Quantity) {
+	public void setDept043Quantity(BigDecimal dept043Quantity) {
 		this.dept043Quantity = dept043Quantity;
 	}
 
-	private BigDecimal getDept044Quantity() {
+	public BigDecimal getDept044Quantity() {
 		return dept044Quantity;
 	}
 
-	private void setDept044Quantity(BigDecimal dept044Quantity) {
+	public void setDept044Quantity(BigDecimal dept044Quantity) {
 		this.dept044Quantity = dept044Quantity;
 	}
 
-	private BigDecimal getDept045Quantity() {
+	public BigDecimal getDept045Quantity() {
 		return dept045Quantity;
 	}
 
-	private void setDept045Quantity(BigDecimal dept045Quantity) {
+	public void setDept045Quantity(BigDecimal dept045Quantity) {
 		this.dept045Quantity = dept045Quantity;
 	}
 
-	private BigDecimal getDept046Quantity() {
+	public BigDecimal getDept046Quantity() {
 		return dept046Quantity;
 	}
 
-	private void setDept046Quantity(BigDecimal dept046Quantity) {
+	public void setDept046Quantity(BigDecimal dept046Quantity) {
 		this.dept046Quantity = dept046Quantity;
 	}
 
-	private BigDecimal getDept047Quantity() {
+	public BigDecimal getDept047Quantity() {
 		return dept047Quantity;
 	}
 
-	private void setDept047Quantity(BigDecimal dept047Quantity) {
+	public void setDept047Quantity(BigDecimal dept047Quantity) {
 		this.dept047Quantity = dept047Quantity;
 	}
 
-	private BigDecimal getDept048Quantity() {
+	public BigDecimal getDept048Quantity() {
 		return dept048Quantity;
 	}
 
-	private void setDept048Quantity(BigDecimal dept048Quantity) {
+	public void setDept048Quantity(BigDecimal dept048Quantity) {
 		this.dept048Quantity = dept048Quantity;
 	}
 
-	private BigDecimal getDept049Quantity() {
+	public BigDecimal getDept049Quantity() {
 		return dept049Quantity;
 	}
 
-	private void setDept049Quantity(BigDecimal dept049Quantity) {
+	public void setDept049Quantity(BigDecimal dept049Quantity) {
 		this.dept049Quantity = dept049Quantity;
 	}
 
-	private BigDecimal getDept050Quantity() {
+	public BigDecimal getDept050Quantity() {
 		return dept050Quantity;
 	}
 
-	private void setDept050Quantity(BigDecimal dept050Quantity) {
+	public void setDept050Quantity(BigDecimal dept050Quantity) {
 		this.dept050Quantity = dept050Quantity;
 	}
 
-	private BigDecimal getDept051Quantity() {
+	public BigDecimal getDept051Quantity() {
 		return dept051Quantity;
 	}
 
-	private void setDept051Quantity(BigDecimal dept051Quantity) {
+	public void setDept051Quantity(BigDecimal dept051Quantity) {
 		this.dept051Quantity = dept051Quantity;
 	}
 
-	private BigDecimal getDept052Quantity() {
+	public BigDecimal getDept052Quantity() {
 		return dept052Quantity;
 	}
 
-	private void setDept052Quantity(BigDecimal dept052Quantity) {
+	public void setDept052Quantity(BigDecimal dept052Quantity) {
 		this.dept052Quantity = dept052Quantity;
 	}
 
-	private BigDecimal getDept053Quantity() {
+	public BigDecimal getDept053Quantity() {
 		return dept053Quantity;
 	}
 
-	private void setDept053Quantity(BigDecimal dept053Quantity) {
+	public void setDept053Quantity(BigDecimal dept053Quantity) {
 		this.dept053Quantity = dept053Quantity;
 	}
 
-	private BigDecimal getDept054Quantity() {
+	public BigDecimal getDept054Quantity() {
 		return dept054Quantity;
 	}
 
-	private void setDept054Quantity(BigDecimal dept054Quantity) {
+	public void setDept054Quantity(BigDecimal dept054Quantity) {
 		this.dept054Quantity = dept054Quantity;
 	}
 
-	private BigDecimal getDept055Quantity() {
+	public BigDecimal getDept055Quantity() {
 		return dept055Quantity;
 	}
 
-	private void setDept055Quantity(BigDecimal dept055Quantity) {
+	public void setDept055Quantity(BigDecimal dept055Quantity) {
 		this.dept055Quantity = dept055Quantity;
 	}
 
-	private BigDecimal getDept056Quantity() {
+	public BigDecimal getDept056Quantity() {
 		return dept056Quantity;
 	}
 
-	private void setDept056Quantity(BigDecimal dept056Quantity) {
+	public void setDept056Quantity(BigDecimal dept056Quantity) {
 		this.dept056Quantity = dept056Quantity;
 	}
 
-	private BigDecimal getDept057Quantity() {
+	public BigDecimal getDept057Quantity() {
 		return dept057Quantity;
 	}
 
-	private void setDept057Quantity(BigDecimal dept057Quantity) {
+	public void setDept057Quantity(BigDecimal dept057Quantity) {
 		this.dept057Quantity = dept057Quantity;
 	}
 
-	private BigDecimal getDept058Quantity() {
+	public BigDecimal getDept058Quantity() {
 		return dept058Quantity;
 	}
 
-	private void setDept058Quantity(BigDecimal dept058Quantity) {
+	public void setDept058Quantity(BigDecimal dept058Quantity) {
 		this.dept058Quantity = dept058Quantity;
 	}
 
-	private BigDecimal getDept059Quantity() {
+	public BigDecimal getDept059Quantity() {
 		return dept059Quantity;
 	}
 
-	private void setDept059Quantity(BigDecimal dept059Quantity) {
+	public void setDept059Quantity(BigDecimal dept059Quantity) {
 		this.dept059Quantity = dept059Quantity;
 	}
 
-	private BigDecimal getDept060Quantity() {
+	public BigDecimal getDept060Quantity() {
 		return dept060Quantity;
 	}
 
-	private void setDept060Quantity(BigDecimal dept060Quantity) {
+	public void setDept060Quantity(BigDecimal dept060Quantity) {
 		this.dept060Quantity = dept060Quantity;
 	}
 
-	private BigDecimal getDept061Quantity() {
+	public BigDecimal getDept061Quantity() {
 		return dept061Quantity;
 	}
 
-	private void setDept061Quantity(BigDecimal dept061Quantity) {
+	public void setDept061Quantity(BigDecimal dept061Quantity) {
 		this.dept061Quantity = dept061Quantity;
 	}
 
-	private BigDecimal getDept062Quantity() {
+	public BigDecimal getDept062Quantity() {
 		return dept062Quantity;
 	}
 
-	private void setDept062Quantity(BigDecimal dept062Quantity) {
+	public void setDept062Quantity(BigDecimal dept062Quantity) {
 		this.dept062Quantity = dept062Quantity;
 	}
 
-	private BigDecimal getDept063Quantity() {
+	public BigDecimal getDept063Quantity() {
 		return dept063Quantity;
 	}
 
-	private void setDept063Quantity(BigDecimal dept063Quantity) {
+	public void setDept063Quantity(BigDecimal dept063Quantity) {
 		this.dept063Quantity = dept063Quantity;
 	}
 
-	private BigDecimal getDept064Quantity() {
+	public BigDecimal getDept064Quantity() {
 		return dept064Quantity;
 	}
 
-	private void setDept064Quantity(BigDecimal dept064Quantity) {
+	public void setDept064Quantity(BigDecimal dept064Quantity) {
 		this.dept064Quantity = dept064Quantity;
 	}
 
-	private BigDecimal getDept065Quantity() {
+	public BigDecimal getDept065Quantity() {
 		return dept065Quantity;
 	}
 
-	private void setDept065Quantity(BigDecimal dept065Quantity) {
+	public void setDept065Quantity(BigDecimal dept065Quantity) {
 		this.dept065Quantity = dept065Quantity;
 	}
 
-	private BigDecimal getDept066Quantity() {
+	public BigDecimal getDept066Quantity() {
 		return dept066Quantity;
 	}
 
-	private void setDept066Quantity(BigDecimal dept066Quantity) {
+	public void setDept066Quantity(BigDecimal dept066Quantity) {
 		this.dept066Quantity = dept066Quantity;
 	}
 
-	private BigDecimal getDept067Quantity() {
+	public BigDecimal getDept067Quantity() {
 		return dept067Quantity;
 	}
 
-	private void setDept067Quantity(BigDecimal dept067Quantity) {
+	public void setDept067Quantity(BigDecimal dept067Quantity) {
 		this.dept067Quantity = dept067Quantity;
 	}
 
-	private BigDecimal getDept068Quantity() {
+	public BigDecimal getDept068Quantity() {
 		return dept068Quantity;
 	}
 
-	private void setDept068Quantity(BigDecimal dept068Quantity) {
+	public void setDept068Quantity(BigDecimal dept068Quantity) {
 		this.dept068Quantity = dept068Quantity;
 	}
 
-	private BigDecimal getDept069Quantity() {
+	public BigDecimal getDept069Quantity() {
 		return dept069Quantity;
 	}
 
-	private void setDept069Quantity(BigDecimal dept069Quantity) {
+	public void setDept069Quantity(BigDecimal dept069Quantity) {
 		this.dept069Quantity = dept069Quantity;
 	}
 
-	private BigDecimal getDept070Quantity() {
+	public BigDecimal getDept070Quantity() {
 		return dept070Quantity;
 	}
 
-	private void setDept070Quantity(BigDecimal dept070Quantity) {
+	public void setDept070Quantity(BigDecimal dept070Quantity) {
 		this.dept070Quantity = dept070Quantity;
 	}
 
-	private BigDecimal getDept071Quantity() {
+	public BigDecimal getDept071Quantity() {
 		return dept071Quantity;
 	}
 
-	private void setDept071Quantity(BigDecimal dept071Quantity) {
+	public void setDept071Quantity(BigDecimal dept071Quantity) {
 		this.dept071Quantity = dept071Quantity;
 	}
 
-	private BigDecimal getDept072Quantity() {
+	public BigDecimal getDept072Quantity() {
 		return dept072Quantity;
 	}
 
-	private void setDept072Quantity(BigDecimal dept072Quantity) {
+	public void setDept072Quantity(BigDecimal dept072Quantity) {
 		this.dept072Quantity = dept072Quantity;
 	}
 
-	private BigDecimal getDept073Quantity() {
+	public BigDecimal getDept073Quantity() {
 		return dept073Quantity;
 	}
 
-	private void setDept073Quantity(BigDecimal dept073Quantity) {
+	public void setDept073Quantity(BigDecimal dept073Quantity) {
 		this.dept073Quantity = dept073Quantity;
 	}
 
-	private BigDecimal getDept074Quantity() {
+	public BigDecimal getDept074Quantity() {
 		return dept074Quantity;
 	}
 
-	private void setDept074Quantity(BigDecimal dept074Quantity) {
+	public void setDept074Quantity(BigDecimal dept074Quantity) {
 		this.dept074Quantity = dept074Quantity;
 	}
 
-	private BigDecimal getDept075Quantity() {
+	public BigDecimal getDept075Quantity() {
 		return dept075Quantity;
 	}
 
-	private void setDept075Quantity(BigDecimal dept075Quantity) {
+	public void setDept075Quantity(BigDecimal dept075Quantity) {
 		this.dept075Quantity = dept075Quantity;
 	}
 
-	private BigDecimal getDept076Quantity() {
+	public BigDecimal getDept076Quantity() {
 		return dept076Quantity;
 	}
 
-	private void setDept076Quantity(BigDecimal dept076Quantity) {
+	public void setDept076Quantity(BigDecimal dept076Quantity) {
 		this.dept076Quantity = dept076Quantity;
 	}
 
-	private BigDecimal getDept077Quantity() {
+	public BigDecimal getDept077Quantity() {
 		return dept077Quantity;
 	}
 
-	private void setDept077Quantity(BigDecimal dept077Quantity) {
+	public void setDept077Quantity(BigDecimal dept077Quantity) {
 		this.dept077Quantity = dept077Quantity;
 	}
 
-	private BigDecimal getDept078Quantity() {
+	public BigDecimal getDept078Quantity() {
 		return dept078Quantity;
 	}
 
-	private void setDept078Quantity(BigDecimal dept078Quantity) {
+	public void setDept078Quantity(BigDecimal dept078Quantity) {
 		this.dept078Quantity = dept078Quantity;
 	}
 
-	private BigDecimal getDept079Quantity() {
+	public BigDecimal getDept079Quantity() {
 		return dept079Quantity;
 	}
 
-	private void setDept079Quantity(BigDecimal dept079Quantity) {
+	public void setDept079Quantity(BigDecimal dept079Quantity) {
 		this.dept079Quantity = dept079Quantity;
 	}
 
-	private BigDecimal getDept080Quantity() {
+	public BigDecimal getDept080Quantity() {
 		return dept080Quantity;
 	}
 
-	private void setDept080Quantity(BigDecimal dept080Quantity) {
+	public void setDept080Quantity(BigDecimal dept080Quantity) {
 		this.dept080Quantity = dept080Quantity;
 	}
 
-	private BigDecimal getDept081Quantity() {
+	public BigDecimal getDept081Quantity() {
 		return dept081Quantity;
 	}
 
-	private void setDept081Quantity(BigDecimal dept081Quantity) {
+	public void setDept081Quantity(BigDecimal dept081Quantity) {
 		this.dept081Quantity = dept081Quantity;
 	}
 
-	private BigDecimal getDept082Quantity() {
+	public BigDecimal getDept082Quantity() {
 		return dept082Quantity;
 	}
 
-	private void setDept082Quantity(BigDecimal dept082Quantity) {
+	public void setDept082Quantity(BigDecimal dept082Quantity) {
 		this.dept082Quantity = dept082Quantity;
 	}
 
-	private BigDecimal getDept083Quantity() {
+	public BigDecimal getDept083Quantity() {
 		return dept083Quantity;
 	}
 
-	private void setDept083Quantity(BigDecimal dept083Quantity) {
+	public void setDept083Quantity(BigDecimal dept083Quantity) {
 		this.dept083Quantity = dept083Quantity;
 	}
 
-	private BigDecimal getDept084Quantity() {
+	public BigDecimal getDept084Quantity() {
 		return dept084Quantity;
 	}
 
-	private void setDept084Quantity(BigDecimal dept084Quantity) {
+	public void setDept084Quantity(BigDecimal dept084Quantity) {
 		this.dept084Quantity = dept084Quantity;
 	}
 
-	private BigDecimal getDept085Quantity() {
+	public BigDecimal getDept085Quantity() {
 		return dept085Quantity;
 	}
 
-	private void setDept085Quantity(BigDecimal dept085Quantity) {
+	public void setDept085Quantity(BigDecimal dept085Quantity) {
 		this.dept085Quantity = dept085Quantity;
 	}
 
-	private BigDecimal getDept086Quantity() {
+	public BigDecimal getDept086Quantity() {
 		return dept086Quantity;
 	}
 
-	private void setDept086Quantity(BigDecimal dept086Quantity) {
+	public void setDept086Quantity(BigDecimal dept086Quantity) {
 		this.dept086Quantity = dept086Quantity;
 	}
 
-	private BigDecimal getDept087Quantity() {
+	public BigDecimal getDept087Quantity() {
 		return dept087Quantity;
 	}
 
-	private void setDept087Quantity(BigDecimal dept087Quantity) {
+	public void setDept087Quantity(BigDecimal dept087Quantity) {
 		this.dept087Quantity = dept087Quantity;
 	}
 
-	private BigDecimal getDept088Quantity() {
+	public BigDecimal getDept088Quantity() {
 		return dept088Quantity;
 	}
 
-	private void setDept088Quantity(BigDecimal dept088Quantity) {
+	public void setDept088Quantity(BigDecimal dept088Quantity) {
 		this.dept088Quantity = dept088Quantity;
 	}
 
-	private BigDecimal getDept089Quantity() {
+	public BigDecimal getDept089Quantity() {
 		return dept089Quantity;
 	}
 
-	private void setDept089Quantity(BigDecimal dept089Quantity) {
+	public void setDept089Quantity(BigDecimal dept089Quantity) {
 		this.dept089Quantity = dept089Quantity;
 	}
 
-	private BigDecimal getDept090Quantity() {
+	public BigDecimal getDept090Quantity() {
 		return dept090Quantity;
 	}
 
-	private void setDept090Quantity(BigDecimal dept090Quantity) {
+	public void setDept090Quantity(BigDecimal dept090Quantity) {
 		this.dept090Quantity = dept090Quantity;
 	}
 
-	private BigDecimal getDept091Quantity() {
+	public BigDecimal getDept091Quantity() {
 		return dept091Quantity;
 	}
 
-	private void setDept091Quantity(BigDecimal dept091Quantity) {
+	public void setDept091Quantity(BigDecimal dept091Quantity) {
 		this.dept091Quantity = dept091Quantity;
 	}
 
-	private BigDecimal getDept092Quantity() {
+	public BigDecimal getDept092Quantity() {
 		return dept092Quantity;
 	}
 
-	private void setDept092Quantity(BigDecimal dept092Quantity) {
+	public void setDept092Quantity(BigDecimal dept092Quantity) {
 		this.dept092Quantity = dept092Quantity;
 	}
 
-	private BigDecimal getDept093Quantity() {
+	public BigDecimal getDept093Quantity() {
 		return dept093Quantity;
 	}
 
-	private void setDept093Quantity(BigDecimal dept093Quantity) {
+	public void setDept093Quantity(BigDecimal dept093Quantity) {
 		this.dept093Quantity = dept093Quantity;
 	}
 
-	private BigDecimal getDept094Quantity() {
+	public BigDecimal getDept094Quantity() {
 		return dept094Quantity;
 	}
 
-	private void setDept094Quantity(BigDecimal dept094Quantity) {
+	public void setDept094Quantity(BigDecimal dept094Quantity) {
 		this.dept094Quantity = dept094Quantity;
 	}
 
-	private BigDecimal getDept095Quantity() {
+	public BigDecimal getDept095Quantity() {
 		return dept095Quantity;
 	}
 
-	private void setDept095Quantity(BigDecimal dept095Quantity) {
+	public void setDept095Quantity(BigDecimal dept095Quantity) {
 		this.dept095Quantity = dept095Quantity;
 	}
 
-	private BigDecimal getDept096Quantity() {
+	public BigDecimal getDept096Quantity() {
 		return dept096Quantity;
 	}
 
-	private void setDept096Quantity(BigDecimal dept096Quantity) {
+	public void setDept096Quantity(BigDecimal dept096Quantity) {
 		this.dept096Quantity = dept096Quantity;
 	}
 
-	private BigDecimal getDept097Quantity() {
+	public BigDecimal getDept097Quantity() {
 		return dept097Quantity;
 	}
 
-	private void setDept097Quantity(BigDecimal dept097Quantity) {
+	public void setDept097Quantity(BigDecimal dept097Quantity) {
 		this.dept097Quantity = dept097Quantity;
 	}
 
-	private BigDecimal getDept098Quantity() {
+	public BigDecimal getDept098Quantity() {
 		return dept098Quantity;
 	}
 
-	private void setDept098Quantity(BigDecimal dept098Quantity) {
+	public void setDept098Quantity(BigDecimal dept098Quantity) {
 		this.dept098Quantity = dept098Quantity;
 	}
 
-	private BigDecimal getDept099Quantity() {
+	public BigDecimal getDept099Quantity() {
 		return dept099Quantity;
 	}
 
-	private void setDept099Quantity(BigDecimal dept099Quantity) {
+	public void setDept099Quantity(BigDecimal dept099Quantity) {
 		this.dept099Quantity = dept099Quantity;
 	}
 
-	private BigDecimal getDept100Quantity() {
+	public BigDecimal getDept100Quantity() {
 		return dept100Quantity;
 	}
 
-	private void setDept100Quantity(BigDecimal dept100Quantity) {
+	public void setDept100Quantity(BigDecimal dept100Quantity) {
 		this.dept100Quantity = dept100Quantity;
 	}
 
-	private BigDecimal getDept101Quantity() {
+	public BigDecimal getDept101Quantity() {
 		return dept101Quantity;
 	}
 
-	private void setDept101Quantity(BigDecimal dept101Quantity) {
+	public void setDept101Quantity(BigDecimal dept101Quantity) {
 		this.dept101Quantity = dept101Quantity;
 	}
 
-	private BigDecimal getDept102Quantity() {
+	public BigDecimal getDept102Quantity() {
 		return dept102Quantity;
 	}
 
-	private void setDept102Quantity(BigDecimal dept102Quantity) {
+	public void setDept102Quantity(BigDecimal dept102Quantity) {
 		this.dept102Quantity = dept102Quantity;
 	}
 
-	private BigDecimal getDept103Quantity() {
+	public BigDecimal getDept103Quantity() {
 		return dept103Quantity;
 	}
 
-	private void setDept103Quantity(BigDecimal dept103Quantity) {
+	public void setDept103Quantity(BigDecimal dept103Quantity) {
 		this.dept103Quantity = dept103Quantity;
 	}
 
-	private BigDecimal getDept104Quantity() {
+	public BigDecimal getDept104Quantity() {
 		return dept104Quantity;
 	}
 
-	private void setDept104Quantity(BigDecimal dept104Quantity) {
+	public void setDept104Quantity(BigDecimal dept104Quantity) {
 		this.dept104Quantity = dept104Quantity;
 	}
 
-	private BigDecimal getDept105Quantity() {
+	public BigDecimal getDept105Quantity() {
 		return dept105Quantity;
 	}
 
-	private void setDept105Quantity(BigDecimal dept105Quantity) {
+	public void setDept105Quantity(BigDecimal dept105Quantity) {
 		this.dept105Quantity = dept105Quantity;
 	}
 
-	private BigDecimal getDept106Quantity() {
+	public BigDecimal getDept106Quantity() {
 		return dept106Quantity;
 	}
 
-	private void setDept106Quantity(BigDecimal dept106Quantity) {
+	public void setDept106Quantity(BigDecimal dept106Quantity) {
 		this.dept106Quantity = dept106Quantity;
 	}
 
-	private BigDecimal getDept107Quantity() {
+	public BigDecimal getDept107Quantity() {
 		return dept107Quantity;
 	}
 
-	private void setDept107Quantity(BigDecimal dept107Quantity) {
+	public void setDept107Quantity(BigDecimal dept107Quantity) {
 		this.dept107Quantity = dept107Quantity;
 	}
 
-	private BigDecimal getDept108Quantity() {
+	public BigDecimal getDept108Quantity() {
 		return dept108Quantity;
 	}
 
-	private void setDept108Quantity(BigDecimal dept108Quantity) {
+	public void setDept108Quantity(BigDecimal dept108Quantity) {
 		this.dept108Quantity = dept108Quantity;
 	}
 
-	private BigDecimal getDept109Quantity() {
+	public BigDecimal getDept109Quantity() {
 		return dept109Quantity;
 	}
 
-	private void setDept109Quantity(BigDecimal dept109Quantity) {
+	public void setDept109Quantity(BigDecimal dept109Quantity) {
 		this.dept109Quantity = dept109Quantity;
 	}
 
-	private BigDecimal getDept110Quantity() {
+	public BigDecimal getDept110Quantity() {
 		return dept110Quantity;
 	}
 
-	private void setDept110Quantity(BigDecimal dept110Quantity) {
+	public void setDept110Quantity(BigDecimal dept110Quantity) {
 		this.dept110Quantity = dept110Quantity;
 	}
 
-	private BigDecimal getDept111Quantity() {
+	public BigDecimal getDept111Quantity() {
 		return dept111Quantity;
 	}
 
-	private void setDept111Quantity(BigDecimal dept111Quantity) {
+	public void setDept111Quantity(BigDecimal dept111Quantity) {
 		this.dept111Quantity = dept111Quantity;
 	}
 
-	private BigDecimal getDept112Quantity() {
+	public BigDecimal getDept112Quantity() {
 		return dept112Quantity;
 	}
 
-	private void setDept112Quantity(BigDecimal dept112Quantity) {
+	public void setDept112Quantity(BigDecimal dept112Quantity) {
 		this.dept112Quantity = dept112Quantity;
 	}
 
-	private BigDecimal getDept113Quantity() {
+	public BigDecimal getDept113Quantity() {
 		return dept113Quantity;
 	}
 
-	private void setDept113Quantity(BigDecimal dept113Quantity) {
+	public void setDept113Quantity(BigDecimal dept113Quantity) {
 		this.dept113Quantity = dept113Quantity;
 	}
 
-	private BigDecimal getDept114Quantity() {
+	public BigDecimal getDept114Quantity() {
 		return dept114Quantity;
 	}
 
-	private void setDept114Quantity(BigDecimal dept114Quantity) {
+	public void setDept114Quantity(BigDecimal dept114Quantity) {
 		this.dept114Quantity = dept114Quantity;
 	}
 
-	private BigDecimal getDept115Quantity() {
+	public BigDecimal getDept115Quantity() {
 		return dept115Quantity;
 	}
 
-	private void setDept115Quantity(BigDecimal dept115Quantity) {
+	public void setDept115Quantity(BigDecimal dept115Quantity) {
 		this.dept115Quantity = dept115Quantity;
 	}
 
-	private BigDecimal getDept116Quantity() {
+	public BigDecimal getDept116Quantity() {
 		return dept116Quantity;
 	}
 
-	private void setDept116Quantity(BigDecimal dept116Quantity) {
+	public void setDept116Quantity(BigDecimal dept116Quantity) {
 		this.dept116Quantity = dept116Quantity;
 	}
 
-	private BigDecimal getDept117Quantity() {
+	public BigDecimal getDept117Quantity() {
 		return dept117Quantity;
 	}
 
-	private void setDept117Quantity(BigDecimal dept117Quantity) {
+	public void setDept117Quantity(BigDecimal dept117Quantity) {
 		this.dept117Quantity = dept117Quantity;
 	}
 
-	private BigDecimal getDept118Quantity() {
+	public BigDecimal getDept118Quantity() {
 		return dept118Quantity;
 	}
 
-	private void setDept118Quantity(BigDecimal dept118Quantity) {
+	public void setDept118Quantity(BigDecimal dept118Quantity) {
 		this.dept118Quantity = dept118Quantity;
 	}
 
-	private BigDecimal getDept119Quantity() {
+	public BigDecimal getDept119Quantity() {
 		return dept119Quantity;
 	}
 
-	private void setDept119Quantity(BigDecimal dept119Quantity) {
+	public void setDept119Quantity(BigDecimal dept119Quantity) {
 		this.dept119Quantity = dept119Quantity;
 	}
 
-	private BigDecimal getDept120Quantity() {
+	public BigDecimal getDept120Quantity() {
 		return dept120Quantity;
 	}
 
-	private void setDept120Quantity(BigDecimal dept120Quantity) {
+	public void setDept120Quantity(BigDecimal dept120Quantity) {
 		this.dept120Quantity = dept120Quantity;
 	}
 
-	private BigDecimal getDept121Quantity() {
+	public BigDecimal getDept121Quantity() {
 		return dept121Quantity;
 	}
 
-	private void setDept121Quantity(BigDecimal dept121Quantity) {
+	public void setDept121Quantity(BigDecimal dept121Quantity) {
 		this.dept121Quantity = dept121Quantity;
 	}
 
-	private BigDecimal getDept122Quantity() {
+	public BigDecimal getDept122Quantity() {
 		return dept122Quantity;
 	}
 
-	private void setDept122Quantity(BigDecimal dept122Quantity) {
+	public void setDept122Quantity(BigDecimal dept122Quantity) {
 		this.dept122Quantity = dept122Quantity;
 	}
 
-	private BigDecimal getDept123Quantity() {
+	public BigDecimal getDept123Quantity() {
 		return dept123Quantity;
 	}
 
-	private void setDept123Quantity(BigDecimal dept123Quantity) {
+	public void setDept123Quantity(BigDecimal dept123Quantity) {
 		this.dept123Quantity = dept123Quantity;
 	}
 
-	private BigDecimal getDept124Quantity() {
+	public BigDecimal getDept124Quantity() {
 		return dept124Quantity;
 	}
 
-	private void setDept124Quantity(BigDecimal dept124Quantity) {
+	public void setDept124Quantity(BigDecimal dept124Quantity) {
 		this.dept124Quantity = dept124Quantity;
 	}
 
-	private BigDecimal getDept125Quantity() {
+	public BigDecimal getDept125Quantity() {
 		return dept125Quantity;
 	}
 
-	private void setDept125Quantity(BigDecimal dept125Quantity) {
+	public void setDept125Quantity(BigDecimal dept125Quantity) {
 		this.dept125Quantity = dept125Quantity;
 	}
 
-	private BigDecimal getDept126Quantity() {
+	public BigDecimal getDept126Quantity() {
 		return dept126Quantity;
 	}
 
-	private void setDept126Quantity(BigDecimal dept126Quantity) {
+	public void setDept126Quantity(BigDecimal dept126Quantity) {
 		this.dept126Quantity = dept126Quantity;
 	}
 
-	private BigDecimal getDept127Quantity() {
+	public BigDecimal getDept127Quantity() {
 		return dept127Quantity;
 	}
 
-	private void setDept127Quantity(BigDecimal dept127Quantity) {
+	public void setDept127Quantity(BigDecimal dept127Quantity) {
 		this.dept127Quantity = dept127Quantity;
 	}
 
-	private BigDecimal getDept128Quantity() {
+	public BigDecimal getDept128Quantity() {
 		return dept128Quantity;
 	}
 
-	private void setDept128Quantity(BigDecimal dept128Quantity) {
+	public void setDept128Quantity(BigDecimal dept128Quantity) {
 		this.dept128Quantity = dept128Quantity;
 	}
 
-	private BigDecimal getDept129Quantity() {
+	public BigDecimal getDept129Quantity() {
 		return dept129Quantity;
 	}
 
-	private void setDept129Quantity(BigDecimal dept129Quantity) {
+	public void setDept129Quantity(BigDecimal dept129Quantity) {
 		this.dept129Quantity = dept129Quantity;
 	}
 
-	private BigDecimal getDept130Quantity() {
+	public BigDecimal getDept130Quantity() {
 		return dept130Quantity;
 	}
 
-	private void setDept130Quantity(BigDecimal dept130Quantity) {
+	public void setDept130Quantity(BigDecimal dept130Quantity) {
 		this.dept130Quantity = dept130Quantity;
 	}
 
-	private BigDecimal getDept131Quantity() {
+	public BigDecimal getDept131Quantity() {
 		return dept131Quantity;
 	}
 
-	private void setDept131Quantity(BigDecimal dept131Quantity) {
+	public void setDept131Quantity(BigDecimal dept131Quantity) {
 		this.dept131Quantity = dept131Quantity;
 	}
 
-	private BigDecimal getDept132Quantity() {
+	public BigDecimal getDept132Quantity() {
 		return dept132Quantity;
 	}
 
-	private void setDept132Quantity(BigDecimal dept132Quantity) {
+	public void setDept132Quantity(BigDecimal dept132Quantity) {
 		this.dept132Quantity = dept132Quantity;
 	}
 
-	private BigDecimal getDept133Quantity() {
+	public BigDecimal getDept133Quantity() {
 		return dept133Quantity;
 	}
 
-	private void setDept133Quantity(BigDecimal dept133Quantity) {
+	public void setDept133Quantity(BigDecimal dept133Quantity) {
 		this.dept133Quantity = dept133Quantity;
 	}
 
-	private BigDecimal getDept134Quantity() {
+	public BigDecimal getDept134Quantity() {
 		return dept134Quantity;
 	}
 
-	private void setDept134Quantity(BigDecimal dept134Quantity) {
+	public void setDept134Quantity(BigDecimal dept134Quantity) {
 		this.dept134Quantity = dept134Quantity;
 	}
 
-	private BigDecimal getDept135Quantity() {
+	public BigDecimal getDept135Quantity() {
 		return dept135Quantity;
 	}
 
-	private void setDept135Quantity(BigDecimal dept135Quantity) {
+	public void setDept135Quantity(BigDecimal dept135Quantity) {
 		this.dept135Quantity = dept135Quantity;
 	}
 
-	private BigDecimal getDept136Quantity() {
+	public BigDecimal getDept136Quantity() {
 		return dept136Quantity;
 	}
 
-	private void setDept136Quantity(BigDecimal dept136Quantity) {
+	public void setDept136Quantity(BigDecimal dept136Quantity) {
 		this.dept136Quantity = dept136Quantity;
 	}
 
-	private BigDecimal getDept137Quantity() {
+	public BigDecimal getDept137Quantity() {
 		return dept137Quantity;
 	}
 
-	private void setDept137Quantity(BigDecimal dept137Quantity) {
+	public void setDept137Quantity(BigDecimal dept137Quantity) {
 		this.dept137Quantity = dept137Quantity;
 	}
 
-	private BigDecimal getDept138Quantity() {
+	public BigDecimal getDept138Quantity() {
 		return dept138Quantity;
 	}
 
-	private void setDept138Quantity(BigDecimal dept138Quantity) {
+	public void setDept138Quantity(BigDecimal dept138Quantity) {
 		this.dept138Quantity = dept138Quantity;
 	}
 
-	private BigDecimal getDept139Quantity() {
+	public BigDecimal getDept139Quantity() {
 		return dept139Quantity;
 	}
 
-	private void setDept139Quantity(BigDecimal dept139Quantity) {
+	public void setDept139Quantity(BigDecimal dept139Quantity) {
 		this.dept139Quantity = dept139Quantity;
 	}
 
-	private BigDecimal getDept140Quantity() {
+	public BigDecimal getDept140Quantity() {
 		return dept140Quantity;
 	}
 
-	private void setDept140Quantity(BigDecimal dept140Quantity) {
+	public void setDept140Quantity(BigDecimal dept140Quantity) {
 		this.dept140Quantity = dept140Quantity;
 	}
 
-	private BigDecimal getDept141Quantity() {
+	public BigDecimal getDept141Quantity() {
 		return dept141Quantity;
 	}
 
-	private void setDept141Quantity(BigDecimal dept141Quantity) {
+	public void setDept141Quantity(BigDecimal dept141Quantity) {
 		this.dept141Quantity = dept141Quantity;
 	}
 
-	private BigDecimal getDept142Quantity() {
+	public BigDecimal getDept142Quantity() {
 		return dept142Quantity;
 	}
 
-	private void setDept142Quantity(BigDecimal dept142Quantity) {
+	public void setDept142Quantity(BigDecimal dept142Quantity) {
 		this.dept142Quantity = dept142Quantity;
 	}
 
-	private BigDecimal getDept143Quantity() {
+	public BigDecimal getDept143Quantity() {
 		return dept143Quantity;
 	}
 
-	private void setDept143Quantity(BigDecimal dept143Quantity) {
+	public void setDept143Quantity(BigDecimal dept143Quantity) {
 		this.dept143Quantity = dept143Quantity;
 	}
 
-	private BigDecimal getDept144Quantity() {
+	public BigDecimal getDept144Quantity() {
 		return dept144Quantity;
 	}
 
-	private void setDept144Quantity(BigDecimal dept144Quantity) {
+	public void setDept144Quantity(BigDecimal dept144Quantity) {
 		this.dept144Quantity = dept144Quantity;
 	}
 
-	private BigDecimal getDept145Quantity() {
+	public BigDecimal getDept145Quantity() {
 		return dept145Quantity;
 	}
 
-	private void setDept145Quantity(BigDecimal dept145Quantity) {
+	public void setDept145Quantity(BigDecimal dept145Quantity) {
 		this.dept145Quantity = dept145Quantity;
 	}
 
-	private BigDecimal getDept146Quantity() {
+	public BigDecimal getDept146Quantity() {
 		return dept146Quantity;
 	}
 
-	private void setDept146Quantity(BigDecimal dept146Quantity) {
+	public void setDept146Quantity(BigDecimal dept146Quantity) {
 		this.dept146Quantity = dept146Quantity;
 	}
 
-	private BigDecimal getDept147Quantity() {
+	public BigDecimal getDept147Quantity() {
 		return dept147Quantity;
 	}
 
-	private void setDept147Quantity(BigDecimal dept147Quantity) {
+	public void setDept147Quantity(BigDecimal dept147Quantity) {
 		this.dept147Quantity = dept147Quantity;
 	}
 
-	private BigDecimal getDept148Quantity() {
+	public BigDecimal getDept148Quantity() {
 		return dept148Quantity;
 	}
 
-	private void setDept148Quantity(BigDecimal dept148Quantity) {
+	public void setDept148Quantity(BigDecimal dept148Quantity) {
 		this.dept148Quantity = dept148Quantity;
 	}
 
-	private BigDecimal getDept149Quantity() {
+	public BigDecimal getDept149Quantity() {
 		return dept149Quantity;
 	}
 
-	private void setDept149Quantity(BigDecimal dept149Quantity) {
+	public void setDept149Quantity(BigDecimal dept149Quantity) {
 		this.dept149Quantity = dept149Quantity;
 	}
 
-	private BigDecimal getDept150Quantity() {
+	public BigDecimal getDept150Quantity() {
 		return dept150Quantity;
 	}
 
-	private void setDept150Quantity(BigDecimal dept150Quantity) {
+	public void setDept150Quantity(BigDecimal dept150Quantity) {
 		this.dept150Quantity = dept150Quantity;
 	}
 
-	private BigDecimal getDept151Quantity() {
+	public BigDecimal getDept151Quantity() {
 		return dept151Quantity;
 	}
 
-	private void setDept151Quantity(BigDecimal dept151Quantity) {
+	public void setDept151Quantity(BigDecimal dept151Quantity) {
 		this.dept151Quantity = dept151Quantity;
 	}
 
-	private BigDecimal getDept152Quantity() {
+	public BigDecimal getDept152Quantity() {
 		return dept152Quantity;
 	}
 
-	private void setDept152Quantity(BigDecimal dept152Quantity) {
+	public void setDept152Quantity(BigDecimal dept152Quantity) {
 		this.dept152Quantity = dept152Quantity;
 	}
 
-	private BigDecimal getDept153Quantity() {
+	public BigDecimal getDept153Quantity() {
 		return dept153Quantity;
 	}
 
-	private void setDept153Quantity(BigDecimal dept153Quantity) {
+	public void setDept153Quantity(BigDecimal dept153Quantity) {
 		this.dept153Quantity = dept153Quantity;
 	}
 
-	private BigDecimal getDept154Quantity() {
+	public BigDecimal getDept154Quantity() {
 		return dept154Quantity;
 	}
 
-	private void setDept154Quantity(BigDecimal dept154Quantity) {
+	public void setDept154Quantity(BigDecimal dept154Quantity) {
 		this.dept154Quantity = dept154Quantity;
 	}
 
-	private BigDecimal getDept155Quantity() {
+	public BigDecimal getDept155Quantity() {
 		return dept155Quantity;
 	}
 
-	private void setDept155Quantity(BigDecimal dept155Quantity) {
+	public void setDept155Quantity(BigDecimal dept155Quantity) {
 		this.dept155Quantity = dept155Quantity;
 	}
 
-	private BigDecimal getDept156Quantity() {
+	public BigDecimal getDept156Quantity() {
 		return dept156Quantity;
 	}
 
-	private void setDept156Quantity(BigDecimal dept156Quantity) {
+	public void setDept156Quantity(BigDecimal dept156Quantity) {
 		this.dept156Quantity = dept156Quantity;
 	}
 
-	private BigDecimal getDept157Quantity() {
+	public BigDecimal getDept157Quantity() {
 		return dept157Quantity;
 	}
 
-	private void setDept157Quantity(BigDecimal dept157Quantity) {
+	public void setDept157Quantity(BigDecimal dept157Quantity) {
 		this.dept157Quantity = dept157Quantity;
 	}
 
-	private BigDecimal getDept158Quantity() {
+	public BigDecimal getDept158Quantity() {
 		return dept158Quantity;
 	}
 
-	private void setDept158Quantity(BigDecimal dept158Quantity) {
+	public void setDept158Quantity(BigDecimal dept158Quantity) {
 		this.dept158Quantity = dept158Quantity;
 	}
 
-	private BigDecimal getDept159Quantity() {
+	public BigDecimal getDept159Quantity() {
 		return dept159Quantity;
 	}
 
-	private void setDept159Quantity(BigDecimal dept159Quantity) {
+	public void setDept159Quantity(BigDecimal dept159Quantity) {
 		this.dept159Quantity = dept159Quantity;
 	}
 
-	private BigDecimal getDept160Quantity() {
+	public BigDecimal getDept160Quantity() {
 		return dept160Quantity;
 	}
 
-	private void setDept160Quantity(BigDecimal dept160Quantity) {
+	public void setDept160Quantity(BigDecimal dept160Quantity) {
 		this.dept160Quantity = dept160Quantity;
 	}
 
-	private BigDecimal getDept161Quantity() {
+	public BigDecimal getDept161Quantity() {
 		return dept161Quantity;
 	}
 
-	private void setDept161Quantity(BigDecimal dept161Quantity) {
+	public void setDept161Quantity(BigDecimal dept161Quantity) {
 		this.dept161Quantity = dept161Quantity;
 	}
 
-	private BigDecimal getDept162Quantity() {
+	public BigDecimal getDept162Quantity() {
 		return dept162Quantity;
 	}
 
-	private void setDept162Quantity(BigDecimal dept162Quantity) {
+	public void setDept162Quantity(BigDecimal dept162Quantity) {
 		this.dept162Quantity = dept162Quantity;
 	}
 
-	private BigDecimal getDept163Quantity() {
+	public BigDecimal getDept163Quantity() {
 		return dept163Quantity;
 	}
 
-	private void setDept163Quantity(BigDecimal dept163Quantity) {
+	public void setDept163Quantity(BigDecimal dept163Quantity) {
 		this.dept163Quantity = dept163Quantity;
 	}
 
-	private BigDecimal getDept164Quantity() {
+	public BigDecimal getDept164Quantity() {
 		return dept164Quantity;
 	}
 
-	private void setDept164Quantity(BigDecimal dept164Quantity) {
+	public void setDept164Quantity(BigDecimal dept164Quantity) {
 		this.dept164Quantity = dept164Quantity;
 	}
 
-	private BigDecimal getDept165Quantity() {
+	public BigDecimal getDept165Quantity() {
 		return dept165Quantity;
 	}
 
-	private void setDept165Quantity(BigDecimal dept165Quantity) {
+	public void setDept165Quantity(BigDecimal dept165Quantity) {
 		this.dept165Quantity = dept165Quantity;
 	}
 
-	private BigDecimal getDept166Quantity() {
+	public BigDecimal getDept166Quantity() {
 		return dept166Quantity;
 	}
 
-	private void setDept166Quantity(BigDecimal dept166Quantity) {
+	public void setDept166Quantity(BigDecimal dept166Quantity) {
 		this.dept166Quantity = dept166Quantity;
 	}
 
-	private BigDecimal getDept167Quantity() {
+	public BigDecimal getDept167Quantity() {
 		return dept167Quantity;
 	}
 
-	private void setDept167Quantity(BigDecimal dept167Quantity) {
+	public void setDept167Quantity(BigDecimal dept167Quantity) {
 		this.dept167Quantity = dept167Quantity;
 	}
 
-	private BigDecimal getDept168Quantity() {
+	public BigDecimal getDept168Quantity() {
 		return dept168Quantity;
 	}
 
-	private void setDept168Quantity(BigDecimal dept168Quantity) {
+	public void setDept168Quantity(BigDecimal dept168Quantity) {
 		this.dept168Quantity = dept168Quantity;
 	}
 
-	private BigDecimal getDept169Quantity() {
+	public BigDecimal getDept169Quantity() {
 		return dept169Quantity;
 	}
 
-	private void setDept169Quantity(BigDecimal dept169Quantity) {
+	public void setDept169Quantity(BigDecimal dept169Quantity) {
 		this.dept169Quantity = dept169Quantity;
 	}
 
-	private BigDecimal getDept170Quantity() {
+	public BigDecimal getDept170Quantity() {
 		return dept170Quantity;
 	}
 
-	private void setDept170Quantity(BigDecimal dept170Quantity) {
+	public void setDept170Quantity(BigDecimal dept170Quantity) {
 		this.dept170Quantity = dept170Quantity;
 	}
 
-	private BigDecimal getDept171Quantity() {
+	public BigDecimal getDept171Quantity() {
 		return dept171Quantity;
 	}
 
-	private void setDept171Quantity(BigDecimal dept171Quantity) {
+	public void setDept171Quantity(BigDecimal dept171Quantity) {
 		this.dept171Quantity = dept171Quantity;
 	}
 
-	private BigDecimal getDept172Quantity() {
+	public BigDecimal getDept172Quantity() {
 		return dept172Quantity;
 	}
 
-	private void setDept172Quantity(BigDecimal dept172Quantity) {
+	public void setDept172Quantity(BigDecimal dept172Quantity) {
 		this.dept172Quantity = dept172Quantity;
 	}
 
-	private BigDecimal getDept173Quantity() {
+	public BigDecimal getDept173Quantity() {
 		return dept173Quantity;
 	}
 
-	private void setDept173Quantity(BigDecimal dept173Quantity) {
+	public void setDept173Quantity(BigDecimal dept173Quantity) {
 		this.dept173Quantity = dept173Quantity;
 	}
 
-	private BigDecimal getDept174Quantity() {
+	public BigDecimal getDept174Quantity() {
 		return dept174Quantity;
 	}
 
-	private void setDept174Quantity(BigDecimal dept174Quantity) {
+	public void setDept174Quantity(BigDecimal dept174Quantity) {
 		this.dept174Quantity = dept174Quantity;
 	}
 
-	private BigDecimal getDept175Quantity() {
+	public BigDecimal getDept175Quantity() {
 		return dept175Quantity;
 	}
 
-	private void setDept175Quantity(BigDecimal dept175Quantity) {
+	public void setDept175Quantity(BigDecimal dept175Quantity) {
 		this.dept175Quantity = dept175Quantity;
 	}
 
-	private BigDecimal getDept176Quantity() {
+	public BigDecimal getDept176Quantity() {
 		return dept176Quantity;
 	}
 
-	private void setDept176Quantity(BigDecimal dept176Quantity) {
+	public void setDept176Quantity(BigDecimal dept176Quantity) {
 		this.dept176Quantity = dept176Quantity;
 	}
 
-	private BigDecimal getDept177Quantity() {
+	public BigDecimal getDept177Quantity() {
 		return dept177Quantity;
 	}
 
-	private void setDept177Quantity(BigDecimal dept177Quantity) {
+	public void setDept177Quantity(BigDecimal dept177Quantity) {
 		this.dept177Quantity = dept177Quantity;
 	}
 
-	private BigDecimal getDept178Quantity() {
+	public BigDecimal getDept178Quantity() {
 		return dept178Quantity;
 	}
 
-	private void setDept178Quantity(BigDecimal dept178Quantity) {
+	public void setDept178Quantity(BigDecimal dept178Quantity) {
 		this.dept178Quantity = dept178Quantity;
 	}
 
-	private BigDecimal getDept179Quantity() {
+	public BigDecimal getDept179Quantity() {
 		return dept179Quantity;
 	}
 
-	private void setDept179Quantity(BigDecimal dept179Quantity) {
+	public void setDept179Quantity(BigDecimal dept179Quantity) {
 		this.dept179Quantity = dept179Quantity;
 	}
 
-	private BigDecimal getDept180Quantity() {
+	public BigDecimal getDept180Quantity() {
 		return dept180Quantity;
 	}
 
-	private void setDept180Quantity(BigDecimal dept180Quantity) {
+	public void setDept180Quantity(BigDecimal dept180Quantity) {
 		this.dept180Quantity = dept180Quantity;
 	}
 
-	private BigDecimal getDept181Quantity() {
+	public BigDecimal getDept181Quantity() {
 		return dept181Quantity;
 	}
 
-	private void setDept181Quantity(BigDecimal dept181Quantity) {
+	public void setDept181Quantity(BigDecimal dept181Quantity) {
 		this.dept181Quantity = dept181Quantity;
 	}
 
-	private BigDecimal getDept182Quantity() {
+	public BigDecimal getDept182Quantity() {
 		return dept182Quantity;
 	}
 
-	private void setDept182Quantity(BigDecimal dept182Quantity) {
+	public void setDept182Quantity(BigDecimal dept182Quantity) {
 		this.dept182Quantity = dept182Quantity;
 	}
 
-	private BigDecimal getDept183Quantity() {
+	public BigDecimal getDept183Quantity() {
 		return dept183Quantity;
 	}
 
-	private void setDept183Quantity(BigDecimal dept183Quantity) {
+	public void setDept183Quantity(BigDecimal dept183Quantity) {
 		this.dept183Quantity = dept183Quantity;
 	}
 
-	private BigDecimal getDept184Quantity() {
+	public BigDecimal getDept184Quantity() {
 		return dept184Quantity;
 	}
 
-	private void setDept184Quantity(BigDecimal dept184Quantity) {
+	public void setDept184Quantity(BigDecimal dept184Quantity) {
 		this.dept184Quantity = dept184Quantity;
 	}
 
-	private BigDecimal getDept185Quantity() {
+	public BigDecimal getDept185Quantity() {
 		return dept185Quantity;
 	}
 
-	private void setDept185Quantity(BigDecimal dept185Quantity) {
+	public void setDept185Quantity(BigDecimal dept185Quantity) {
 		this.dept185Quantity = dept185Quantity;
 	}
 
-	private BigDecimal getDept186Quantity() {
+	public BigDecimal getDept186Quantity() {
 		return dept186Quantity;
 	}
 
-	private void setDept186Quantity(BigDecimal dept186Quantity) {
+	public void setDept186Quantity(BigDecimal dept186Quantity) {
 		this.dept186Quantity = dept186Quantity;
 	}
 
-	private BigDecimal getDept187Quantity() {
+	public BigDecimal getDept187Quantity() {
 		return dept187Quantity;
 	}
 
-	private void setDept187Quantity(BigDecimal dept187Quantity) {
+	public void setDept187Quantity(BigDecimal dept187Quantity) {
 		this.dept187Quantity = dept187Quantity;
 	}
 
-	private BigDecimal getDept188Quantity() {
+	public BigDecimal getDept188Quantity() {
 		return dept188Quantity;
 	}
 
-	private void setDept188Quantity(BigDecimal dept188Quantity) {
+	public void setDept188Quantity(BigDecimal dept188Quantity) {
 		this.dept188Quantity = dept188Quantity;
 	}
 
-	private BigDecimal getDept189Quantity() {
+	public BigDecimal getDept189Quantity() {
 		return dept189Quantity;
 	}
 
-	private void setDept189Quantity(BigDecimal dept189Quantity) {
+	public void setDept189Quantity(BigDecimal dept189Quantity) {
 		this.dept189Quantity = dept189Quantity;
 	}
 
-	private BigDecimal getDept190Quantity() {
+	public BigDecimal getDept190Quantity() {
 		return dept190Quantity;
 	}
 
-	private void setDept190Quantity(BigDecimal dept190Quantity) {
+	public void setDept190Quantity(BigDecimal dept190Quantity) {
 		this.dept190Quantity = dept190Quantity;
 	}
 
-	private BigDecimal getDept191Quantity() {
+	public BigDecimal getDept191Quantity() {
 		return dept191Quantity;
 	}
 
-	private void setDept191Quantity(BigDecimal dept191Quantity) {
+	public void setDept191Quantity(BigDecimal dept191Quantity) {
 		this.dept191Quantity = dept191Quantity;
 	}
 
-	private BigDecimal getDept192Quantity() {
+	public BigDecimal getDept192Quantity() {
 		return dept192Quantity;
 	}
 
-	private void setDept192Quantity(BigDecimal dept192Quantity) {
+	public void setDept192Quantity(BigDecimal dept192Quantity) {
 		this.dept192Quantity = dept192Quantity;
 	}
 
-	private BigDecimal getDept193Quantity() {
+	public BigDecimal getDept193Quantity() {
 		return dept193Quantity;
 	}
 
-	private void setDept193Quantity(BigDecimal dept193Quantity) {
+	public void setDept193Quantity(BigDecimal dept193Quantity) {
 		this.dept193Quantity = dept193Quantity;
 	}
 
-	private BigDecimal getDept194Quantity() {
+	public BigDecimal getDept194Quantity() {
 		return dept194Quantity;
 	}
 
-	private void setDept194Quantity(BigDecimal dept194Quantity) {
+	public void setDept194Quantity(BigDecimal dept194Quantity) {
 		this.dept194Quantity = dept194Quantity;
 	}
 
-	private BigDecimal getDept195Quantity() {
+	public BigDecimal getDept195Quantity() {
 		return dept195Quantity;
 	}
 
-	private void setDept195Quantity(BigDecimal dept195Quantity) {
+	public void setDept195Quantity(BigDecimal dept195Quantity) {
 		this.dept195Quantity = dept195Quantity;
 	}
 
-	private BigDecimal getDept196Quantity() {
+	public BigDecimal getDept196Quantity() {
 		return dept196Quantity;
 	}
 
-	private void setDept196Quantity(BigDecimal dept196Quantity) {
+	public void setDept196Quantity(BigDecimal dept196Quantity) {
 		this.dept196Quantity = dept196Quantity;
 	}
 
-	private BigDecimal getDept197Quantity() {
+	public BigDecimal getDept197Quantity() {
 		return dept197Quantity;
 	}
 
-	private void setDept197Quantity(BigDecimal dept197Quantity) {
+	public void setDept197Quantity(BigDecimal dept197Quantity) {
 		this.dept197Quantity = dept197Quantity;
 	}
 
-	private BigDecimal getDept198Quantity() {
+	public BigDecimal getDept198Quantity() {
 		return dept198Quantity;
 	}
 
-	private void setDept198Quantity(BigDecimal dept198Quantity) {
+	public void setDept198Quantity(BigDecimal dept198Quantity) {
 		this.dept198Quantity = dept198Quantity;
 	}
 
-	private BigDecimal getDept199Quantity() {
+	public BigDecimal getDept199Quantity() {
 		return dept199Quantity;
 	}
 
-	private void setDept199Quantity(BigDecimal dept199Quantity) {
+	public void setDept199Quantity(BigDecimal dept199Quantity) {
 		this.dept199Quantity = dept199Quantity;
 	}
 
-	private BigDecimal getDept200Quantity() {
+	public BigDecimal getDept200Quantity() {
 		return dept200Quantity;
 	}
 
-	private void setDept200Quantity(BigDecimal dept200Quantity) {
+	public void setDept200Quantity(BigDecimal dept200Quantity) {
 		this.dept200Quantity = dept200Quantity;
 	}
 
-	private BigDecimal getFabricAmount() {
+	public BigDecimal getFabricAmount() {
 		return fabricAmount;
 	}
 
-	private void setFabricAmount(BigDecimal fabricAmount) {
+	public void setFabricAmount(BigDecimal fabricAmount) {
 		this.fabricAmount = fabricAmount;
 	}
 
-	private BigDecimal getWorkshopAmount() {
+	public BigDecimal getWorkshopAmount() {
 		return workshopAmount;
 	}
 
-	private void setWorkshopAmount(BigDecimal workshopAmount) {
+	public void setWorkshopAmount(BigDecimal workshopAmount) {
 		this.workshopAmount = workshopAmount;
 	}
 
-	private BigDecimal getSalefabricAmount() {
+	public BigDecimal getSalefabricAmount() {
 		return salefabricAmount;
 	}
 
-	private void setSalefabricAmount(BigDecimal salefabricAmount) {
+	public void setSalefabricAmount(BigDecimal salefabricAmount) {
 		this.salefabricAmount = salefabricAmount;
 	}
 
-	private BigDecimal getGiftcertAmount() {
+	public BigDecimal getGiftcertAmount() {
 		return giftcertAmount;
 	}
 
-	private void setGiftcertAmount(BigDecimal giftcertAmount) {
+	public void setGiftcertAmount(BigDecimal giftcertAmount) {
 		this.giftcertAmount = giftcertAmount;
 	}
 
-	private BigDecimal getDept005Amount() {
+	public BigDecimal getDept005Amount() {
 		return dept005Amount;
 	}
 
-	private void setDept005Amount(BigDecimal dept005Amount) {
+	public void setDept005Amount(BigDecimal dept005Amount) {
 		this.dept005Amount = dept005Amount;
 	}
 
-	private BigDecimal getNotionAmount() {
+	public BigDecimal getNotionAmount() {
 		return notionAmount;
 	}
 
-	private void setNotionAmount(BigDecimal notionAmount) {
+	public void setNotionAmount(BigDecimal notionAmount) {
 		this.notionAmount = notionAmount;
 	}
 
-	private BigDecimal getBomAmount() {
+	public BigDecimal getBomAmount() {
 		return bomAmount;
 	}
 
-	private void setBomAmount(BigDecimal bomAmount) {
+	public void setBomAmount(BigDecimal bomAmount) {
 		this.bomAmount = bomAmount;
 	}
 
-	private BigDecimal getThreadsAmount() {
+	public BigDecimal getThreadsAmount() {
 		return threadsAmount;
 	}
 
-	private void setThreadsAmount(BigDecimal threadsAmount) {
+	public void setThreadsAmount(BigDecimal threadsAmount) {
 		this.threadsAmount = threadsAmount;
 	}
 
-	private BigDecimal getDept009Amount() {
+	public BigDecimal getDept009Amount() {
 		return dept009Amount;
 	}
 
-	private void setDept009Amount(BigDecimal dept009Amount) {
+	public void setDept009Amount(BigDecimal dept009Amount) {
 		this.dept009Amount = dept009Amount;
 	}
 
-	private BigDecimal getDept010Amount() {
+	public BigDecimal getDept010Amount() {
 		return dept010Amount;
 	}
 
-	private void setDept010Amount(BigDecimal dept010Amount) {
+	public void setDept010Amount(BigDecimal dept010Amount) {
 		this.dept010Amount = dept010Amount;
 	}
 
-	private BigDecimal getBookAmount() {
+	public BigDecimal getBookAmount() {
 		return bookAmount;
 	}
 
-	private void setBookAmount(BigDecimal bookAmount) {
+	public void setBookAmount(BigDecimal bookAmount) {
 		this.bookAmount = bookAmount;
 	}
 
-	private BigDecimal getPostageAmount() {
+	public BigDecimal getPostageAmount() {
 		return postageAmount;
 	}
 
-	private void setPostageAmount(BigDecimal postageAmount) {
+	public void setPostageAmount(BigDecimal postageAmount) {
 		this.postageAmount = postageAmount;
 	}
 
-	private BigDecimal getKitsAmount() {
+	public BigDecimal getKitsAmount() {
 		return kitsAmount;
 	}
 
-	private void setKitsAmount(BigDecimal kitsAmount) {
+	public void setKitsAmount(BigDecimal kitsAmount) {
 		this.kitsAmount = kitsAmount;
 	}
 
-	private BigDecimal getDept014Amount() {
+	public BigDecimal getDept014Amount() {
 		return dept014Amount;
 	}
 
-	private void setDept014Amount(BigDecimal dept014Amount) {
+	public void setDept014Amount(BigDecimal dept014Amount) {
 		this.dept014Amount = dept014Amount;
 	}
 
-	private BigDecimal getDept015Amount() {
+	public BigDecimal getDept015Amount() {
 		return dept015Amount;
 	}
 
-	private void setDept015Amount(BigDecimal dept015Amount) {
+	public void setDept015Amount(BigDecimal dept015Amount) {
 		this.dept015Amount = dept015Amount;
 	}
 
-	private BigDecimal getClassAmount() {
+	public BigDecimal getClassAmount() {
 		return classAmount;
 	}
 
-	private void setClassAmount(BigDecimal classAmount) {
+	public void setClassAmount(BigDecimal classAmount) {
 		this.classAmount = classAmount;
 	}
 
-	private BigDecimal getLongarmAmount() {
+	public BigDecimal getLongarmAmount() {
 		return longarmAmount;
 	}
 
-	private void setLongarmAmount(BigDecimal longarmAmount) {
+	public void setLongarmAmount(BigDecimal longarmAmount) {
 		this.longarmAmount = longarmAmount;
 	}
 
-	private BigDecimal getPatternsAmount() {
+	public BigDecimal getPatternsAmount() {
 		return patternsAmount;
 	}
 
-	private void setPatternsAmount(BigDecimal patternsAmount) {
+	public void setPatternsAmount(BigDecimal patternsAmount) {
 		this.patternsAmount = patternsAmount;
 	}
 
-	private BigDecimal getDept019Amount() {
+	public BigDecimal getDept019Amount() {
 		return dept019Amount;
 	}
 
-	private void setDept019Amount(BigDecimal dept019Amount) {
+	public void setDept019Amount(BigDecimal dept019Amount) {
 		this.dept019Amount = dept019Amount;
 	}
 
-	private BigDecimal getPatternAmount() {
+	public BigDecimal getPatternAmount() {
 		return patternAmount;
 	}
 
-	private void setPatternAmount(BigDecimal patternAmount) {
+	public void setPatternAmount(BigDecimal patternAmount) {
 		this.patternAmount = patternAmount;
 	}
 
-	private BigDecimal getJanomeAmount() {
+	public BigDecimal getJanomeAmount() {
 		return janomeAmount;
 	}
 
-	private void setJanomeAmount(BigDecimal janomeAmount) {
+	public void setJanomeAmount(BigDecimal janomeAmount) {
 		this.janomeAmount = janomeAmount;
 	}
 
-	private BigDecimal getBattingAmount() {
+	public BigDecimal getBattingAmount() {
 		return battingAmount;
 	}
 
-	private void setBattingAmount(BigDecimal battingAmount) {
+	public void setBattingAmount(BigDecimal battingAmount) {
 		this.battingAmount = battingAmount;
 	}
 
-	private BigDecimal getMiscAmount() {
+	public BigDecimal getMiscAmount() {
 		return miscAmount;
 	}
 
-	private void setMiscAmount(BigDecimal miscAmount) {
+	public void setMiscAmount(BigDecimal miscAmount) {
 		this.miscAmount = miscAmount;
 	}
 
-	private BigDecimal getDept024Amount() {
+	public BigDecimal getDept024Amount() {
 		return dept024Amount;
 	}
 
-	private void setDept024Amount(BigDecimal dept024Amount) {
+	public void setDept024Amount(BigDecimal dept024Amount) {
 		this.dept024Amount = dept024Amount;
 	}
 
-	private BigDecimal getDept025Amount() {
+	public BigDecimal getDept025Amount() {
 		return dept025Amount;
 	}
 
-	private void setDept025Amount(BigDecimal dept025Amount) {
+	public void setDept025Amount(BigDecimal dept025Amount) {
 		this.dept025Amount = dept025Amount;
 	}
 
-	private BigDecimal getDept026Amount() {
+	public BigDecimal getDept026Amount() {
 		return dept026Amount;
 	}
 
-	private void setDept026Amount(BigDecimal dept026Amount) {
+	public void setDept026Amount(BigDecimal dept026Amount) {
 		this.dept026Amount = dept026Amount;
 	}
 
-	private BigDecimal getDept027Amount() {
+	public BigDecimal getDept027Amount() {
 		return dept027Amount;
 	}
 
-	private void setDept027Amount(BigDecimal dept027Amount) {
+	public void setDept027Amount(BigDecimal dept027Amount) {
 		this.dept027Amount = dept027Amount;
 	}
 
-	private BigDecimal getDept028Amount() {
+	public BigDecimal getDept028Amount() {
 		return dept028Amount;
 	}
 
-	private void setDept028Amount(BigDecimal dept028Amount) {
+	public void setDept028Amount(BigDecimal dept028Amount) {
 		this.dept028Amount = dept028Amount;
 	}
 
-	private BigDecimal getDept029Amount() {
+	public BigDecimal getDept029Amount() {
 		return dept029Amount;
 	}
 
-	private void setDept029Amount(BigDecimal dept029Amount) {
+	public void setDept029Amount(BigDecimal dept029Amount) {
 		this.dept029Amount = dept029Amount;
 	}
 
-	private BigDecimal getDept030Amount() {
+	public BigDecimal getDept030Amount() {
 		return dept030Amount;
 	}
 
-	private void setDept030Amount(BigDecimal dept030Amount) {
+	public void setDept030Amount(BigDecimal dept030Amount) {
 		this.dept030Amount = dept030Amount;
 	}
 
-	private BigDecimal getDept031Amount() {
+	public BigDecimal getDept031Amount() {
 		return dept031Amount;
 	}
 
-	private void setDept031Amount(BigDecimal dept031Amount) {
+	public void setDept031Amount(BigDecimal dept031Amount) {
 		this.dept031Amount = dept031Amount;
 	}
 
-	private BigDecimal getDept032Amount() {
+	public BigDecimal getDept032Amount() {
 		return dept032Amount;
 	}
 
-	private void setDept032Amount(BigDecimal dept032Amount) {
+	public void setDept032Amount(BigDecimal dept032Amount) {
 		this.dept032Amount = dept032Amount;
 	}
 
-	private BigDecimal getDept033Amount() {
+	public BigDecimal getDept033Amount() {
 		return dept033Amount;
 	}
 
-	private void setDept033Amount(BigDecimal dept033Amount) {
+	public void setDept033Amount(BigDecimal dept033Amount) {
 		this.dept033Amount = dept033Amount;
 	}
 
-	private BigDecimal getDept034Amount() {
+	public BigDecimal getDept034Amount() {
 		return dept034Amount;
 	}
 
-	private void setDept034Amount(BigDecimal dept034Amount) {
+	public void setDept034Amount(BigDecimal dept034Amount) {
 		this.dept034Amount = dept034Amount;
 	}
 
-	private BigDecimal getDept035Amount() {
+	public BigDecimal getDept035Amount() {
 		return dept035Amount;
 	}
 
-	private void setDept035Amount(BigDecimal dept035Amount) {
+	public void setDept035Amount(BigDecimal dept035Amount) {
 		this.dept035Amount = dept035Amount;
 	}
 
-	private BigDecimal getDept036Amount() {
+	public BigDecimal getDept036Amount() {
 		return dept036Amount;
 	}
 
-	private void setDept036Amount(BigDecimal dept036Amount) {
+	public void setDept036Amount(BigDecimal dept036Amount) {
 		this.dept036Amount = dept036Amount;
 	}
 
-	private BigDecimal getDept037Amount() {
+	public BigDecimal getDept037Amount() {
 		return dept037Amount;
 	}
 
-	private void setDept037Amount(BigDecimal dept037Amount) {
+	public void setDept037Amount(BigDecimal dept037Amount) {
 		this.dept037Amount = dept037Amount;
 	}
 
-	private BigDecimal getDept038Amount() {
+	public BigDecimal getDept038Amount() {
 		return dept038Amount;
 	}
 
-	private void setDept038Amount(BigDecimal dept038Amount) {
+	public void setDept038Amount(BigDecimal dept038Amount) {
 		this.dept038Amount = dept038Amount;
 	}
 
-	private BigDecimal getDept039Amount() {
+	public BigDecimal getDept039Amount() {
 		return dept039Amount;
 	}
 
-	private void setDept039Amount(BigDecimal dept039Amount) {
+	public void setDept039Amount(BigDecimal dept039Amount) {
 		this.dept039Amount = dept039Amount;
 	}
 
-	private BigDecimal getDept040Amount() {
+	public BigDecimal getDept040Amount() {
 		return dept040Amount;
 	}
 
-	private void setDept040Amount(BigDecimal dept040Amount) {
+	public void setDept040Amount(BigDecimal dept040Amount) {
 		this.dept040Amount = dept040Amount;
 	}
 
-	private BigDecimal getDept041Amount() {
+	public BigDecimal getDept041Amount() {
 		return dept041Amount;
 	}
 
-	private void setDept041Amount(BigDecimal dept041Amount) {
+	public void setDept041Amount(BigDecimal dept041Amount) {
 		this.dept041Amount = dept041Amount;
 	}
 
-	private BigDecimal getDept042Amount() {
+	public BigDecimal getDept042Amount() {
 		return dept042Amount;
 	}
 
-	private void setDept042Amount(BigDecimal dept042Amount) {
+	public void setDept042Amount(BigDecimal dept042Amount) {
 		this.dept042Amount = dept042Amount;
 	}
 
-	private BigDecimal getDept043Amount() {
+	public BigDecimal getDept043Amount() {
 		return dept043Amount;
 	}
 
-	private void setDept043Amount(BigDecimal dept043Amount) {
+	public void setDept043Amount(BigDecimal dept043Amount) {
 		this.dept043Amount = dept043Amount;
 	}
 
-	private BigDecimal getDept044Amount() {
+	public BigDecimal getDept044Amount() {
 		return dept044Amount;
 	}
 
-	private void setDept044Amount(BigDecimal dept044Amount) {
+	public void setDept044Amount(BigDecimal dept044Amount) {
 		this.dept044Amount = dept044Amount;
 	}
 
-	private BigDecimal getDept045Amount() {
+	public BigDecimal getDept045Amount() {
 		return dept045Amount;
 	}
 
-	private void setDept045Amount(BigDecimal dept045Amount) {
+	public void setDept045Amount(BigDecimal dept045Amount) {
 		this.dept045Amount = dept045Amount;
 	}
 
-	private BigDecimal getDept046Amount() {
+	public BigDecimal getDept046Amount() {
 		return dept046Amount;
 	}
 
-	private void setDept046Amount(BigDecimal dept046Amount) {
+	public void setDept046Amount(BigDecimal dept046Amount) {
 		this.dept046Amount = dept046Amount;
 	}
 
-	private BigDecimal getDept047Amount() {
+	public BigDecimal getDept047Amount() {
 		return dept047Amount;
 	}
 
-	private void setDept047Amount(BigDecimal dept047Amount) {
+	public void setDept047Amount(BigDecimal dept047Amount) {
 		this.dept047Amount = dept047Amount;
 	}
 
-	private BigDecimal getDept048Amount() {
+	public BigDecimal getDept048Amount() {
 		return dept048Amount;
 	}
 
-	private void setDept048Amount(BigDecimal dept048Amount) {
+	public void setDept048Amount(BigDecimal dept048Amount) {
 		this.dept048Amount = dept048Amount;
 	}
 
-	private BigDecimal getDept049Amount() {
+	public BigDecimal getDept049Amount() {
 		return dept049Amount;
 	}
 
-	private void setDept049Amount(BigDecimal dept049Amount) {
+	public void setDept049Amount(BigDecimal dept049Amount) {
 		this.dept049Amount = dept049Amount;
 	}
 
-	private BigDecimal getDept050Amount() {
+	public BigDecimal getDept050Amount() {
 		return dept050Amount;
 	}
 
-	private void setDept050Amount(BigDecimal dept050Amount) {
+	public void setDept050Amount(BigDecimal dept050Amount) {
 		this.dept050Amount = dept050Amount;
 	}
 
-	private BigDecimal getDept051Amount() {
+	public BigDecimal getDept051Amount() {
 		return dept051Amount;
 	}
 
-	private void setDept051Amount(BigDecimal dept051Amount) {
+	public void setDept051Amount(BigDecimal dept051Amount) {
 		this.dept051Amount = dept051Amount;
 	}
 
-	private BigDecimal getDept052Amount() {
+	public BigDecimal getDept052Amount() {
 		return dept052Amount;
 	}
 
-	private void setDept052Amount(BigDecimal dept052Amount) {
+	public void setDept052Amount(BigDecimal dept052Amount) {
 		this.dept052Amount = dept052Amount;
 	}
 
-	private BigDecimal getDept053Amount() {
+	public BigDecimal getDept053Amount() {
 		return dept053Amount;
 	}
 
-	private void setDept053Amount(BigDecimal dept053Amount) {
+	public void setDept053Amount(BigDecimal dept053Amount) {
 		this.dept053Amount = dept053Amount;
 	}
 
-	private BigDecimal getDept054Amount() {
+	public BigDecimal getDept054Amount() {
 		return dept054Amount;
 	}
 
-	private void setDept054Amount(BigDecimal dept054Amount) {
+	public void setDept054Amount(BigDecimal dept054Amount) {
 		this.dept054Amount = dept054Amount;
 	}
 
-	private BigDecimal getDept055Amount() {
+	public BigDecimal getDept055Amount() {
 		return dept055Amount;
 	}
 
-	private void setDept055Amount(BigDecimal dept055Amount) {
+	public void setDept055Amount(BigDecimal dept055Amount) {
 		this.dept055Amount = dept055Amount;
 	}
 
-	private BigDecimal getDept056Amount() {
+	public BigDecimal getDept056Amount() {
 		return dept056Amount;
 	}
 
-	private void setDept056Amount(BigDecimal dept056Amount) {
+	public void setDept056Amount(BigDecimal dept056Amount) {
 		this.dept056Amount = dept056Amount;
 	}
 
-	private BigDecimal getDept057Amount() {
+	public BigDecimal getDept057Amount() {
 		return dept057Amount;
 	}
 
-	private void setDept057Amount(BigDecimal dept057Amount) {
+	public void setDept057Amount(BigDecimal dept057Amount) {
 		this.dept057Amount = dept057Amount;
 	}
 
-	private BigDecimal getDept058Amount() {
+	public BigDecimal getDept058Amount() {
 		return dept058Amount;
 	}
 
-	private void setDept058Amount(BigDecimal dept058Amount) {
+	public void setDept058Amount(BigDecimal dept058Amount) {
 		this.dept058Amount = dept058Amount;
 	}
 
-	private BigDecimal getDept059Amount() {
+	public BigDecimal getDept059Amount() {
 		return dept059Amount;
 	}
 
-	private void setDept059Amount(BigDecimal dept059Amount) {
+	public void setDept059Amount(BigDecimal dept059Amount) {
 		this.dept059Amount = dept059Amount;
 	}
 
-	private BigDecimal getDept060Amount() {
+	public BigDecimal getDept060Amount() {
 		return dept060Amount;
 	}
 
-	private void setDept060Amount(BigDecimal dept060Amount) {
+	public void setDept060Amount(BigDecimal dept060Amount) {
 		this.dept060Amount = dept060Amount;
 	}
 
-	private BigDecimal getDept061Amount() {
+	public BigDecimal getDept061Amount() {
 		return dept061Amount;
 	}
 
-	private void setDept061Amount(BigDecimal dept061Amount) {
+	public void setDept061Amount(BigDecimal dept061Amount) {
 		this.dept061Amount = dept061Amount;
 	}
 
-	private BigDecimal getDept062Amount() {
+	public BigDecimal getDept062Amount() {
 		return dept062Amount;
 	}
 
-	private void setDept062Amount(BigDecimal dept062Amount) {
+	public void setDept062Amount(BigDecimal dept062Amount) {
 		this.dept062Amount = dept062Amount;
 	}
 
-	private BigDecimal getDept063Amount() {
+	public BigDecimal getDept063Amount() {
 		return dept063Amount;
 	}
 
-	private void setDept063Amount(BigDecimal dept063Amount) {
+	public void setDept063Amount(BigDecimal dept063Amount) {
 		this.dept063Amount = dept063Amount;
 	}
 
-	private BigDecimal getDept064Amount() {
+	public BigDecimal getDept064Amount() {
 		return dept064Amount;
 	}
 
-	private void setDept064Amount(BigDecimal dept064Amount) {
+	public void setDept064Amount(BigDecimal dept064Amount) {
 		this.dept064Amount = dept064Amount;
 	}
 
-	private BigDecimal getDept065Amount() {
+	public BigDecimal getDept065Amount() {
 		return dept065Amount;
 	}
 
-	private void setDept065Amount(BigDecimal dept065Amount) {
+	public void setDept065Amount(BigDecimal dept065Amount) {
 		this.dept065Amount = dept065Amount;
 	}
 
-	private BigDecimal getDept066Amount() {
+	public BigDecimal getDept066Amount() {
 		return dept066Amount;
 	}
 
-	private void setDept066Amount(BigDecimal dept066Amount) {
+	public void setDept066Amount(BigDecimal dept066Amount) {
 		this.dept066Amount = dept066Amount;
 	}
 
-	private BigDecimal getDept067Amount() {
+	public BigDecimal getDept067Amount() {
 		return dept067Amount;
 	}
 
-	private void setDept067Amount(BigDecimal dept067Amount) {
+	public void setDept067Amount(BigDecimal dept067Amount) {
 		this.dept067Amount = dept067Amount;
 	}
 
-	private BigDecimal getDept068Amount() {
+	public BigDecimal getDept068Amount() {
 		return dept068Amount;
 	}
 
-	private void setDept068Amount(BigDecimal dept068Amount) {
+	public void setDept068Amount(BigDecimal dept068Amount) {
 		this.dept068Amount = dept068Amount;
 	}
 
-	private BigDecimal getDept069Amount() {
+	public BigDecimal getDept069Amount() {
 		return dept069Amount;
 	}
 
-	private void setDept069Amount(BigDecimal dept069Amount) {
+	public void setDept069Amount(BigDecimal dept069Amount) {
 		this.dept069Amount = dept069Amount;
 	}
 
-	private BigDecimal getDept070Amount() {
+	public BigDecimal getDept070Amount() {
 		return dept070Amount;
 	}
 
-	private void setDept070Amount(BigDecimal dept070Amount) {
+	public void setDept070Amount(BigDecimal dept070Amount) {
 		this.dept070Amount = dept070Amount;
 	}
 
-	private BigDecimal getDept071Amount() {
+	public BigDecimal getDept071Amount() {
 		return dept071Amount;
 	}
 
-	private void setDept071Amount(BigDecimal dept071Amount) {
+	public void setDept071Amount(BigDecimal dept071Amount) {
 		this.dept071Amount = dept071Amount;
 	}
 
-	private BigDecimal getDept072Amount() {
+	public BigDecimal getDept072Amount() {
 		return dept072Amount;
 	}
 
-	private void setDept072Amount(BigDecimal dept072Amount) {
+	public void setDept072Amount(BigDecimal dept072Amount) {
 		this.dept072Amount = dept072Amount;
 	}
 
-	private BigDecimal getDept073Amount() {
+	public BigDecimal getDept073Amount() {
 		return dept073Amount;
 	}
 
-	private void setDept073Amount(BigDecimal dept073Amount) {
+	public void setDept073Amount(BigDecimal dept073Amount) {
 		this.dept073Amount = dept073Amount;
 	}
 
-	private BigDecimal getDept074Amount() {
+	public BigDecimal getDept074Amount() {
 		return dept074Amount;
 	}
 
-	private void setDept074Amount(BigDecimal dept074Amount) {
+	public void setDept074Amount(BigDecimal dept074Amount) {
 		this.dept074Amount = dept074Amount;
 	}
 
-	private BigDecimal getDept075Amount() {
+	public BigDecimal getDept075Amount() {
 		return dept075Amount;
 	}
 
-	private void setDept075Amount(BigDecimal dept075Amount) {
+	public void setDept075Amount(BigDecimal dept075Amount) {
 		this.dept075Amount = dept075Amount;
 	}
 
-	private BigDecimal getDept076Amount() {
+	public BigDecimal getDept076Amount() {
 		return dept076Amount;
 	}
 
-	private void setDept076Amount(BigDecimal dept076Amount) {
+	public void setDept076Amount(BigDecimal dept076Amount) {
 		this.dept076Amount = dept076Amount;
 	}
 
-	private BigDecimal getDept077Amount() {
+	public BigDecimal getDept077Amount() {
 		return dept077Amount;
 	}
 
-	private void setDept077Amount(BigDecimal dept077Amount) {
+	public void setDept077Amount(BigDecimal dept077Amount) {
 		this.dept077Amount = dept077Amount;
 	}
 
-	private BigDecimal getDept078Amount() {
+	public BigDecimal getDept078Amount() {
 		return dept078Amount;
 	}
 
-	private void setDept078Amount(BigDecimal dept078Amount) {
+	public void setDept078Amount(BigDecimal dept078Amount) {
 		this.dept078Amount = dept078Amount;
 	}
 
-	private BigDecimal getDept079Amount() {
+	public BigDecimal getDept079Amount() {
 		return dept079Amount;
 	}
 
-	private void setDept079Amount(BigDecimal dept079Amount) {
+	public void setDept079Amount(BigDecimal dept079Amount) {
 		this.dept079Amount = dept079Amount;
 	}
 
-	private BigDecimal getDept080Amount() {
+	public BigDecimal getDept080Amount() {
 		return dept080Amount;
 	}
 
-	private void setDept080Amount(BigDecimal dept080Amount) {
+	public void setDept080Amount(BigDecimal dept080Amount) {
 		this.dept080Amount = dept080Amount;
 	}
 
-	private BigDecimal getDept081Amount() {
+	public BigDecimal getDept081Amount() {
 		return dept081Amount;
 	}
 
-	private void setDept081Amount(BigDecimal dept081Amount) {
+	public void setDept081Amount(BigDecimal dept081Amount) {
 		this.dept081Amount = dept081Amount;
 	}
 
-	private BigDecimal getDept082Amount() {
+	public BigDecimal getDept082Amount() {
 		return dept082Amount;
 	}
 
-	private void setDept082Amount(BigDecimal dept082Amount) {
+	public void setDept082Amount(BigDecimal dept082Amount) {
 		this.dept082Amount = dept082Amount;
 	}
 
-	private BigDecimal getDept083Amount() {
+	public BigDecimal getDept083Amount() {
 		return dept083Amount;
 	}
 
-	private void setDept083Amount(BigDecimal dept083Amount) {
+	public void setDept083Amount(BigDecimal dept083Amount) {
 		this.dept083Amount = dept083Amount;
 	}
 
-	private BigDecimal getDept084Amount() {
+	public BigDecimal getDept084Amount() {
 		return dept084Amount;
 	}
 
-	private void setDept084Amount(BigDecimal dept084Amount) {
+	public void setDept084Amount(BigDecimal dept084Amount) {
 		this.dept084Amount = dept084Amount;
 	}
 
-	private BigDecimal getDept085Amount() {
+	public BigDecimal getDept085Amount() {
 		return dept085Amount;
 	}
 
-	private void setDept085Amount(BigDecimal dept085Amount) {
+	public void setDept085Amount(BigDecimal dept085Amount) {
 		this.dept085Amount = dept085Amount;
 	}
 
-	private BigDecimal getDept086Amount() {
+	public BigDecimal getDept086Amount() {
 		return dept086Amount;
 	}
 
-	private void setDept086Amount(BigDecimal dept086Amount) {
+	public void setDept086Amount(BigDecimal dept086Amount) {
 		this.dept086Amount = dept086Amount;
 	}
 
-	private BigDecimal getDept087Amount() {
+	public BigDecimal getDept087Amount() {
 		return dept087Amount;
 	}
 
-	private void setDept087Amount(BigDecimal dept087Amount) {
+	public void setDept087Amount(BigDecimal dept087Amount) {
 		this.dept087Amount = dept087Amount;
 	}
 
-	private BigDecimal getDept088Amount() {
+	public BigDecimal getDept088Amount() {
 		return dept088Amount;
 	}
 
-	private void setDept088Amount(BigDecimal dept088Amount) {
+	public void setDept088Amount(BigDecimal dept088Amount) {
 		this.dept088Amount = dept088Amount;
 	}
 
-	private BigDecimal getDept089Amount() {
+	public BigDecimal getDept089Amount() {
 		return dept089Amount;
 	}
 
-	private void setDept089Amount(BigDecimal dept089Amount) {
+	public void setDept089Amount(BigDecimal dept089Amount) {
 		this.dept089Amount = dept089Amount;
 	}
 
-	private BigDecimal getDept090Amount() {
+	public BigDecimal getDept090Amount() {
 		return dept090Amount;
 	}
 
-	private void setDept090Amount(BigDecimal dept090Amount) {
+	public void setDept090Amount(BigDecimal dept090Amount) {
 		this.dept090Amount = dept090Amount;
 	}
 
-	private BigDecimal getDept091Amount() {
+	public BigDecimal getDept091Amount() {
 		return dept091Amount;
 	}
 
-	private void setDept091Amount(BigDecimal dept091Amount) {
+	public void setDept091Amount(BigDecimal dept091Amount) {
 		this.dept091Amount = dept091Amount;
 	}
 
-	private BigDecimal getDept092Amount() {
+	public BigDecimal getDept092Amount() {
 		return dept092Amount;
 	}
 
-	private void setDept092Amount(BigDecimal dept092Amount) {
+	public void setDept092Amount(BigDecimal dept092Amount) {
 		this.dept092Amount = dept092Amount;
 	}
 
-	private BigDecimal getDept093Amount() {
+	public BigDecimal getDept093Amount() {
 		return dept093Amount;
 	}
 
-	private void setDept093Amount(BigDecimal dept093Amount) {
+	public void setDept093Amount(BigDecimal dept093Amount) {
 		this.dept093Amount = dept093Amount;
 	}
 
-	private BigDecimal getDept094Amount() {
+	public BigDecimal getDept094Amount() {
 		return dept094Amount;
 	}
 
-	private void setDept094Amount(BigDecimal dept094Amount) {
+	public void setDept094Amount(BigDecimal dept094Amount) {
 		this.dept094Amount = dept094Amount;
 	}
 
-	private BigDecimal getDept095Amount() {
+	public BigDecimal getDept095Amount() {
 		return dept095Amount;
 	}
 
-	private void setDept095Amount(BigDecimal dept095Amount) {
+	public void setDept095Amount(BigDecimal dept095Amount) {
 		this.dept095Amount = dept095Amount;
 	}
 
-	private BigDecimal getDept096Amount() {
+	public BigDecimal getDept096Amount() {
 		return dept096Amount;
 	}
 
-	private void setDept096Amount(BigDecimal dept096Amount) {
+	public void setDept096Amount(BigDecimal dept096Amount) {
 		this.dept096Amount = dept096Amount;
 	}
 
-	private BigDecimal getDept097Amount() {
+	public BigDecimal getDept097Amount() {
 		return dept097Amount;
 	}
 
-	private void setDept097Amount(BigDecimal dept097Amount) {
+	public void setDept097Amount(BigDecimal dept097Amount) {
 		this.dept097Amount = dept097Amount;
 	}
 
-	private BigDecimal getDept098Amount() {
+	public BigDecimal getDept098Amount() {
 		return dept098Amount;
 	}
 
-	private void setDept098Amount(BigDecimal dept098Amount) {
+	public void setDept098Amount(BigDecimal dept098Amount) {
 		this.dept098Amount = dept098Amount;
 	}
 
-	private BigDecimal getDept099Amount() {
+	public BigDecimal getDept099Amount() {
 		return dept099Amount;
 	}
 
-	private void setDept099Amount(BigDecimal dept099Amount) {
+	public void setDept099Amount(BigDecimal dept099Amount) {
 		this.dept099Amount = dept099Amount;
 	}
 
-	private BigDecimal getDept100Amount() {
+	public BigDecimal getDept100Amount() {
 		return dept100Amount;
 	}
 
-	private void setDept100Amount(BigDecimal dept100Amount) {
+	public void setDept100Amount(BigDecimal dept100Amount) {
 		this.dept100Amount = dept100Amount;
 	}
 
-	private BigDecimal getDept101Amount() {
+	public BigDecimal getDept101Amount() {
 		return dept101Amount;
 	}
 
-	private void setDept101Amount(BigDecimal dept101Amount) {
+	public void setDept101Amount(BigDecimal dept101Amount) {
 		this.dept101Amount = dept101Amount;
 	}
 
-	private BigDecimal getDept102Amount() {
+	public BigDecimal getDept102Amount() {
 		return dept102Amount;
 	}
 
-	private void setDept102Amount(BigDecimal dept102Amount) {
+	public void setDept102Amount(BigDecimal dept102Amount) {
 		this.dept102Amount = dept102Amount;
 	}
 
-	private BigDecimal getDept103Amount() {
+	public BigDecimal getDept103Amount() {
 		return dept103Amount;
 	}
 
-	private void setDept103Amount(BigDecimal dept103Amount) {
+	public void setDept103Amount(BigDecimal dept103Amount) {
 		this.dept103Amount = dept103Amount;
 	}
 
-	private BigDecimal getDept104Amount() {
+	public BigDecimal getDept104Amount() {
 		return dept104Amount;
 	}
 
-	private void setDept104Amount(BigDecimal dept104Amount) {
+	public void setDept104Amount(BigDecimal dept104Amount) {
 		this.dept104Amount = dept104Amount;
 	}
 
-	private BigDecimal getDept105Amount() {
+	public BigDecimal getDept105Amount() {
 		return dept105Amount;
 	}
 
-	private void setDept105Amount(BigDecimal dept105Amount) {
+	public void setDept105Amount(BigDecimal dept105Amount) {
 		this.dept105Amount = dept105Amount;
 	}
 
-	private BigDecimal getDept106Amount() {
+	public BigDecimal getDept106Amount() {
 		return dept106Amount;
 	}
 
-	private void setDept106Amount(BigDecimal dept106Amount) {
+	public void setDept106Amount(BigDecimal dept106Amount) {
 		this.dept106Amount = dept106Amount;
 	}
 
-	private BigDecimal getDept107Amount() {
+	public BigDecimal getDept107Amount() {
 		return dept107Amount;
 	}
 
-	private void setDept107Amount(BigDecimal dept107Amount) {
+	public void setDept107Amount(BigDecimal dept107Amount) {
 		this.dept107Amount = dept107Amount;
 	}
 
-	private BigDecimal getDept108Amount() {
+	public BigDecimal getDept108Amount() {
 		return dept108Amount;
 	}
 
-	private void setDept108Amount(BigDecimal dept108Amount) {
+	public void setDept108Amount(BigDecimal dept108Amount) {
 		this.dept108Amount = dept108Amount;
 	}
 
-	private BigDecimal getDept109Amount() {
+	public BigDecimal getDept109Amount() {
 		return dept109Amount;
 	}
 
-	private void setDept109Amount(BigDecimal dept109Amount) {
+	public void setDept109Amount(BigDecimal dept109Amount) {
 		this.dept109Amount = dept109Amount;
 	}
 
-	private BigDecimal getDept110Amount() {
+	public BigDecimal getDept110Amount() {
 		return dept110Amount;
 	}
 
-	private void setDept110Amount(BigDecimal dept110Amount) {
+	public void setDept110Amount(BigDecimal dept110Amount) {
 		this.dept110Amount = dept110Amount;
 	}
 
-	private BigDecimal getDept111Amount() {
+	public BigDecimal getDept111Amount() {
 		return dept111Amount;
 	}
 
-	private void setDept111Amount(BigDecimal dept111Amount) {
+	public void setDept111Amount(BigDecimal dept111Amount) {
 		this.dept111Amount = dept111Amount;
 	}
 
-	private BigDecimal getDept112Amount() {
+	public BigDecimal getDept112Amount() {
 		return dept112Amount;
 	}
 
-	private void setDept112Amount(BigDecimal dept112Amount) {
+	public void setDept112Amount(BigDecimal dept112Amount) {
 		this.dept112Amount = dept112Amount;
 	}
 
-	private BigDecimal getDept113Amount() {
+	public BigDecimal getDept113Amount() {
 		return dept113Amount;
 	}
 
-	private void setDept113Amount(BigDecimal dept113Amount) {
+	public void setDept113Amount(BigDecimal dept113Amount) {
 		this.dept113Amount = dept113Amount;
 	}
 
-	private BigDecimal getDept114Amount() {
+	public BigDecimal getDept114Amount() {
 		return dept114Amount;
 	}
 
-	private void setDept114Amount(BigDecimal dept114Amount) {
+	public void setDept114Amount(BigDecimal dept114Amount) {
 		this.dept114Amount = dept114Amount;
 	}
 
-	private BigDecimal getDept115Amount() {
+	public BigDecimal getDept115Amount() {
 		return dept115Amount;
 	}
 
-	private void setDept115Amount(BigDecimal dept115Amount) {
+	public void setDept115Amount(BigDecimal dept115Amount) {
 		this.dept115Amount = dept115Amount;
 	}
 
-	private BigDecimal getDept116Amount() {
+	public BigDecimal getDept116Amount() {
 		return dept116Amount;
 	}
 
-	private void setDept116Amount(BigDecimal dept116Amount) {
+	public void setDept116Amount(BigDecimal dept116Amount) {
 		this.dept116Amount = dept116Amount;
 	}
 
-	private BigDecimal getDept117Amount() {
+	public BigDecimal getDept117Amount() {
 		return dept117Amount;
 	}
 
-	private void setDept117Amount(BigDecimal dept117Amount) {
+	public void setDept117Amount(BigDecimal dept117Amount) {
 		this.dept117Amount = dept117Amount;
 	}
 
-	private BigDecimal getDept118Amount() {
+	public BigDecimal getDept118Amount() {
 		return dept118Amount;
 	}
 
-	private void setDept118Amount(BigDecimal dept118Amount) {
+	public void setDept118Amount(BigDecimal dept118Amount) {
 		this.dept118Amount = dept118Amount;
 	}
 
-	private BigDecimal getDept119Amount() {
+	public BigDecimal getDept119Amount() {
 		return dept119Amount;
 	}
 
-	private void setDept119Amount(BigDecimal dept119Amount) {
+	public void setDept119Amount(BigDecimal dept119Amount) {
 		this.dept119Amount = dept119Amount;
 	}
 
-	private BigDecimal getDept120Amount() {
+	public BigDecimal getDept120Amount() {
 		return dept120Amount;
 	}
 
-	private void setDept120Amount(BigDecimal dept120Amount) {
+	public void setDept120Amount(BigDecimal dept120Amount) {
 		this.dept120Amount = dept120Amount;
 	}
 
-	private BigDecimal getDept121Amount() {
+	public BigDecimal getDept121Amount() {
 		return dept121Amount;
 	}
 
-	private void setDept121Amount(BigDecimal dept121Amount) {
+	public void setDept121Amount(BigDecimal dept121Amount) {
 		this.dept121Amount = dept121Amount;
 	}
 
-	private BigDecimal getDept122Amount() {
+	public BigDecimal getDept122Amount() {
 		return dept122Amount;
 	}
 
-	private void setDept122Amount(BigDecimal dept122Amount) {
+	public void setDept122Amount(BigDecimal dept122Amount) {
 		this.dept122Amount = dept122Amount;
 	}
 
-	private BigDecimal getDept123Amount() {
+	public BigDecimal getDept123Amount() {
 		return dept123Amount;
 	}
 
-	private void setDept123Amount(BigDecimal dept123Amount) {
+	public void setDept123Amount(BigDecimal dept123Amount) {
 		this.dept123Amount = dept123Amount;
 	}
 
-	private BigDecimal getDept124Amount() {
+	public BigDecimal getDept124Amount() {
 		return dept124Amount;
 	}
 
-	private void setDept124Amount(BigDecimal dept124Amount) {
+	public void setDept124Amount(BigDecimal dept124Amount) {
 		this.dept124Amount = dept124Amount;
 	}
 
-	private BigDecimal getDept125Amount() {
+	public BigDecimal getDept125Amount() {
 		return dept125Amount;
 	}
 
-	private void setDept125Amount(BigDecimal dept125Amount) {
+	public void setDept125Amount(BigDecimal dept125Amount) {
 		this.dept125Amount = dept125Amount;
 	}
 
-	private BigDecimal getDept126Amount() {
+	public BigDecimal getDept126Amount() {
 		return dept126Amount;
 	}
 
-	private void setDept126Amount(BigDecimal dept126Amount) {
+	public void setDept126Amount(BigDecimal dept126Amount) {
 		this.dept126Amount = dept126Amount;
 	}
 
-	private BigDecimal getDept127Amount() {
+	public BigDecimal getDept127Amount() {
 		return dept127Amount;
 	}
 
-	private void setDept127Amount(BigDecimal dept127Amount) {
+	public void setDept127Amount(BigDecimal dept127Amount) {
 		this.dept127Amount = dept127Amount;
 	}
 
-	private BigDecimal getDept128Amount() {
+	public BigDecimal getDept128Amount() {
 		return dept128Amount;
 	}
 
-	private void setDept128Amount(BigDecimal dept128Amount) {
+	public void setDept128Amount(BigDecimal dept128Amount) {
 		this.dept128Amount = dept128Amount;
 	}
 
-	private BigDecimal getDept129Amount() {
+	public BigDecimal getDept129Amount() {
 		return dept129Amount;
 	}
 
-	private void setDept129Amount(BigDecimal dept129Amount) {
+	public void setDept129Amount(BigDecimal dept129Amount) {
 		this.dept129Amount = dept129Amount;
 	}
 
-	private BigDecimal getDept130Amount() {
+	public BigDecimal getDept130Amount() {
 		return dept130Amount;
 	}
 
-	private void setDept130Amount(BigDecimal dept130Amount) {
+	public void setDept130Amount(BigDecimal dept130Amount) {
 		this.dept130Amount = dept130Amount;
 	}
 
-	private BigDecimal getDept131Amount() {
+	public BigDecimal getDept131Amount() {
 		return dept131Amount;
 	}
 
-	private void setDept131Amount(BigDecimal dept131Amount) {
+	public void setDept131Amount(BigDecimal dept131Amount) {
 		this.dept131Amount = dept131Amount;
 	}
 
-	private BigDecimal getDept132Amount() {
+	public BigDecimal getDept132Amount() {
 		return dept132Amount;
 	}
 
-	private void setDept132Amount(BigDecimal dept132Amount) {
+	public void setDept132Amount(BigDecimal dept132Amount) {
 		this.dept132Amount = dept132Amount;
 	}
 
-	private BigDecimal getDept133Amount() {
+	public BigDecimal getDept133Amount() {
 		return dept133Amount;
 	}
 
-	private void setDept133Amount(BigDecimal dept133Amount) {
+	public void setDept133Amount(BigDecimal dept133Amount) {
 		this.dept133Amount = dept133Amount;
 	}
 
-	private BigDecimal getDept134Amount() {
+	public BigDecimal getDept134Amount() {
 		return dept134Amount;
 	}
 
-	private void setDept134Amount(BigDecimal dept134Amount) {
+	public void setDept134Amount(BigDecimal dept134Amount) {
 		this.dept134Amount = dept134Amount;
 	}
 
-	private BigDecimal getDept135Amount() {
+	public BigDecimal getDept135Amount() {
 		return dept135Amount;
 	}
 
-	private void setDept135Amount(BigDecimal dept135Amount) {
+	public void setDept135Amount(BigDecimal dept135Amount) {
 		this.dept135Amount = dept135Amount;
 	}
 
-	private BigDecimal getDept136Amount() {
+	public BigDecimal getDept136Amount() {
 		return dept136Amount;
 	}
 
-	private void setDept136Amount(BigDecimal dept136Amount) {
+	public void setDept136Amount(BigDecimal dept136Amount) {
 		this.dept136Amount = dept136Amount;
 	}
 
-	private BigDecimal getDept137Amount() {
+	public BigDecimal getDept137Amount() {
 		return dept137Amount;
 	}
 
-	private void setDept137Amount(BigDecimal dept137Amount) {
+	public void setDept137Amount(BigDecimal dept137Amount) {
 		this.dept137Amount = dept137Amount;
 	}
 
-	private BigDecimal getDept138Amount() {
+	public BigDecimal getDept138Amount() {
 		return dept138Amount;
 	}
 
-	private void setDept138Amount(BigDecimal dept138Amount) {
+	public void setDept138Amount(BigDecimal dept138Amount) {
 		this.dept138Amount = dept138Amount;
 	}
 
-	private BigDecimal getDept139Amount() {
+	public BigDecimal getDept139Amount() {
 		return dept139Amount;
 	}
 
-	private void setDept139Amount(BigDecimal dept139Amount) {
+	public void setDept139Amount(BigDecimal dept139Amount) {
 		this.dept139Amount = dept139Amount;
 	}
 
-	private BigDecimal getDept140Amount() {
+	public BigDecimal getDept140Amount() {
 		return dept140Amount;
 	}
 
-	private void setDept140Amount(BigDecimal dept140Amount) {
+	public void setDept140Amount(BigDecimal dept140Amount) {
 		this.dept140Amount = dept140Amount;
 	}
 
-	private BigDecimal getDept141Amount() {
+	public BigDecimal getDept141Amount() {
 		return dept141Amount;
 	}
 
-	private void setDept141Amount(BigDecimal dept141Amount) {
+	public void setDept141Amount(BigDecimal dept141Amount) {
 		this.dept141Amount = dept141Amount;
 	}
 
-	private BigDecimal getDept142Amount() {
+	public BigDecimal getDept142Amount() {
 		return dept142Amount;
 	}
 
-	private void setDept142Amount(BigDecimal dept142Amount) {
+	public void setDept142Amount(BigDecimal dept142Amount) {
 		this.dept142Amount = dept142Amount;
 	}
 
-	private BigDecimal getDept143Amount() {
+	public BigDecimal getDept143Amount() {
 		return dept143Amount;
 	}
 
-	private void setDept143Amount(BigDecimal dept143Amount) {
+	public void setDept143Amount(BigDecimal dept143Amount) {
 		this.dept143Amount = dept143Amount;
 	}
 
-	private BigDecimal getDept144Amount() {
+	public BigDecimal getDept144Amount() {
 		return dept144Amount;
 	}
 
-	private void setDept144Amount(BigDecimal dept144Amount) {
+	public void setDept144Amount(BigDecimal dept144Amount) {
 		this.dept144Amount = dept144Amount;
 	}
 
-	private BigDecimal getDept145Amount() {
+	public BigDecimal getDept145Amount() {
 		return dept145Amount;
 	}
 
-	private void setDept145Amount(BigDecimal dept145Amount) {
+	public void setDept145Amount(BigDecimal dept145Amount) {
 		this.dept145Amount = dept145Amount;
 	}
 
-	private BigDecimal getDept146Amount() {
+	public BigDecimal getDept146Amount() {
 		return dept146Amount;
 	}
 
-	private void setDept146Amount(BigDecimal dept146Amount) {
+	public void setDept146Amount(BigDecimal dept146Amount) {
 		this.dept146Amount = dept146Amount;
 	}
 
-	private BigDecimal getDept147Amount() {
+	public BigDecimal getDept147Amount() {
 		return dept147Amount;
 	}
 
-	private void setDept147Amount(BigDecimal dept147Amount) {
+	public void setDept147Amount(BigDecimal dept147Amount) {
 		this.dept147Amount = dept147Amount;
 	}
 
-	private BigDecimal getDept148Amount() {
+	public BigDecimal getDept148Amount() {
 		return dept148Amount;
 	}
 
-	private void setDept148Amount(BigDecimal dept148Amount) {
+	public void setDept148Amount(BigDecimal dept148Amount) {
 		this.dept148Amount = dept148Amount;
 	}
 
-	private BigDecimal getDept149Amount() {
+	public BigDecimal getDept149Amount() {
 		return dept149Amount;
 	}
 
-	private void setDept149Amount(BigDecimal dept149Amount) {
+	public void setDept149Amount(BigDecimal dept149Amount) {
 		this.dept149Amount = dept149Amount;
 	}
 
-	private BigDecimal getDept150Amount() {
+	public BigDecimal getDept150Amount() {
 		return dept150Amount;
 	}
 
-	private void setDept150Amount(BigDecimal dept150Amount) {
+	public void setDept150Amount(BigDecimal dept150Amount) {
 		this.dept150Amount = dept150Amount;
 	}
 
-	private BigDecimal getDept151Amount() {
+	public BigDecimal getDept151Amount() {
 		return dept151Amount;
 	}
 
-	private void setDept151Amount(BigDecimal dept151Amount) {
+	public void setDept151Amount(BigDecimal dept151Amount) {
 		this.dept151Amount = dept151Amount;
 	}
 
-	private BigDecimal getDept152Amount() {
+	public BigDecimal getDept152Amount() {
 		return dept152Amount;
 	}
 
-	private void setDept152Amount(BigDecimal dept152Amount) {
+	public void setDept152Amount(BigDecimal dept152Amount) {
 		this.dept152Amount = dept152Amount;
 	}
 
-	private BigDecimal getDept153Amount() {
+	public BigDecimal getDept153Amount() {
 		return dept153Amount;
 	}
 
-	private void setDept153Amount(BigDecimal dept153Amount) {
+	public void setDept153Amount(BigDecimal dept153Amount) {
 		this.dept153Amount = dept153Amount;
 	}
 
-	private BigDecimal getDept154Amount() {
+	public BigDecimal getDept154Amount() {
 		return dept154Amount;
 	}
 
-	private void setDept154Amount(BigDecimal dept154Amount) {
+	public void setDept154Amount(BigDecimal dept154Amount) {
 		this.dept154Amount = dept154Amount;
 	}
 
-	private BigDecimal getDept155Amount() {
+	public BigDecimal getDept155Amount() {
 		return dept155Amount;
 	}
 
-	private void setDept155Amount(BigDecimal dept155Amount) {
+	public void setDept155Amount(BigDecimal dept155Amount) {
 		this.dept155Amount = dept155Amount;
 	}
 
-	private BigDecimal getDept156Amount() {
+	public BigDecimal getDept156Amount() {
 		return dept156Amount;
 	}
 
-	private void setDept156Amount(BigDecimal dept156Amount) {
+	public void setDept156Amount(BigDecimal dept156Amount) {
 		this.dept156Amount = dept156Amount;
 	}
 
-	private BigDecimal getDept157Amount() {
+	public BigDecimal getDept157Amount() {
 		return dept157Amount;
 	}
 
-	private void setDept157Amount(BigDecimal dept157Amount) {
+	public void setDept157Amount(BigDecimal dept157Amount) {
 		this.dept157Amount = dept157Amount;
 	}
 
-	private BigDecimal getDept158Amount() {
+	public BigDecimal getDept158Amount() {
 		return dept158Amount;
 	}
 
-	private void setDept158Amount(BigDecimal dept158Amount) {
+	public void setDept158Amount(BigDecimal dept158Amount) {
 		this.dept158Amount = dept158Amount;
 	}
 
-	private BigDecimal getDept159Amount() {
+	public BigDecimal getDept159Amount() {
 		return dept159Amount;
 	}
 
-	private void setDept159Amount(BigDecimal dept159Amount) {
+	public void setDept159Amount(BigDecimal dept159Amount) {
 		this.dept159Amount = dept159Amount;
 	}
 
-	private BigDecimal getDept160Amount() {
+	public BigDecimal getDept160Amount() {
 		return dept160Amount;
 	}
 
-	private void setDept160Amount(BigDecimal dept160Amount) {
+	public void setDept160Amount(BigDecimal dept160Amount) {
 		this.dept160Amount = dept160Amount;
 	}
 
-	private BigDecimal getDept161Amount() {
+	public BigDecimal getDept161Amount() {
 		return dept161Amount;
 	}
 
-	private void setDept161Amount(BigDecimal dept161Amount) {
+	public void setDept161Amount(BigDecimal dept161Amount) {
 		this.dept161Amount = dept161Amount;
 	}
 
-	private BigDecimal getDept162Amount() {
+	public BigDecimal getDept162Amount() {
 		return dept162Amount;
 	}
 
-	private void setDept162Amount(BigDecimal dept162Amount) {
+	public void setDept162Amount(BigDecimal dept162Amount) {
 		this.dept162Amount = dept162Amount;
 	}
 
-	private BigDecimal getDept163Amount() {
+	public BigDecimal getDept163Amount() {
 		return dept163Amount;
 	}
 
-	private void setDept163Amount(BigDecimal dept163Amount) {
+	public void setDept163Amount(BigDecimal dept163Amount) {
 		this.dept163Amount = dept163Amount;
 	}
 
-	private BigDecimal getDept164Amount() {
+	public BigDecimal getDept164Amount() {
 		return dept164Amount;
 	}
 
-	private void setDept164Amount(BigDecimal dept164Amount) {
+	public void setDept164Amount(BigDecimal dept164Amount) {
 		this.dept164Amount = dept164Amount;
 	}
 
-	private BigDecimal getDept165Amount() {
+	public BigDecimal getDept165Amount() {
 		return dept165Amount;
 	}
 
-	private void setDept165Amount(BigDecimal dept165Amount) {
+	public void setDept165Amount(BigDecimal dept165Amount) {
 		this.dept165Amount = dept165Amount;
 	}
 
-	private BigDecimal getDept166Amount() {
+	public BigDecimal getDept166Amount() {
 		return dept166Amount;
 	}
 
-	private void setDept166Amount(BigDecimal dept166Amount) {
+	public void setDept166Amount(BigDecimal dept166Amount) {
 		this.dept166Amount = dept166Amount;
 	}
 
-	private BigDecimal getDept167Amount() {
+	public BigDecimal getDept167Amount() {
 		return dept167Amount;
 	}
 
-	private void setDept167Amount(BigDecimal dept167Amount) {
+	public void setDept167Amount(BigDecimal dept167Amount) {
 		this.dept167Amount = dept167Amount;
 	}
 
-	private BigDecimal getDept168Amount() {
+	public BigDecimal getDept168Amount() {
 		return dept168Amount;
 	}
 
-	private void setDept168Amount(BigDecimal dept168Amount) {
+	public void setDept168Amount(BigDecimal dept168Amount) {
 		this.dept168Amount = dept168Amount;
 	}
 
-	private BigDecimal getDept169Amount() {
+	public BigDecimal getDept169Amount() {
 		return dept169Amount;
 	}
 
-	private void setDept169Amount(BigDecimal dept169Amount) {
+	public void setDept169Amount(BigDecimal dept169Amount) {
 		this.dept169Amount = dept169Amount;
 	}
 
-	private BigDecimal getDept170Amount() {
+	public BigDecimal getDept170Amount() {
 		return dept170Amount;
 	}
 
-	private void setDept170Amount(BigDecimal dept170Amount) {
+	public void setDept170Amount(BigDecimal dept170Amount) {
 		this.dept170Amount = dept170Amount;
 	}
 
-	private BigDecimal getDept171Amount() {
+	public BigDecimal getDept171Amount() {
 		return dept171Amount;
 	}
 
-	private void setDept171Amount(BigDecimal dept171Amount) {
+	public void setDept171Amount(BigDecimal dept171Amount) {
 		this.dept171Amount = dept171Amount;
 	}
 
-	private BigDecimal getDept172Amount() {
+	public BigDecimal getDept172Amount() {
 		return dept172Amount;
 	}
 
-	private void setDept172Amount(BigDecimal dept172Amount) {
+	public void setDept172Amount(BigDecimal dept172Amount) {
 		this.dept172Amount = dept172Amount;
 	}
 
-	private BigDecimal getDept173Amount() {
+	public BigDecimal getDept173Amount() {
 		return dept173Amount;
 	}
 
-	private void setDept173Amount(BigDecimal dept173Amount) {
+	public void setDept173Amount(BigDecimal dept173Amount) {
 		this.dept173Amount = dept173Amount;
 	}
 
-	private BigDecimal getDept174Amount() {
+	public BigDecimal getDept174Amount() {
 		return dept174Amount;
 	}
 
-	private void setDept174Amount(BigDecimal dept174Amount) {
+	public void setDept174Amount(BigDecimal dept174Amount) {
 		this.dept174Amount = dept174Amount;
 	}
 
-	private BigDecimal getDept175Amount() {
+	public BigDecimal getDept175Amount() {
 		return dept175Amount;
 	}
 
-	private void setDept175Amount(BigDecimal dept175Amount) {
+	public void setDept175Amount(BigDecimal dept175Amount) {
 		this.dept175Amount = dept175Amount;
 	}
 
-	private BigDecimal getDept176Amount() {
+	public BigDecimal getDept176Amount() {
 		return dept176Amount;
 	}
 
-	private void setDept176Amount(BigDecimal dept176Amount) {
+	public void setDept176Amount(BigDecimal dept176Amount) {
 		this.dept176Amount = dept176Amount;
 	}
 
-	private BigDecimal getDept177Amount() {
+	public BigDecimal getDept177Amount() {
 		return dept177Amount;
 	}
 
-	private void setDept177Amount(BigDecimal dept177Amount) {
+	public void setDept177Amount(BigDecimal dept177Amount) {
 		this.dept177Amount = dept177Amount;
 	}
 
-	private BigDecimal getDept178Amount() {
+	public BigDecimal getDept178Amount() {
 		return dept178Amount;
 	}
 
-	private void setDept178Amount(BigDecimal dept178Amount) {
+	public void setDept178Amount(BigDecimal dept178Amount) {
 		this.dept178Amount = dept178Amount;
 	}
 
-	private BigDecimal getDept179Amount() {
+	public BigDecimal getDept179Amount() {
 		return dept179Amount;
 	}
 
-	private void setDept179Amount(BigDecimal dept179Amount) {
+	public void setDept179Amount(BigDecimal dept179Amount) {
 		this.dept179Amount = dept179Amount;
 	}
 
-	private BigDecimal getDept180Amount() {
+	public BigDecimal getDept180Amount() {
 		return dept180Amount;
 	}
 
-	private void setDept180Amount(BigDecimal dept180Amount) {
+	public void setDept180Amount(BigDecimal dept180Amount) {
 		this.dept180Amount = dept180Amount;
 	}
 
-	private BigDecimal getDept181Amount() {
+	public BigDecimal getDept181Amount() {
 		return dept181Amount;
 	}
 
-	private void setDept181Amount(BigDecimal dept181Amount) {
+	public void setDept181Amount(BigDecimal dept181Amount) {
 		this.dept181Amount = dept181Amount;
 	}
 
-	private BigDecimal getDept182Amount() {
+	public BigDecimal getDept182Amount() {
 		return dept182Amount;
 	}
 
-	private void setDept182Amount(BigDecimal dept182Amount) {
+	public void setDept182Amount(BigDecimal dept182Amount) {
 		this.dept182Amount = dept182Amount;
 	}
 
-	private BigDecimal getDept183Amount() {
+	public BigDecimal getDept183Amount() {
 		return dept183Amount;
 	}
 
-	private void setDept183Amount(BigDecimal dept183Amount) {
+	public void setDept183Amount(BigDecimal dept183Amount) {
 		this.dept183Amount = dept183Amount;
 	}
 
-	private BigDecimal getDept184Amount() {
+	public BigDecimal getDept184Amount() {
 		return dept184Amount;
 	}
 
-	private void setDept184Amount(BigDecimal dept184Amount) {
+	public void setDept184Amount(BigDecimal dept184Amount) {
 		this.dept184Amount = dept184Amount;
 	}
 
-	private BigDecimal getDept185Amount() {
+	public BigDecimal getDept185Amount() {
 		return dept185Amount;
 	}
 
-	private void setDept185Amount(BigDecimal dept185Amount) {
+	public void setDept185Amount(BigDecimal dept185Amount) {
 		this.dept185Amount = dept185Amount;
 	}
 
-	private BigDecimal getDept186Amount() {
+	public BigDecimal getDept186Amount() {
 		return dept186Amount;
 	}
 
-	private void setDept186Amount(BigDecimal dept186Amount) {
+	public void setDept186Amount(BigDecimal dept186Amount) {
 		this.dept186Amount = dept186Amount;
 	}
 
-	private BigDecimal getDept187Amount() {
+	public BigDecimal getDept187Amount() {
 		return dept187Amount;
 	}
 
-	private void setDept187Amount(BigDecimal dept187Amount) {
+	public void setDept187Amount(BigDecimal dept187Amount) {
 		this.dept187Amount = dept187Amount;
 	}
 
-	private BigDecimal getDept188Amount() {
+	public BigDecimal getDept188Amount() {
 		return dept188Amount;
 	}
 
-	private void setDept188Amount(BigDecimal dept188Amount) {
+	public void setDept188Amount(BigDecimal dept188Amount) {
 		this.dept188Amount = dept188Amount;
 	}
 
-	private BigDecimal getDept189Amount() {
+	public BigDecimal getDept189Amount() {
 		return dept189Amount;
 	}
 
-	private void setDept189Amount(BigDecimal dept189Amount) {
+	public void setDept189Amount(BigDecimal dept189Amount) {
 		this.dept189Amount = dept189Amount;
 	}
 
-	private BigDecimal getDept190Amount() {
+	public BigDecimal getDept190Amount() {
 		return dept190Amount;
 	}
 
-	private void setDept190Amount(BigDecimal dept190Amount) {
+	public void setDept190Amount(BigDecimal dept190Amount) {
 		this.dept190Amount = dept190Amount;
 	}
 
-	private BigDecimal getDept191Amount() {
+	public BigDecimal getDept191Amount() {
 		return dept191Amount;
 	}
 
-	private void setDept191Amount(BigDecimal dept191Amount) {
+	public void setDept191Amount(BigDecimal dept191Amount) {
 		this.dept191Amount = dept191Amount;
 	}
 
-	private BigDecimal getDept192Amount() {
+	public BigDecimal getDept192Amount() {
 		return dept192Amount;
 	}
 
-	private void setDept192Amount(BigDecimal dept192Amount) {
+	public void setDept192Amount(BigDecimal dept192Amount) {
 		this.dept192Amount = dept192Amount;
 	}
 
-	private BigDecimal getDept193Amount() {
+	public BigDecimal getDept193Amount() {
 		return dept193Amount;
 	}
 
-	private void setDept193Amount(BigDecimal dept193Amount) {
+	public void setDept193Amount(BigDecimal dept193Amount) {
 		this.dept193Amount = dept193Amount;
 	}
 
-	private BigDecimal getDept194Amount() {
+	public BigDecimal getDept194Amount() {
 		return dept194Amount;
 	}
 
-	private void setDept194Amount(BigDecimal dept194Amount) {
+	public void setDept194Amount(BigDecimal dept194Amount) {
 		this.dept194Amount = dept194Amount;
 	}
 
-	private BigDecimal getDept195Amount() {
+	public BigDecimal getDept195Amount() {
 		return dept195Amount;
 	}
 
-	private void setDept195Amount(BigDecimal dept195Amount) {
+	public void setDept195Amount(BigDecimal dept195Amount) {
 		this.dept195Amount = dept195Amount;
 	}
 
-	private BigDecimal getDept196Amount() {
+	public BigDecimal getDept196Amount() {
 		return dept196Amount;
 	}
 
-	private void setDept196Amount(BigDecimal dept196Amount) {
+	public void setDept196Amount(BigDecimal dept196Amount) {
 		this.dept196Amount = dept196Amount;
 	}
 
-	private BigDecimal getDept197Amount() {
+	public BigDecimal getDept197Amount() {
 		return dept197Amount;
 	}
 
-	private void setDept197Amount(BigDecimal dept197Amount) {
+	public void setDept197Amount(BigDecimal dept197Amount) {
 		this.dept197Amount = dept197Amount;
 	}
 
-	private BigDecimal getDept198Amount() {
+	public BigDecimal getDept198Amount() {
 		return dept198Amount;
 	}
 
-	private void setDept198Amount(BigDecimal dept198Amount) {
+	public void setDept198Amount(BigDecimal dept198Amount) {
 		this.dept198Amount = dept198Amount;
 	}
 
-	private BigDecimal getDept199Amount() {
+	public BigDecimal getDept199Amount() {
 		return dept199Amount;
 	}
 
-	private void setDept199Amount(BigDecimal dept199Amount) {
+	public void setDept199Amount(BigDecimal dept199Amount) {
 		this.dept199Amount = dept199Amount;
 	}
 
-	private BigDecimal getDept200Amount() {
+	public BigDecimal getDept200Amount() {
 		return dept200Amount;
 	}
 
-	private void setDept200Amount(BigDecimal dept200Amount) {
+	public void setDept200Amount(BigDecimal dept200Amount) {
 		this.dept200Amount = dept200Amount;
+	}
+
+	public Z005() {
+		super();
 	}
 }

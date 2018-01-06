@@ -8,7 +8,7 @@ public class Z020 {
 	private String z20machine;
 	private String z20file;
 	private String z20mode;
-	private String z20zcounter;
+	private int z20zcounter;
 	private String z20date;
 	private String z20time;
 	private BigDecimal grandTotal;
@@ -16,7 +16,7 @@ public class Z020 {
 
 	public String z005CreateTableString() {
 		return "create table z020 ( " + "z20model varchar," + "z20machine varchar," + "z20file varchar,"
-				+ "z20mode varchar," + "z20zcounter varchar," + "z20date integer," + "z20time varchar,"
+				+ "z20mode varchar," + "z20zcounter decimal(10)," + "z20date integer," + "z20time varchar,"
 				+ "grandTotal decimal(10,2)," + "prevGrandTotal decimal(10,2)" + ");";
 	}
 
@@ -52,11 +52,11 @@ public class Z020 {
 		this.z20mode = z20mode;
 	}
 
-	public String getZ20zcounter() {
+	public int getZ20zcounter() {
 		return z20zcounter;
 	}
 
-	public void setZ20zcounter(String z20zcounter) {
+	public void setZ20zcounter(int z20zcounter) {
 		this.z20zcounter = z20zcounter;
 	}
 

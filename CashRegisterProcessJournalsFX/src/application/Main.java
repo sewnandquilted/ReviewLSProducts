@@ -100,6 +100,9 @@ public class Main extends Application {
 	static String userEntry;
 	// private static boolean doTrace = false;
 	static ArrayList<String> checked = new ArrayList<String>();
+	public static ArrayList<Z001> z001List = new ArrayList<Z001>();
+	public static ArrayList<Z002> z002List = new ArrayList<Z002>();
+	public static ArrayList<Z005> z005List = new ArrayList<Z005>();
 	public static ArrayList<Z020> z020List = new ArrayList<Z020>();
 
 	static Connection conn;
@@ -150,13 +153,28 @@ public class Main extends Application {
 						System.out.println("csvFileType: " + csvFileType);
 						switch (csvFileType) {
 						case "Z001": {
-							processZ001(item.toString());
+							try {
+								processZ001(item.toString());
+							} catch (FileNotFoundException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						}
 						case "Z002": {
-							processZ002(item.toString());
+							try {
+								processZ002(item.toString());
+							} catch (FileNotFoundException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						}
 						case "Z005": {
-							processZ005(item.toString());
+							try {
+								processZ005(item.toString());
+							} catch (FileNotFoundException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						}
 						case "Z020": {
 							try {
@@ -175,11 +193,1812 @@ public class Main extends Application {
 		}
 	}
 
+	private static void processZ001(String fileIn) throws FileNotFoundException {
+		Z001 z01 = new Z001();
+		currentFilename = fileIn;
+		FileInputStream fileStream = new FileInputStream(fileIn);
+		BufferedReader br = new BufferedReader(new InputStreamReader(fileStream));
+		z01capture(z01, br);
+	}
+
+	private static void z01capture(Z001 z01, BufferedReader br) {
+		do {
+			String split[] = getNextCsvLine(br);
+			switch (split[0]) {
+			case "MODEL": {
+				z01.setZ01model(split[1]);
+			}
+			case "MACHINE": {
+				z01.setZ01machine(split[1]);
+			}
+			case "FILE": {
+				z01.setZ01file(split[1]);
+			}
+			case "MODE": {
+				z01.setZ01mode(split[1]);
+			}
+			case "Z COUNTER": {
+				z01.setZ01zcounter(Integer.parseInt(split[1]));
+			}
+			case "DATE": {
+				z01.setZ01date(split[1]);
+			}
+			case "TIME": {
+				z01.setZ01time(split[1]);
+			}
+			case "": {
+			}
+			case "RECORD": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setGrossQuantity(bd2);
+				z01.setGrossAmount(bd3);
+			}
+			case "1": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setNetQuantity(bd2);
+				z01.setNetAmount(bd3);
+			}
+			case "2": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCashindrawQuantity(bd2);
+				z01.setCashindrawAmount(bd3);
+			}
+			case "3": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setChidQuantity(bd2);
+				z01.setChidAmount(bd3);
+			}
+			case "4": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCkidQuantity(bd2);
+				z01.setCkidAmount(bd3);
+			}
+			case "5": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid1Quantity(bd2);
+				z01.setCrid1Amount(bd3);
+			}
+			case "6": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid2Quantity(bd2);
+				z01.setCrid2Amount(bd3);
+			}
+			case "7": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid3Quantity(bd2);
+				z01.setCrid3Amount(bd3);
+			}
+			case "8": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid4Quantity(bd2);
+				z01.setCrid4Amount(bd3);
+			}
+			case "9": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCaid2Quantity(bd2);
+				z01.setCaid2Amount(bd3);
+			}
+			case "10": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setChid2Quantity(bd2);
+				z01.setChid2Amount(bd3);
+			}
+			case "11": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCkid2Quantity(bd2);
+				z01.setCkid2Amount(bd3);
+			}
+			case "12": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid21Quantity(bd2);
+				z01.setCrid21Amount(bd3);
+			}
+			case "13": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid22Quantity(bd2);
+				z01.setCrid22Amount(bd3);
+			}
+			case "14": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid23Quantity(bd2);
+				z01.setCrid23Amount(bd3);
+			}
+			case "15": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCrid24Quantity(bd2);
+				z01.setCrid24Amount(bd3);
+			}
+			case "16": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setRfQuantity(bd2);
+				z01.setRfAmount(bd3);
+			}
+			case "17": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCustQuantity(bd2);
+				z01.setCustAmount(bd3);
+			}
+			case "18": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setAvrgQuantity(bd2);
+				z01.setAvrgAmount(bd3);
+			}
+			case "19": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setC1Quantity(bd2);
+				z01.setC1Amount(bd3);
+			}
+			case "20": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setC2Quantity(bd2);
+				z01.setC2Amount(bd3);
+			}
+			case "21": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCeca1Quantity(bd2);
+				z01.setCeca1Amount(bd3);
+			}
+			case "22": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCeck1Quantity(bd2);
+				z01.setCeck1Amount(bd3);
+			}
+			case "23": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCeca2Quantity(bd2);
+				z01.setCeca2Amount(bd3);
+			}
+			case "24": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCeck2Quantity(bd2);
+				z01.setCeck2Amount(bd3);
+			}
+			case "25": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setDcQuantity(bd2);
+				z01.setDcAmount(bd3);
+			}
+			case "26": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCouponQuantity(bd2);
+				z01.setCouponAmount(bd3);
+			}
+			case "27": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setRefundQuantity(bd2);
+				z01.setRefundAmount(bd3);
+			}
+			case "28": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setRound1Quantity(bd2);
+				z01.setRound1Amount(bd3);
+			}
+			case "29": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setRound2Quantity(bd2);
+				z01.setRound2Amount(bd3);
+			}
+			case "30": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setCancelQuantity(bd2);
+				z01.setCancelAmount(bd3);
+			}
+			case "31": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setDeclaQuantity(bd2);
+				z01.setDeclaAmount(bd3);
+			}
+			case "32": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTaxableamtQuantity(bd2);
+				z01.setTaxableamtAmount(bd3);
+			}
+			case "33": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setGstincludedQuantity(bd2);
+				z01.setGstincludedAmount(bd3);
+			}
+			case "34": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTa2Quantity(bd2);
+				z01.setTa2Amount(bd3);
+			}
+			case "35": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTx2Quantity(bd2);
+				z01.setTx2Amount(bd3);
+			}
+			case "36": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTa3Quantity(bd2);
+				z01.setTa3Amount(bd3);
+			}
+			case "37": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTx3Quantity(bd2);
+				z01.setTx3Amount(bd3);
+			}
+			case "38": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTa4Quantity(bd2);
+				z01.setTa4Amount(bd3);
+			}
+			case "39": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setTx4Quantity(bd2);
+				z01.setTx4Amount(bd3);
+			}
+			case "40": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setNontaxQuantity(bd2);
+				z01.setNontaxAmount(bd3);
+			}
+			case "41": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z01.setGrossQuantity(bd2);
+				z01.setGrossAmount(bd3);
+			}
+			default: {
+			}
+			}
+		} while (morelines);
+		z001List.add(z01);
+	}
+
+	private static void processZ002(String fileIn) throws FileNotFoundException {
+		Z002 z02 = new Z002();
+		currentFilename = fileIn;
+		FileInputStream fileStream = new FileInputStream(fileIn);
+		BufferedReader br = new BufferedReader(new InputStreamReader(fileStream));
+		z02capture(z02, br);
+	}
+
+	private static void z02capture(Z002 z02, BufferedReader br) {
+		do {
+			String split[] = getNextCsvLine(br);
+			switch (split[0]) {
+			case "MODEL": {
+				z02.setZ02model(split[1]);
+			}
+			case "MACHINE": {
+				z02.setZ02machine(split[1]);
+			}
+			case "REPORT": {
+				z02.setZ02report(split[1]);
+			}
+			case "FILE": {
+				z02.setZ02file(split[1]);
+			}
+			case "MODE": {
+				z02.setZ02mode(split[1]);
+			}
+			case "Z COUNTER": {
+				z02.setZ02zcounter(Integer.parseInt(split[1]));
+			}
+			case "DATE": {
+				z02.setZ02date(split[1]);
+			}
+			case "TIME": {
+				z02.setZ02time(split[1]);
+			}
+			case "": {
+			}
+			case "RECORD": {
+			}
+			case "1": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setCashQuantity(bd2);
+				z02.setCashAmount(bd3);
+			}
+			case "2": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setSubtotalQuantity(bd2);
+				z02.setSubtotalAmount(bd3);
+			}
+			case "3": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setChargeQuantity(bd2);
+				z02.setChargeAmount(bd3);
+			}
+			case "4": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setCheckQuantity(bd2);
+				z02.setCheckAmount(bd3);
+			}
+			case "5": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setHelpQuantity(bd2);
+				z02.setHelpAmount(bd3);
+			}
+			case "6": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setTaxpgmQuantity(bd2);
+				z02.setTaxpgmAmount(bd3);
+			}
+			case "7": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setPoQuantity(bd2);
+				z02.setPoAmount(bd3);
+			}
+			case "8": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setRaQuantity(bd2);
+				z02.setRaAmount(bd3);
+			}
+			case "9": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setSignoffQuantity(bd2);
+				z02.setSignoffAmount(bd3);
+			}
+			case "10": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setClknoQuantity(bd2);
+				z02.setClknoAmount(bd3);
+			}
+			case "11": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setShiftnoQuantity(bd2);
+				z02.setShiftnoAmount(bd3);
+			}
+			case "12": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setDwnQuantity(bd2);
+				z02.setDwnAmount(bd3);
+			}
+			case "13": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setPctdiscountQuantity(bd2);
+				z02.setPctdiscountAmount(bd3);
+			}
+			case "14": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setDiscountQuantity(bd2);
+				z02.setDiscountAmount(bd3);
+			}
+			case "15": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setPluQuantity(bd2);
+				z02.setPluAmount(bd3);
+			}
+			case "16": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setPrcQuantity(bd2);
+				z02.setPrcAmount(bd3);
+			}
+			case "17": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setReceiptQuantity(bd2);
+				z02.setReceiptAmount(bd3);
+			}
+			case "18": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setCorrQuantity(bd2);
+				z02.setCorrAmount(bd3);
+			}
+			case "19": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setRfQuantity(bd2);
+				z02.setRfAmount(bd3);
+			}
+			case "20": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setOpenQuantity(bd2);
+				z02.setOpenAmount(bd3);
+			}
+			case "21": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setRctQuantity(bd2);
+				z02.setRctAmount(bd3);
+			}
+			case "22": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setZeroQuantity(bd2);
+				z02.setZeroAmount(bd3);
+			}
+			case "23": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setDotQuantity(bd2);
+				z02.setDotAmount(bd3);
+			}
+			case "24": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setVatQuantity(bd2);
+				z02.setVatAmount(bd3);
+			}
+			case "25": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setNsQuantity(bd2);
+				z02.setNsAmount(bd3);
+			}
+			case "26": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setCouponQuantity(bd2);
+				z02.setCouponAmount(bd3);
+			}
+			case "27": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setUpQuantity(bd2);
+				z02.setUpAmount(bd3);
+			}
+			case "28": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setCeQuantity(bd2);
+				z02.setCeAmount(bd3);
+			}
+			case "29": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setxQuantity(bd2);
+				z02.setxAmount(bd3);
+			}
+			case "30": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setHashQuantity(bd2);
+				z02.setHashAmount(bd3);
+			}
+			case "31": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setNosaleQuantity(bd2);
+				z02.setNosaleAmount(bd3);
+			}
+			case "32": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z02.setVoidQuantity(bd2);
+				z02.setVoidAmount(bd3);
+			}
+			case "33":
+			case "34":
+			case "35":
+			case "36":
+			case "37":
+			case "38":
+			case "39":
+			case "40":
+			case "41":
+			case "42":
+			case "43":
+			case "44":
+			case "45":
+			case "46":
+			case "47":
+			case "48":
+			case "49":
+			case "50": {
+			}
+			default: {
+			}
+			}
+		} while (morelines);
+		z002List.add(z02);
+	}
+
+	private static void processZ005(String fileIn) throws FileNotFoundException {
+		Z005 z05 = new Z005();
+		currentFilename = fileIn;
+		FileInputStream fileStream = new FileInputStream(fileIn);
+		BufferedReader br = new BufferedReader(new InputStreamReader(fileStream));
+		z05capture(z05, br);
+	}
+
+	private static void z05capture(Z005 z05, BufferedReader br) {
+		do {
+			String split[] = getNextCsvLine(br);
+			switch (split[0]) {
+			case "MODEL": {
+				z05.setZ05model(split[1]);
+			}
+			case "MACHINE": {
+				z05.setZ05machine(split[1]);
+			}
+			case "FILE": {
+				z05.setZ05file(split[1]);
+			}
+			case "MODE": {
+				z05.setZ05mode(split[1]);
+			}
+			case "Z COUNTER": {
+				z05.setZ05zcounter(Integer.parseInt(split[1]));
+			}
+			case "DATE": {
+				z05.setZ05date(split[1]);
+			}
+			case "TIME": {
+				z05.setZ05time(split[1]);
+			}
+			case "": {
+			}
+			case "RECORD": {
+			}
+
+			case "1": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setFabricQuantity(bd2);
+				z05.setFabricAmount(bd3);
+			}
+			case "2": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setWorkshopQuantity(bd2);
+				z05.setWorkshopAmount(bd3);
+			}
+			case "3": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setSalefabricQuantity(bd2);
+				z05.setSalefabricAmount(bd3);
+			}
+			case "4": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setGiftcertQuantity(bd2);
+				z05.setGiftcertAmount(bd3);
+			}
+			case "5": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept005Quantity(bd2);
+				z05.setDept005Amount(bd3);
+			}
+			case "6": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setNotionQuantity(bd2);
+				z05.setNotionAmount(bd3);
+			}
+			case "7": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setBomQuantity(bd2);
+				z05.setBomAmount(bd3);
+			}
+			case "8": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setThreadsQuantity(bd2);
+				z05.setThreadsAmount(bd3);
+			}
+			case "9": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept009Quantity(bd2);
+				z05.setDept009Amount(bd3);
+			}
+			case "10": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept010Quantity(bd2);
+				z05.setDept010Amount(bd3);
+			}
+			case "11": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setBookQuantity(bd2);
+				z05.setBookAmount(bd3);
+			}
+			case "12": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setPostageQuantity(bd2);
+				z05.setPostageAmount(bd3);
+			}
+			case "13": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setKitsQuantity(bd2);
+				z05.setKitsAmount(bd3);
+			}
+			case "14": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept014Quantity(bd2);
+				z05.setDept014Amount(bd3);
+			}
+			case "15": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept015Quantity(bd2);
+				z05.setDept015Amount(bd3);
+			}
+			case "16": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setClassQuantity(bd2);
+				z05.setClassAmount(bd3);
+			}
+			case "17": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setLongarmQuantity(bd2);
+				z05.setLongarmAmount(bd3);
+			}
+			case "18": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setPatternsQuantity(bd2);
+				z05.setPatternsAmount(bd3);
+			}
+			case "19": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept019Quantity(bd2);
+				z05.setDept019Amount(bd3);
+			}
+			case "20": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setPatternQuantity(bd2);
+				z05.setPatternAmount(bd3);
+			}
+			case "21": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setJanomeQuantity(bd2);
+				z05.setJanomeAmount(bd3);
+			}
+			case "22": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setBattingQuantity(bd2);
+				z05.setBattingAmount(bd3);
+			}
+			case "23": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setMiscQuantity(bd2);
+				z05.setMiscAmount(bd3);
+			}
+			case "24": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept024Quantity(bd2);
+				z05.setDept024Amount(bd3);
+			}
+			case "25": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept025Quantity(bd2);
+				z05.setDept025Amount(bd3);
+			}
+			case "26": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept026Quantity(bd2);
+				z05.setDept026Amount(bd3);
+			}
+			case "27": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept027Quantity(bd2);
+				z05.setDept027Amount(bd3);
+			}
+			case "28": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept028Quantity(bd2);
+				z05.setDept028Amount(bd3);
+			}
+			case "29": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept029Quantity(bd2);
+				z05.setDept029Amount(bd3);
+			}
+			case "30": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept030Quantity(bd2);
+				z05.setDept030Amount(bd3);
+			}
+			case "31": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept031Quantity(bd2);
+				z05.setDept031Amount(bd3);
+			}
+			case "32": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept032Quantity(bd2);
+				z05.setDept032Amount(bd3);
+			}
+			case "33": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept033Quantity(bd2);
+				z05.setDept033Amount(bd3);
+			}
+			case "34": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept034Quantity(bd2);
+				z05.setDept034Amount(bd3);
+			}
+			case "35": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept035Quantity(bd2);
+				z05.setDept035Amount(bd3);
+			}
+			case "36": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept036Quantity(bd2);
+				z05.setDept036Amount(bd3);
+			}
+			case "37": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept037Quantity(bd2);
+				z05.setDept037Amount(bd3);
+			}
+			case "38": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept038Quantity(bd2);
+				z05.setDept038Amount(bd3);
+			}
+			case "39": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept039Quantity(bd2);
+				z05.setDept039Amount(bd3);
+			}
+			case "40": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept040Quantity(bd2);
+				z05.setDept040Amount(bd3);
+			}
+			case "41": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept041Quantity(bd2);
+				z05.setDept041Amount(bd3);
+			}
+			case "42": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept042Quantity(bd2);
+				z05.setDept042Amount(bd3);
+			}
+			case "43": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept043Quantity(bd2);
+				z05.setDept043Amount(bd3);
+			}
+			case "44": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept044Quantity(bd2);
+				z05.setDept044Amount(bd3);
+			}
+			case "45": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept045Quantity(bd2);
+				z05.setDept045Amount(bd3);
+			}
+			case "46": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept046Quantity(bd2);
+				z05.setDept046Amount(bd3);
+			}
+			case "47": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept047Quantity(bd2);
+				z05.setDept047Amount(bd3);
+			}
+			case "48": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept048Quantity(bd2);
+				z05.setDept048Amount(bd3);
+			}
+			case "49": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept049Quantity(bd2);
+				z05.setDept049Amount(bd3);
+			}
+			case "50": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept050Quantity(bd2);
+				z05.setDept050Amount(bd3);
+			}
+			case "51": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept051Quantity(bd2);
+				z05.setDept051Amount(bd3);
+			}
+			case "52": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept052Quantity(bd2);
+				z05.setDept052Amount(bd3);
+			}
+			case "53": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept053Quantity(bd2);
+				z05.setDept053Amount(bd3);
+			}
+			case "54": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept054Quantity(bd2);
+				z05.setDept054Amount(bd3);
+			}
+			case "55": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept055Quantity(bd2);
+				z05.setDept055Amount(bd3);
+			}
+			case "56": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept056Quantity(bd2);
+				z05.setDept056Amount(bd3);
+			}
+			case "57": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept057Quantity(bd2);
+				z05.setDept057Amount(bd3);
+			}
+			case "58": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept058Quantity(bd2);
+				z05.setDept058Amount(bd3);
+			}
+			case "59": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept059Quantity(bd2);
+				z05.setDept059Amount(bd3);
+			}
+			case "60": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept060Quantity(bd2);
+				z05.setDept060Amount(bd3);
+			}
+			case "61": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept061Quantity(bd2);
+				z05.setDept061Amount(bd3);
+			}
+			case "62": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept062Quantity(bd2);
+				z05.setDept062Amount(bd3);
+			}
+			case "63": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept063Quantity(bd2);
+				z05.setDept063Amount(bd3);
+			}
+			case "64": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept064Quantity(bd2);
+				z05.setDept064Amount(bd3);
+			}
+			case "65": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept065Quantity(bd2);
+				z05.setDept065Amount(bd3);
+			}
+			case "66": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept066Quantity(bd2);
+				z05.setDept066Amount(bd3);
+			}
+			case "67": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept067Quantity(bd2);
+				z05.setDept067Amount(bd3);
+			}
+			case "68": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept068Quantity(bd2);
+				z05.setDept068Amount(bd3);
+			}
+			case "69": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept069Quantity(bd2);
+				z05.setDept069Amount(bd3);
+			}
+			case "70": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept070Quantity(bd2);
+				z05.setDept070Amount(bd3);
+			}
+			case "71": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept071Quantity(bd2);
+				z05.setDept071Amount(bd3);
+			}
+			case "72": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept072Quantity(bd2);
+				z05.setDept072Amount(bd3);
+			}
+			case "73": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept073Quantity(bd2);
+				z05.setDept073Amount(bd3);
+			}
+			case "74": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept074Quantity(bd2);
+				z05.setDept074Amount(bd3);
+			}
+			case "75": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept075Quantity(bd2);
+				z05.setDept075Amount(bd3);
+			}
+			case "76": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept076Quantity(bd2);
+				z05.setDept076Amount(bd3);
+			}
+			case "77": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept077Quantity(bd2);
+				z05.setDept077Amount(bd3);
+			}
+			case "78": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept078Quantity(bd2);
+				z05.setDept078Amount(bd3);
+			}
+			case "79": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept079Quantity(bd2);
+				z05.setDept079Amount(bd3);
+			}
+			case "80": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept080Quantity(bd2);
+				z05.setDept080Amount(bd3);
+			}
+			case "81": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept081Quantity(bd2);
+				z05.setDept081Amount(bd3);
+			}
+			case "82": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept082Quantity(bd2);
+				z05.setDept082Amount(bd3);
+			}
+			case "83": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept083Quantity(bd2);
+				z05.setDept083Amount(bd3);
+			}
+			case "84": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept084Quantity(bd2);
+				z05.setDept084Amount(bd3);
+			}
+			case "85": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept085Quantity(bd2);
+				z05.setDept085Amount(bd3);
+			}
+			case "86": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept086Quantity(bd2);
+				z05.setDept086Amount(bd3);
+			}
+			case "87": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept087Quantity(bd2);
+				z05.setDept087Amount(bd3);
+			}
+			case "88": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept088Quantity(bd2);
+				z05.setDept088Amount(bd3);
+			}
+			case "89": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept089Quantity(bd2);
+				z05.setDept089Amount(bd3);
+			}
+			case "90": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept090Quantity(bd2);
+				z05.setDept090Amount(bd3);
+			}
+			case "91": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept091Quantity(bd2);
+				z05.setDept091Amount(bd3);
+			}
+			case "92": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept092Quantity(bd2);
+				z05.setDept092Amount(bd3);
+			}
+			case "93": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept093Quantity(bd2);
+				z05.setDept093Amount(bd3);
+			}
+			case "94": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept094Quantity(bd2);
+				z05.setDept094Amount(bd3);
+			}
+			case "95": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept095Quantity(bd2);
+				z05.setDept095Amount(bd3);
+			}
+			case "96": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept096Quantity(bd2);
+				z05.setDept096Amount(bd3);
+			}
+			case "97": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept097Quantity(bd2);
+				z05.setDept097Amount(bd3);
+			}
+			case "98": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept098Quantity(bd2);
+				z05.setDept098Amount(bd3);
+			}
+			case "99": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept099Quantity(bd2);
+				z05.setDept099Amount(bd3);
+			}
+			case "100": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept100Quantity(bd2);
+				z05.setDept100Amount(bd3);
+			}
+			case "101": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept101Quantity(bd2);
+				z05.setDept101Amount(bd3);
+			}
+			case "102": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept102Quantity(bd2);
+				z05.setDept102Amount(bd3);
+			}
+			case "103": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept103Quantity(bd2);
+				z05.setDept103Amount(bd3);
+			}
+			case "104": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept104Quantity(bd2);
+				z05.setDept104Amount(bd3);
+			}
+			case "105": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept105Quantity(bd2);
+				z05.setDept105Amount(bd3);
+			}
+			case "106": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept106Quantity(bd2);
+				z05.setDept106Amount(bd3);
+			}
+			case "107": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept107Quantity(bd2);
+				z05.setDept107Amount(bd3);
+			}
+			case "108": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept108Quantity(bd2);
+				z05.setDept108Amount(bd3);
+			}
+			case "109": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept109Quantity(bd2);
+				z05.setDept109Amount(bd3);
+			}
+			case "110": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept110Quantity(bd2);
+				z05.setDept110Amount(bd3);
+			}
+			case "111": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept111Quantity(bd2);
+				z05.setDept111Amount(bd3);
+			}
+			case "112": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept112Quantity(bd2);
+				z05.setDept112Amount(bd3);
+			}
+			case "113": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept113Quantity(bd2);
+				z05.setDept113Amount(bd3);
+			}
+			case "114": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept114Quantity(bd2);
+				z05.setDept114Amount(bd3);
+			}
+			case "115": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept115Quantity(bd2);
+				z05.setDept115Amount(bd3);
+			}
+			case "116": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept116Quantity(bd2);
+				z05.setDept116Amount(bd3);
+			}
+			case "117": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept117Quantity(bd2);
+				z05.setDept117Amount(bd3);
+			}
+			case "118": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept118Quantity(bd2);
+				z05.setDept118Amount(bd3);
+			}
+			case "119": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept119Quantity(bd2);
+				z05.setDept119Amount(bd3);
+			}
+			case "120": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept120Quantity(bd2);
+				z05.setDept120Amount(bd3);
+			}
+			case "121": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept121Quantity(bd2);
+				z05.setDept121Amount(bd3);
+			}
+			case "122": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept122Quantity(bd2);
+				z05.setDept122Amount(bd3);
+			}
+			case "123": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept123Quantity(bd2);
+				z05.setDept123Amount(bd3);
+			}
+			case "124": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept124Quantity(bd2);
+				z05.setDept124Amount(bd3);
+			}
+			case "125": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept125Quantity(bd2);
+				z05.setDept125Amount(bd3);
+			}
+			case "126": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept126Quantity(bd2);
+				z05.setDept126Amount(bd3);
+			}
+			case "127": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept127Quantity(bd2);
+				z05.setDept127Amount(bd3);
+			}
+			case "128": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept128Quantity(bd2);
+				z05.setDept128Amount(bd3);
+			}
+			case "129": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept129Quantity(bd2);
+				z05.setDept129Amount(bd3);
+			}
+			case "130": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept130Quantity(bd2);
+				z05.setDept130Amount(bd3);
+			}
+			case "131": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept131Quantity(bd2);
+				z05.setDept131Amount(bd3);
+			}
+			case "132": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept132Quantity(bd2);
+				z05.setDept132Amount(bd3);
+			}
+			case "133": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept133Quantity(bd2);
+				z05.setDept133Amount(bd3);
+			}
+			case "134": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept134Quantity(bd2);
+				z05.setDept134Amount(bd3);
+			}
+			case "135": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept135Quantity(bd2);
+				z05.setDept135Amount(bd3);
+			}
+			case "136": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept136Quantity(bd2);
+				z05.setDept136Amount(bd3);
+			}
+			case "137": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept137Quantity(bd2);
+				z05.setDept137Amount(bd3);
+			}
+			case "138": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept138Quantity(bd2);
+				z05.setDept138Amount(bd3);
+			}
+			case "139": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept139Quantity(bd2);
+				z05.setDept139Amount(bd3);
+			}
+			case "140": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept140Quantity(bd2);
+				z05.setDept140Amount(bd3);
+			}
+			case "141": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept141Quantity(bd2);
+				z05.setDept141Amount(bd3);
+			}
+			case "142": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept142Quantity(bd2);
+				z05.setDept142Amount(bd3);
+			}
+			case "143": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept143Quantity(bd2);
+				z05.setDept143Amount(bd3);
+			}
+			case "144": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept144Quantity(bd2);
+				z05.setDept144Amount(bd3);
+			}
+			case "145": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept145Quantity(bd2);
+				z05.setDept145Amount(bd3);
+			}
+			case "146": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept146Quantity(bd2);
+				z05.setDept146Amount(bd3);
+			}
+			case "147": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept147Quantity(bd2);
+				z05.setDept147Amount(bd3);
+			}
+			case "148": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept148Quantity(bd2);
+				z05.setDept148Amount(bd3);
+			}
+			case "149": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept149Quantity(bd2);
+				z05.setDept149Amount(bd3);
+			}
+			case "150": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept150Quantity(bd2);
+				z05.setDept150Amount(bd3);
+			}
+			case "151": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept151Quantity(bd2);
+				z05.setDept151Amount(bd3);
+			}
+			case "152": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept152Quantity(bd2);
+				z05.setDept152Amount(bd3);
+			}
+			case "153": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept153Quantity(bd2);
+				z05.setDept153Amount(bd3);
+			}
+			case "154": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept154Quantity(bd2);
+				z05.setDept154Amount(bd3);
+			}
+			case "155": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept155Quantity(bd2);
+				z05.setDept155Amount(bd3);
+			}
+			case "156": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept156Quantity(bd2);
+				z05.setDept156Amount(bd3);
+			}
+			case "157": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept157Quantity(bd2);
+				z05.setDept157Amount(bd3);
+			}
+			case "158": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept158Quantity(bd2);
+				z05.setDept158Amount(bd3);
+			}
+			case "159": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept159Quantity(bd2);
+				z05.setDept159Amount(bd3);
+			}
+			case "160": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept160Quantity(bd2);
+				z05.setDept160Amount(bd3);
+			}
+			case "161": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept161Quantity(bd2);
+				z05.setDept161Amount(bd3);
+			}
+			case "162": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept162Quantity(bd2);
+				z05.setDept162Amount(bd3);
+			}
+			case "163": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept163Quantity(bd2);
+				z05.setDept163Amount(bd3);
+			}
+			case "164": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept164Quantity(bd2);
+				z05.setDept164Amount(bd3);
+			}
+			case "165": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept165Quantity(bd2);
+				z05.setDept165Amount(bd3);
+			}
+			case "166": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept166Quantity(bd2);
+				z05.setDept166Amount(bd3);
+			}
+			case "167": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept167Quantity(bd2);
+				z05.setDept167Amount(bd3);
+			}
+			case "168": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept168Quantity(bd2);
+				z05.setDept168Amount(bd3);
+			}
+			case "169": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept169Quantity(bd2);
+				z05.setDept169Amount(bd3);
+			}
+			case "170": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept170Quantity(bd2);
+				z05.setDept170Amount(bd3);
+			}
+			case "171": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept171Quantity(bd2);
+				z05.setDept171Amount(bd3);
+			}
+			case "172": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept172Quantity(bd2);
+				z05.setDept172Amount(bd3);
+			}
+			case "173": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept173Quantity(bd2);
+				z05.setDept173Amount(bd3);
+			}
+			case "174": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept174Quantity(bd2);
+				z05.setDept174Amount(bd3);
+			}
+			case "175": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept175Quantity(bd2);
+				z05.setDept175Amount(bd3);
+			}
+			case "176": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept176Quantity(bd2);
+				z05.setDept176Amount(bd3);
+			}
+			case "177": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept177Quantity(bd2);
+				z05.setDept177Amount(bd3);
+			}
+			case "178": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept178Quantity(bd2);
+				z05.setDept178Amount(bd3);
+			}
+			case "179": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept179Quantity(bd2);
+				z05.setDept179Amount(bd3);
+			}
+			case "180": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept180Quantity(bd2);
+				z05.setDept180Amount(bd3);
+			}
+			case "181": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept181Quantity(bd2);
+				z05.setDept181Amount(bd3);
+			}
+			case "182": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept182Quantity(bd2);
+				z05.setDept182Amount(bd3);
+			}
+			case "183": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept183Quantity(bd2);
+				z05.setDept183Amount(bd3);
+			}
+			case "184": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept184Quantity(bd2);
+				z05.setDept184Amount(bd3);
+			}
+			case "185": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept185Quantity(bd2);
+				z05.setDept185Amount(bd3);
+			}
+			case "186": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept186Quantity(bd2);
+				z05.setDept186Amount(bd3);
+			}
+			case "187": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept187Quantity(bd2);
+				z05.setDept187Amount(bd3);
+			}
+			case "188": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept188Quantity(bd2);
+				z05.setDept188Amount(bd3);
+			}
+			case "189": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept189Quantity(bd2);
+				z05.setDept189Amount(bd3);
+			}
+			case "190": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept190Quantity(bd2);
+				z05.setDept190Amount(bd3);
+			}
+			case "191": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept191Quantity(bd2);
+				z05.setDept191Amount(bd3);
+			}
+			case "192": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept192Quantity(bd2);
+				z05.setDept192Amount(bd3);
+			}
+			case "193": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept193Quantity(bd2);
+				z05.setDept193Amount(bd3);
+			}
+			case "194": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept194Quantity(bd2);
+				z05.setDept194Amount(bd3);
+			}
+			case "195": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept195Quantity(bd2);
+				z05.setDept195Amount(bd3);
+			}
+			case "196": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept196Quantity(bd2);
+				z05.setDept196Amount(bd3);
+			}
+			case "197": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept197Quantity(bd2);
+				z05.setDept197Amount(bd3);
+			}
+			case "198": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept198Quantity(bd2);
+				z05.setDept198Amount(bd3);
+			}
+			case "199": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept199Quantity(bd2);
+				z05.setDept199Amount(bd3);
+			}
+			case "200": {
+				BigDecimal bd2 = new BigDecimal(split[2].replaceAll(",", ""));
+				BigDecimal bd3 = new BigDecimal(split[3].replaceAll(",", ""));
+				z05.setDept200Quantity(bd2);
+				z05.setDept200Amount(bd3);
+			}
+			default: {
+			}
+			}
+		} while (morelines);
+		z005List.add(z05);
+	}
+
 	private static void processZ020(String fileIn) throws FileNotFoundException {
 		Z020 z20 = new Z020();
 		currentFilename = fileIn;
 		FileInputStream fileStream = new FileInputStream(fileIn);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fileStream));
+		z20capture(z20, br);
+	}
+
+	private static void z20capture(Z020 z20, BufferedReader br) {
 		do {
 			String split[] = getNextCsvLine(br);
 			switch (split[0]) {
@@ -196,7 +2015,7 @@ public class Main extends Application {
 				z20.setZ20mode(split[1]);
 			}
 			case "Z COUNTER": {
-				z20.setZ20zcounter(split[1]);
+				z20.setZ20zcounter(Integer.parseInt(split[1]));
 			}
 			case "DATE": {
 				z20.setZ20date(split[1]);
@@ -225,21 +2044,6 @@ public class Main extends Application {
 			}
 		} while (morelines);
 		z020List.add(z20);
-	}
-
-	private static void processZ005(String string) {
-		// TODO Auto-generated method stub
-
-	}
-
-	private static void processZ002(String string) {
-		// TODO Auto-generated method stub
-
-	}
-
-	private static void processZ001(String string) {
-		// TODO Auto-generated method stub
-
 	}
 
 	public static void ProcessEJ(String fileIn) throws IOException {
